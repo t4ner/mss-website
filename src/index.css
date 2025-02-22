@@ -9,3 +9,10 @@ body {
 @theme {
   --font-krona: "Krona One", sans-serif;
 }
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+

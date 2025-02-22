@@ -5,14 +5,14 @@ import Hero from "./Hero";
 const Navbar = () => {
   return (
     <div>
-      <header className=" rounded-lg bg-gray-200 container mx-auto mt-5">
+      <header className=" rounded-lg bg-gray-100 container mx-auto mt-5">
         <nav
           aria-label="Main navigation"
           className="flex justify-around items-center p-4 font-krona"
         >
           <Link
             to="/"
-            className="hover:text-[#004B6B] transition-colors"
+            className="hover:text-[#0C4A79]  transition-colors"
             aria-label="Home page"
           >
             Home
@@ -20,7 +20,7 @@ const Navbar = () => {
 
           <Link
             to="/products"
-            className="hover:text-[#004B6B] transition-colors"
+            className="hover:text-[#0C4A79] transition-colors"
             aria-label="Products page"
           >
             Products
@@ -40,7 +40,7 @@ const Navbar = () => {
 
           <Link
             to="/services"
-            className="hover:text-[#004B6B] transition-colors"
+            className="hover:text-[#0C4A79] transition-colors"
             aria-label="Services page"
           >
             Services
@@ -48,7 +48,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="hover:text-[#004B6B] transition-colors"
+            className="hover:text-[#0C4A79] transition-colors"
             aria-label="Contact page"
           >
             Contact
