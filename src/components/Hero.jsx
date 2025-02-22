@@ -16,7 +16,7 @@ const Hero = ({ title, subtitle, image }) => {
           />
 
           <div className="absolute inset-0 flex items-end justify-start p-4">
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl font-krona leading-16">
+            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold max-w-5xl font-krona leading-16">
               {title} <br /> {subtitle}
             </h1>
           </div>

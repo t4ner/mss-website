@@ -8,9 +8,9 @@ const Products = () => {
     <div>
       <Navbar />
       <Hero
-        title="Our Products"
-        subtitle="Advanced Solutions for Cable Industry"
-        image="/hero/products-hero.jpeg"
+        title="Cable Manufacturing "
+        subtitle="Machines and Special Machines"
+        image="/hero/products-hero.png"
       />
       {/* Ürün içerikleri buraya gelecek */}
       <Footer />
