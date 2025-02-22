@@ -101,7 +101,7 @@ const ProductList = () => {
         "Offers reliable and precise processing of cables to meet the highest quality standards.",
       specs:
         "Processing speed up to 200 m/min, maximum processing capacity up to 1000 kg.",
-  
+
       category: "CV Line Machines",
     },
   ];
@@ -266,7 +266,9 @@ const ProductList = () => {
                         <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">
                           Specifications
                         </div>
-                        <div className="text-gray-700 text-lg">{product.specs}</div>
+                        <div className="text-gray-700 text-lg">
+                          {product.specs}
+                        </div>
                       </div>
                     )}
                   </div>

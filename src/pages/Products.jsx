@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductList from "../components/ProductList";
 import ProductsInfo from "../components/ProductsInfo";
+import ProductServices from "../components/ProductServices";
 const Products = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const Products = () => {
       />
       <ProductsInfo />  
       <ProductList />
+      <ProductServices />
       <Footer />
     </div>
   );
