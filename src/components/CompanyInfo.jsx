@@ -6,12 +6,8 @@ import CoreValues from "./CoreValues";
 const CompanyInfo = () => {
   return (
     <section aria-label="Company Information" className="company-info-section">
-      <div className="bg-gradient-to-br from-[#0C4A79] to-[#2171B5] mt-20 text-white py-26 relative overflow-hidden container mx-auto rounded-lg">
-        {/* Minimal arka plan */}
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
-          aria-hidden="true"
-        ></div>
+      <div className="bg-gray-50  text-black py-16 relative overflow-hidden container mx-auto rounded-lg">
+    
 
         <div className="container mx-auto px-6">
           <motion.article
@@ -23,12 +19,12 @@ const CompanyInfo = () => {
             {/* Sol içerik */}
             <div className="lg:w-1/2">
               <header className="mb-12">
-                <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm mb-6">
+                <div className="inline-block bg-[#0C4A79] text-white backdrop-blur-sm px-4 py-1.5 rounded-full text-sm mb-6">
                   About Us
                 </div>
 
                 <h1 className="text-4xl font-bold mb-8 leading-tight font-krona">
-                  <span className="block text-white">
+                  <span className="block text-[#0C4A79]">
                     Innovative Solutions in
                   </span>
                   <span className="block mt-1 text-[#E5153D]">
@@ -75,13 +71,13 @@ const CompanyInfo = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       key={index}
-                      className="bg-white/5 p-5 rounded-lg hover:bg-white/10 transition-colors duration-300"
+                      className="bg-gray-200 p-5 rounded-lg hover:bg-white/90 transition-colors duration-300"
                       role="listitem"
                     >
                       <h2 className="font-medium text-lg mb-2">
                         {feature.title}
                       </h2>
-                      <p className="text-gray-300 text-lg">{feature.desc}</p>
+                      <p className="text-gray-400 text-lg">{feature.desc}</p>
                     </motion.div>
                   ))}
                 </div>

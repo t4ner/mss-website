@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ProductList = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] =
+    useState("Rod Breakdown Line");
 
   const categories = [
     "Rod Breakdown Line",
@@ -21,7 +22,7 @@ const ProductList = () => {
       title: "Rod Breakdown Line",
       description:
         "These machines are designed for the efficient breakdown of rods, ensuring uniform and precise processing.",
-      image: "/images/rod-breakdown.jpg",
+      image: "/services/services1.jpg",
       category: "Rod Breakdown Line",
     },
     {
@@ -29,7 +30,7 @@ const ProductList = () => {
       description:
         "Our extrusion lines provide reliable insulation and sheathing of cables to meet the highest quality standards.",
       specs: "Capacity up to 500 kg, processing speed up to 100 m/min.",
-      image: "/images/insulation-sheathing.jpg",
+      images: ["/services/services2.jpg", "/services/services2-2.jpg"],
       category: "Insulation & Sheathing Lines",
     },
     {
@@ -37,7 +38,7 @@ const ProductList = () => {
       description:
         "These machines enable precise stranding and armoring of cables while maintaining high production speed.",
       specs: "Stranding speed up to 200 m/min, armoring thickness up to 5 mm.",
-      image: "/images/stranding-armoring.jpg",
+      images: ["/services/services3.jpg", "/services/services3-2.jpg"],
       category: "Stranding and Armoring Lines",
     },
     {
@@ -46,7 +47,7 @@ const ProductList = () => {
         "A central stranding machine known for its reliability and precision, ensuring uniform stranding.",
       specs:
         "Stranding speed up to 180 m/min, maximum stranding capacity up to 1000 kg.",
-      image: "/images/central-strander.jpg",
+      images: ["/services/services4.jpg", "/services/services4-2.jpg"],
       category: "Central Strander Machine",
     },
     {
@@ -55,7 +56,7 @@ const ProductList = () => {
         "Specifically designed for the armoring of steel wires, offering a robust and durable solution.",
       specs:
         "Armoring speed up to 150 m/min, maximum armoring thickness up to 8 mm.",
-      image: "/images/steel-wire-armoring.jpg",
+      images: ["/services/services5.jpg", "/services/services5-2.jpg"],
       category: "Steel Wire Armoring Machine",
     },
     {
@@ -64,7 +65,7 @@ const ProductList = () => {
         "A versatile stranding machine that combines multiple stranding processes in a single line to maximize efficiency.",
       specs:
         "Stranding speed up to 250 m/min, maximum stranding capacity up to 1500 kg.",
-      image: "/images/multi-central-stranding.jpg",
+      images: ["/services/services6.jpg", "/services/services6-2.jpg"],
       category: "Multi Central Stranding Line",
     },
     {
@@ -73,7 +74,7 @@ const ProductList = () => {
         "These machines are designed for the precise taping of cables with mica tape to provide an additional layer of insulation.",
       specs:
         "Taping speed up to 120 m/min, maximum taping thickness up to 2 mm.",
-      image: "/images/mica-taping.jpg",
+      image: "/services/services7.jpg",
       category: "Mica Taping Line",
     },
     {
@@ -82,7 +83,7 @@ const ProductList = () => {
         "Ensures uniform and precise rewinding of cables to improve product quality.",
       specs:
         "Rewinding speed up to 100 m/min, maximum rewinding capacity up to 500 kg.",
-      image: "/images/rewinding.jpg",
+      images: ["/services/services8.jpg", "/services/services8-2.jpg"],
       category: "Rewinding Line",
     },
     {
@@ -91,7 +92,7 @@ const ProductList = () => {
         "Provides horizontal taping of cables for uniform and precise taping.",
       specs:
         "Taping speed up to 150 m/min, maximum taping thickness up to 3 mm.",
-      image: "/images/horizontal-taping.jpg",
+      image: "/services/services9.jpg",
       category: "Horizontal Taping Line",
     },
     {
@@ -100,23 +101,47 @@ const ProductList = () => {
         "Offers reliable and precise processing of cables to meet the highest quality standards.",
       specs:
         "Processing speed up to 200 m/min, maximum processing capacity up to 1000 kg.",
-      image: "/images/cv-line.jpg",
+  
       category: "CV Line Machines",
     },
   ];
 
+  const [currentImageIndexes, setCurrentImageIndexes] = useState({});
+
+  useEffect(() => {
+    const initialIndexes = products.reduce((acc, product, idx) => {
+      acc[idx] = 0;
+      return acc;
+    }, {});
+    setCurrentImageIndexes(initialIndexes);
+  }, []);
+
+  const nextImage = (productIndex, imagesLength) => {
+    setCurrentImageIndexes((prev) => ({
+      ...prev,
+      [productIndex]: (prev[productIndex] + 1) % imagesLength,
+    }));
+  };
+
+  const prevImage = (productIndex, imagesLength) => {
+    setCurrentImageIndexes((prev) => ({
+      ...prev,
+      [productIndex]: (prev[productIndex] - 1 + imagesLength) % imagesLength,
+    }));
+  };
+
   return (
     <div className="container flex gap-8">
       {/* Sidebar */}
-      <div className="w-1/4 flex-shrink-0 bg-blue-500">
+      <div className="w-[30%] flex-shrink-0 bg-gray-50 p-5 rounded-lg">
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
               <button
                 onClick={() => setSelectedCategory(category)}
-                className={`w-full text-left p-4 rounded-lg transition-all duration-200 flex items-center justify-between ${
+                className={`w-full text-lg text-left p-4 rounded-lg transition-all duration-200 flex items-center justify-between ${
                   selectedCategory === category
-                    ? "bg-red-500 text-white"
+                    ? "bg-gray-200 text-[#0C4A79]"
                     : "hover:bg-gray-100"
                 }`}
               >
@@ -129,32 +154,122 @@ const ProductList = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-red-500">
+      <div className="flex items-center justify-center flex-1 w-full  gap-8 bg-gray-50 p-6 rounded-lg">
         {products
           .filter(
             (product) =>
               !selectedCategory || product.category === selectedCategory
           )
           .map((product, index) => (
-            <div key={index} className="group">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="mb-4">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-48 object-contain"
-                  />
+            <div key={index} className="grou w-full h-full">
+              <div className="flex flex-col w-full h-full bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="relative w-full flex justify-center bg-gray-100">
+                  <div className="relative w-full">
+                    <img
+                      src={
+                        Array.isArray(product.images)
+                          ? product.images[currentImageIndexes[index] || 0]
+                          : product.image
+                      }
+                      alt={product.title}
+                      className="w-auto h-[400px] object-contain mx-auto"
+                    />
+
+                    {Array.isArray(product.images) &&
+                      product.images.length > 1 && (
+                        <>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              prevImage(index, product.images.length);
+                            }}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#0C4A79]/80 hover:bg-[#0C4A79] text-white p-2 rounded-full"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M15 19l-7-7 7-7"
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              nextImage(index, product.images.length);
+                            }}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C4A79]/80 hover:bg-[#0C4A79] text-white p-2 rounded-full"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </button>
+
+                          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                            {product.images.map((_, dotIndex) => (
+                              <button
+                                key={dotIndex}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setCurrentImageIndexes((prev) => ({
+                                    ...prev,
+                                    [index]: dotIndex,
+                                  }));
+                                }}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                  currentImageIndexes[index] === dotIndex
+                                    ? "bg-white scale-125"
+                                    : "bg-white/50 hover:bg-white/75"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                  </div>
                 </div>
-                <div className="text-center space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {product.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{product.description}</p>
-                  {product.specs && (
-                    <p className="text-sm text-blue-600 italic">
-                      {product.specs}
-                    </p>
-                  )}
+
+                <div className="p-8">
+                  <div className="mb-6">
+                    <h2 className="text-xl font-krona font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                      {product.title}
+                    </h2>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="prose prose-gray">
+                      <p className="text-gray-600 text-lg">
+                        {product.description}
+                      </p>
+                    </div>
+
+                    {product.specs && (
+                      <div className="border-l-4 border-[#0C4A79] pl-4">
+                        <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">
+                          Specifications
+                        </div>
+                        <div className="text-gray-700 text-lg">{product.specs}</div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

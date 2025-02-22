@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductList from "../components/ProductList";
+import ProductsInfo from "../components/ProductsInfo";
 const Products = () => {
   return (
     <div>
@@ -12,7 +13,8 @@ const Products = () => {
         subtitle="Machines and Special Machines"
         image="/hero/products-hero.png"
       />
-      <ProductList />       
+      <ProductsInfo />  
+      <ProductList />
       <Footer />
     </div>
   );

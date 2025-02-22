@@ -43,7 +43,7 @@ const CompanyBenefits = () => {
         ></div>
       </motion.h2>
 
-      <div className="relative w-full container bg-gradient-to-br from-[#0C4A79] to-[#2171B5] py-10 rounded-2xl shadow-2xl overflow-hidden">
+      <div className="relative w-full container  py-10 rounded-2xl overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#2171B5] rounded-full blur-[120px] opacity-20"></div>
@@ -71,10 +71,10 @@ const CompanyBenefits = () => {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-krona font-bold text-white mb-3 group-hover:text-[#90CAF9] transition-colors">
+                  <h3 className="text-xl font-krona font-bold text-black mb-3 group-hover:text-[#0C4A79] transition-colors">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-200 text-lg leading-relaxed">
+                  <p className="text-gray-800 text-lg leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -95,12 +95,12 @@ const CompanyBenefits = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-10"
           >
-            <p className="max-w-2xl mx-auto text-lg text-white leading-relaxed">
+            <p className="max-w-2xl mx-auto text-lg text-black leading-relaxed">
               Discover the benefits of our technology and let us elevate your
               cable manufacturing processes together.{" "}
               <a
                 href="/contact"
-                className="underline hover:text-[#90CAF9] transition-colors"
+                className="underline hover:text-[#0C4A79] transition-colors"
               >
                 Contact us today
               </a>{" "}
