@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import ProductList from "../components/ProductList";
 const Products = () => {
   return (
     <div>
@@ -12,7 +12,7 @@ const Products = () => {
         subtitle="Machines and Special Machines"
         image="/hero/products-hero.png"
       />
-      {/* Ürün içerikleri buraya gelecek */}
+      <ProductList />       
       <Footer />
     </div>
   );
