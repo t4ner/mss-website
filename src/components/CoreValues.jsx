@@ -52,16 +52,22 @@ const CoreValues = () => {
     },
   ];
 
-  const CardGrid = ({ items }) => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  const CardGrid = ({ items, sectionId }) => (
+    <div
+      className="grid grid-cols-1 md:grid-cols-3 gap-8"
+      role="list"
+      aria-label="Feature cards"
+    >
       {items.map((item, index) => (
-        <motion.div
+        <motion.article
           key={index}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
           whileHover={{ scale: 1.03 }}
           className="relative group h-[400px]"
+          role="listitem"
+          aria-labelledby={`${sectionId}-title-${index}`}
         >
           <div
             className={`
@@ -71,10 +77,17 @@ const CoreValues = () => {
             `}
           >
             <div className="flex flex-col items-center text-center">
-              <div className="mb-6 p-4 rounded-full bg-white/20 backdrop-blur-sm">
+              <div
+                className="mb-6 p-4 rounded-full bg-white/20 backdrop-blur-sm"
+                role="img"
+                aria-hidden="true"
+              >
                 {item.icon}
               </div>
-              <h3 className="text-xl font-krona font-semibold mb-4 text-white">
+              <h3
+                id={`${sectionId}-title-${index}`}
+                className="text-xl font-krona font-semibold mb-4 text-white"
+              >
                 {item.title}
               </h3>
               <p className="text-white/90 text-lg leading-relaxed">
@@ -83,39 +96,57 @@ const CoreValues = () => {
             </div>
             <div className="absolute inset-0 bg-white rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
           </div>
-        </motion.div>
+        </motion.article>
       ))}
     </div>
   );
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <main className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <motion.div
+        <motion.section
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
+          aria-labelledby="technology-heading"
         >
-          <h2 className="text-4xl font-bold mb-4 font-krona">Our Technology</h2>
-          <div className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"></div>
-        </motion.div>
+          <h2
+            id="technology-heading"
+            className="text-4xl font-bold mb-4 font-krona"
+          >
+            Our Technology
+          </h2>
+          <div
+            className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"
+            role="presentation"
+          ></div>
+        </motion.section>
 
-        <CardGrid items={values} />
+        <CardGrid items={values} sectionId="technology" />
 
-        <motion.div
+        <motion.section
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16 mt-20"
+          aria-labelledby="services-heading"
         >
-          <h2 className="text-4xl font-bold mb-4 font-krona">Our Services</h2>
-          <div className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"></div>
-        </motion.div>
+          <h2
+            id="services-heading"
+            className="text-4xl font-bold mb-4 font-krona"
+          >
+            Our Services
+          </h2>
+          <div
+            className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"
+            role="presentation"
+          ></div>
+        </motion.section>
 
-        <CardGrid items={services} />
+        <CardGrid items={services} sectionId="services" />
       </div>
-    </section>
+    </main>
   );
 };
 
