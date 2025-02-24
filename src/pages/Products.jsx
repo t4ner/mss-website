@@ -14,9 +14,11 @@ const Products = () => {
         subtitle="Machines and Special Machines"
         image="/hero/products-hero.png"
       />
-      <ProductsInfo />  
-      <ProductList />
-      <ProductServices />
+      <div className="space-y-20">
+        <ProductsInfo />
+        <ProductList />
+        <ProductServices />
+      </div>
       <Footer />
     </div>
   );

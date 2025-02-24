@@ -60,7 +60,7 @@ const ContactForm = () => {
         </div>
 
         {/* Sağ Sütun - Form */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div className="bg-white/50 rounded-xl p-6 shadow-sm border border-gray-100">
           <h2 className="text-xl mb-6">Send us a message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -112,7 +112,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-[#0C4A79] text-white px-6 py-3 rounded-lg hover:bg-[#0C4A79]/80 transition-colors duration-300"
+              className="bg-gradient-to-br from-[#0C4A79] to-[#2171B5] text-white px-6 py-3 rounded-lg hover:bg-[#0C4A79]/80 transition-colors duration-300"
             >
               Send message
             </button>

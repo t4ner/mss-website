@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import ContactHero from "../components/ContactHero";
 import ContactForm from "../components/ContactForm";
 import ContactInfo from "../components/ContactInfo";
+import ContactBenefits from "../components/ContactBenefits";
 const Contact = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const Contact = () => {
       <ContactHero />
       <ContactInfo />
       <ContactForm />
+      <ContactBenefits />
       <Footer />
     </div>
   );

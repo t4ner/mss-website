@@ -102,7 +102,7 @@ const CoreValues = () => {
   );
 
   return (
-    <main className="py-20">
+    <main >
       <div className="container mx-auto px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}

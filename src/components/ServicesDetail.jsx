@@ -12,7 +12,7 @@ const ServicesDetail = () => {
       title: "Cable Machine Production",
       image: "/servicesDetail/servicesdetail2.jpg",
       description:
-        "Our production lines include a variety of machines for cable manufacturing that meet the highest quality standards. We develop and manufacture machines tailored to our specific requirements.",
+        "Our production lines include a variety of machines for cable manufacturing that meet the highest quality standards. We develop and manufacture machines tailored to our customers' specific requirements.",
     },
     {
       title: "Machine Installation",
@@ -36,19 +36,19 @@ const ServicesDetail = () => {
       title: "Maintenance and HR Services",
       image: "/servicesDetail/servicesdetail6.jpg",
       description:
-        "Regular maintenance is crucial for the longevity and efficiency of your machines. Our maintenance team offers comprehensive services to ensure your machines are always in top condition.",
+        "Regular maintenance is crucial for the longevity and efficiency of your machines. Our maintenance team offers comprehensive services to ensure your machines are always in top condition. Additionally, we provide HR services to ensure your staff is well-trained and prepared to operate the machines.",
     },
   ];
 
   return (
     <div>
-      <div className="container">
-        <ul className="list-none p-0 grid grid-cols-1 gap-[4vw] mb-[4vw]">
+      <div className="container mt-16">
+        <ul className="list-none p-0 grid grid-cols-1 gap-[4vw]">
           {services.map((service, index) => (
             <li
               key={index}
               className="sticky top-0"
-              style={{ paddingTop: `calc(${index + 1} * 1.5em)` }}
+            style={{ paddingTop: `calc(${index + 1} * 1.5em)` }}  
             >
               <div
                 className="box-border rounded-lg shadow-lg h-[70vh] 

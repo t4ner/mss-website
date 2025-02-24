@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <section className="hero-section pt-5 pb-10">
+    <section className="hero-section">
       <div className="container mx-auto">
         <div className="relative rounded-lg overflow-hidden">
           <iframe

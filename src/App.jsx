@@ -4,9 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

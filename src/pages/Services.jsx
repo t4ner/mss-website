@@ -16,7 +16,7 @@ const Services = () => {
       />
       <ServicesInfo />
       <ServicesDetail />
-      <ServicesBenefits />  
+      <ServicesBenefits />
       <Footer />
     </div>
   );

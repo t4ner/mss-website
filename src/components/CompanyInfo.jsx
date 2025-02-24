@@ -1,7 +1,7 @@
 import React from "react";
 import companyInfo from "/homeImage/companyInfo.jpg";
 import { motion } from "framer-motion";
-import CoreValues from "./CoreValues";
+
 
 const CompanyInfo = () => {
   return (
@@ -130,7 +130,7 @@ const CompanyInfo = () => {
           </motion.article>
         </div>
       </div>
-      <CoreValues />
+    
     </section>
   );
 };

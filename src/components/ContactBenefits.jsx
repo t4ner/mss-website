@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { FaTools, FaLightbulb, FaHandshake } from "react-icons/fa";
+import { FaSearch, FaTools, FaCogs } from "react-icons/fa";
 
 const benefits = [
   {
     id: "01",
-    title: "Experience and Know-how",
+    title: "Product Inquiries",
     description:
-      "With years of experience in the industry, we possess the necessary expertise to provide you with the best solutions.",
-    icon: FaTools,
+      "Learn more about our range of cable manufacturing machines and how they can optimize your production processes.",
+    icon: FaSearch,
   },
   {
     id: "02",
-    title: "Innovation",
+    title: "Technical Support",
     description:
-      "We are constantly developing innovative solutions to meet the evolving demands of the market.",
-    icon: FaLightbulb,
+      "Our expert team is available to address any technical issues or questions to minimize downtime and maximize efficiency.",
+    icon: FaTools,
   },
   {
     id: "03",
-    title: "Customer Satisfaction",
+    title: "Customized Solutions",
     description:
-      "Our top priority is to satisfy our customers by providing high-quality products and services.",
-    icon: FaHandshake,
+      "We offer tailored solutions designed to meet your specific needs. Contact us to discuss how we can help you achieve your production goals.",
+    icon: FaCogs,
   },
 ];
 
-const CompanyBenefits = () => {
+const ContactBenefits = () => {
   return (
     <section
-      className=" relative overflow-hidden"
-      aria-labelledby="benefits-title"
+      className="pt-20 relative overflow-hidden"
+      aria-labelledby="assistance-title"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -40,10 +40,10 @@ const CompanyBenefits = () => {
           className="text-center mb-16"
         >
           <h2
-            id="benefits-title"
-            className="text-4xl  font-bold font-krona text-gray-900 mb-6"
+            id="assistance-title"
+            className="text-4xl font-bold font-krona text-gray-900 mb-6"
           >
-            Why Choose MSS Cable Machinery?
+            How Can We Assist You?
           </h2>
           <div className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"></div>
         </motion.div>
@@ -91,17 +91,18 @@ const CompanyBenefits = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Discover the benefits of our technology and let us elevate your
-            cable manufacturing processes together. {""}
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+            Ready to Talk? If you need immediate assistance or have an urgent
+            matter, do not hesitate to call or email us. We are eager to hear
+            from you and provide the support you need.{" "}
             <a
               href="/contact"
               className="text-[#0C4A79] hover:text-[#0C4A79]/80 font-semibold underline transition-colors"
             >
               Contact us today
             </a>{" "}
-            to learn more about how we can help you achieve your production
-            goals.
+            and let's elevate your cable manufacturing processes to the next
+            level.
           </p>
         </motion.div>
       </div>
@@ -109,4 +110,4 @@ const CompanyBenefits = () => {
   );
 };
 
-export default CompanyBenefits;
+export default ContactBenefits;

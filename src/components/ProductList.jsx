@@ -30,7 +30,7 @@ const ProductList = () => {
       description:
         "Our extrusion lines provide reliable insulation and sheathing of cables to meet the highest quality standards.",
       specs: "Capacity up to 500 kg, processing speed up to 100 m/min.",
-      images: ["/services/services2.jpg", "/services/services2-2.jpg"],
+      images: ["/services/services2.jpg", "/services/services2-2.jpg", "/services/services2-3.jpg"],
       category: "Insulation & Sheathing Lines",
     },
     {
@@ -146,7 +146,7 @@ const ProductList = () => {
                 }`}
               >
                 {category}
-                <span className="text-xl">+</span>
+                <span className="text-3xl">  » </span>
               </button>
             </li>
           ))}
@@ -162,7 +162,7 @@ const ProductList = () => {
           )
           .map((product, index) => (
             <div key={index} className="grou w-full h-full">
-              <div className="flex flex-col w-full h-full bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="flex flex-col w-full h-full bg-white/50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="relative w-full flex justify-center bg-gray-100">
                   <div className="relative w-full">
                     <img

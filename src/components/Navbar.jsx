@@ -5,7 +5,7 @@ import Hero from "./Hero";
 const Navbar = () => {
   return (
     <div>
-      <header className=" rounded-lg bg-gray-100 container mx-auto mt-5">
+      <header className=" rounded-lg bg-white/50 container mx-auto my-5">
         <nav
           aria-label="Main navigation"
           className="flex justify-around items-center p-4 font-krona"
