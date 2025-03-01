@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="space-y-20">
+      <div className="space-y-10 lg:space-y-20">
         <Hero
           title="MSS Cable Machinery"
           subtitle="The Right Technology for Cable Manufacturing Machines"

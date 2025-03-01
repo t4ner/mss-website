@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 const CompanyInfo = () => {
   return (
     <section aria-label="Company Information" className="company-info-section">
-      <div className="bg-gray-50  text-black py-16 relative overflow-hidden container mx-auto rounded-lg">
+      <div className="bg-gray-50  text-black py-8 lg:py-16 relative overflow-hidden container mx-auto rounded-lg">
         <div className="container mx-auto px-6">
           <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col lg:flex-row items-center gap-16"
+            className="flex flex-col lg:flex-row items-center lg:gap-16"
           >
             {/* Sol içerik */}
             <div className="lg:w-1/2">
               <header className="mb-12">
-                <div className="inline-block bg-[#0C4A79] text-white backdrop-blur-sm px-4 py-1.5 rounded-full text-sm mb-6">
+                <div className="inline-block bg-[#0C4A79] text-white backdrop-blur-sm px-4 py-1.5 rounded-full text-xs lg:text-sm mb-6">
                   About Us
                 </div>
 
@@ -71,10 +71,10 @@ const CompanyInfo = () => {
                       className="bg-gray-200 p-5 rounded-lg hover:bg-white/90 transition-colors duration-300"
                       role="listitem"
                     >
-                      <h2 className="font-medium text-lg mb-2">
+                      <h2 className="font-medium text-sm lg:text-lg mb-2">
                         {feature.title}
                       </h2>
-                      <p className="text-gray-400 text-lg">{feature.desc}</p>
+                      <p className="text-gray-400 text-sm lg:text-lg">{feature.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -91,7 +91,7 @@ const CompanyInfo = () => {
               <img
                 src={companyInfo}
                 alt="MSS Cable Machinery Manufacturing Facility and Equipment"
-                className="w-full h-[550px] object-cover rounded-xl shadow-lg"
+                className="w-full lg:h-[550px] object-cover rounded-xl shadow-lg"
                 loading="lazy"
                 itemProp="image"
               />
@@ -101,7 +101,7 @@ const CompanyInfo = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[90%]"
+                className="hidden lg:block absolute -bottom-12 left-1/2 -translate-x-1/2 w-[90%]"
               >
                 <div
                   className="bg-white rounded-lg shadow-lg p-6 flex justify-between"
