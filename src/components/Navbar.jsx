@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <header className="relative bg-gray-50 container mx-auto my-5 p-4 rounded-lg">
       <nav className="w-full" role="navigation" aria-label="Main navigation">
-        <div className="container px-4 mx-auto">
+        <div className="container px-0  lg:px-4 mx-auto">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link

@@ -10,13 +10,13 @@ const Hero = ({ title, subtitle, image }) => {
           <img
             src={image}
             alt="hero"
-            className="w-full h-[80vh] object-cover"
+            className="w-full h-[70vh] lg:h-[80vh] object-cover"
             loading="lazy"
             aria-hidden="false"
           />
 
-          <div className="absolute inset-0 flex items-end justify-start p-4">
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold max-w-5xl font-krona leading-16">
+          <div className="absolute inset-0 flex items-end justify-start p-2 lg:p-4">
+            <h1 className="text-white text-xl  lg:text-5xl font-bold max-w-5xl font-krona lg:leading-16">
               {title} <br /> {subtitle}
             </h1>
           </div>
