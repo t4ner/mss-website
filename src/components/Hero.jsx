@@ -4,7 +4,7 @@ const Hero = ({ title, subtitle, image }) => {
   return (
     <section className="hero-section">
       <div className="container mx-auto">
-        <div className="relative rounded-lg overflow-hidden">
+        <div className="relative lg:rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-black/40"></div>
 
           <img

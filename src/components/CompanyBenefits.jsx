@@ -89,7 +89,7 @@ const CompanyBenefits = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-10 lg:mt-16"
         >
           <p className="text-sm lg:text-lg text-gray-700 max-w-2xl mx-auto">
             Discover the benefits of our technology and let us elevate your

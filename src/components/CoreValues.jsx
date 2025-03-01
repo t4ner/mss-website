@@ -108,7 +108,7 @@ const CoreValues = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
           aria-labelledby="technology-heading"
         >
           <h2
@@ -129,7 +129,7 @@ const CoreValues = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 mt-10 lg:mt-20"
+          className="text-center mb-10 lg:mb-16 mt-10 lg:mt-20"
           aria-labelledby="services-heading"
         >
           <h2
