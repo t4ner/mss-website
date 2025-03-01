@@ -202,7 +202,7 @@ const ProductList = () => {
                               e.preventDefault();
                               prevImage(index, product.images.length);
                             }}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#0C4A79]/80 hover:bg-[#0C4A79] text-white p-2 rounded-full"
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#0C4A79] hover:bg-[#0C4A79] text-white p-2 rounded-full"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +224,7 @@ const ProductList = () => {
                               e.preventDefault();
                               nextImage(index, product.images.length);
                             }}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C4A79]/80 hover:bg-[#0C4A79] text-white p-2 rounded-full"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C4A79] hover:bg-[#0C4A79] text-white p-2 rounded-full"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +304,6 @@ const ProductList = () => {
           className="fixed bottom-3 right-3 z-50 bg-[#0C4A79]  text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
         >
           <span className="text-sm  mr-1">Products</span>
-         
         </button>
 
         {/* Mobile Category Menu */}
