@@ -32,7 +32,7 @@ const CompanyBenefits = () => {
       className=" relative overflow-hidden"
       aria-labelledby="benefits-title"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 lg:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const CompanyBenefits = () => {
         >
           <h2
             id="benefits-title"
-            className="text-4xl  font-bold font-krona text-gray-900 mb-6"
+            className="text-lg lg:text-4xl  font-bold font-krona text-gray-900 mb-6"
           >
             Why Choose MSS Cable Machinery?
           </h2>
@@ -55,7 +55,7 @@ const CompanyBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative bg-white/50 backdrop-blur-lg rounded-2xl p-10 shadow-xl border border-white/20 hover:border-[#0C4A79]/30 transition-all duration-300 group"
+              className="relative bg-white/50 backdrop-blur-lg rounded-2xl p-10 shadow-xl border border-white/20 hover:border-[#0C4A79]/30 transition-all duration-300 group h-[260px] lg:h-[300px]"
             >
               <div className="absolute -top-6 left-8">
                 <div className="relative">
@@ -67,10 +67,10 @@ const CompanyBenefits = () => {
               </div>
 
               <div className="mt-8">
-                <h3 className="text-2xl font-bold font-krona text-gray-900 mb-4">
+                <h3 className="text-lg lg:text-2xl font-bold font-krona text-gray-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-sm lg:text-lg text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -91,7 +91,7 @@ const CompanyBenefits = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-sm lg:text-lg text-gray-700 max-w-2xl mx-auto">
             Discover the benefits of our technology and let us elevate your
             cable manufacturing processes together. {""}
             <a

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="bg-white/50 container rounded-lg mt-20 mb-5"
+      className="bg-white/50 container rounded-lg mt-10 lg:mt-20 mb-5"
       role="contentinfo"
     >
       <div className="flex justify-between items-center px-8 py-4">

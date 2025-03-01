@@ -6,21 +6,21 @@ import { MdOutlineEngineering, MdBuildCircle, MdSupport } from "react-icons/md";
 const CoreValues = () => {
   const values = [
     {
-      icon: <BiCog className="text-5xl text-white" />,
+      icon: <BiCog className= "text-3xl lg:text-5xl text-white" />,
       title: "Precision and Reliability",
       description:
         "Our machines are engineered to deliver precise and reliable results, ensuring the quality of your cable production.",
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <BiLineChart className="text-5xl text-white" />,
+      icon: <BiLineChart className= "text-3xl lg:text-5xl text-white" />,
       title: "Efficiency Enhancement",
       description:
         "By employing state-of-the-art technologies and automation solutions, we help our customers optimize their production processes and enhance efficiency.",
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
-      icon: <BiWrench className="text-5xl text-white" />,
+      icon: <BiWrench className= "text-3xl lg:text-5xl text-white" />,
       title: "Adaptability",
       description:
         "We offer tailored solutions that cater to the specific needs and requirements of our customers.",
@@ -30,21 +30,21 @@ const CoreValues = () => {
 
   const services = [
     {
-      icon: <MdOutlineEngineering className="text-5xl text-white" />,
+      icon: <MdOutlineEngineering className= "text-3xl lg:text-5xl text-white" />,
       title: "Consultation and Planning",
       description:
         "Our experts support you in planning and implementing your cable manufacturing projects.",
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <MdBuildCircle className="text-5xl text-white" />,
+      icon: <MdBuildCircle className= "text-3xl lg:text-5xl text-white" />,
       title: "Installation and Commissioning",
       description:
         "We provide comprehensive installation and commissioning services to ensure your machines operate smoothly.",
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
-      icon: <MdSupport className="text-5xl text-white" />,
+      icon: <MdSupport className="text-3xl lg:text-5xl text-white" />,
       title: "Maintenance and Support",
       description:
         "Our dedicated support team is available to ensure your machines are always in optimal condition and running smoothly.",
@@ -65,9 +65,9 @@ const CoreValues = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
           whileHover={{ scale: 1.03 }}
-          className="relative group h-[400px]"
+          className="relative group h-[300px] lg:h-[400px]"
           role="listitem"
-          aria-labelledby={`${sectionId}-title-${index}`}
+          aria-labelledby={`${sectionId}-title-${index}`}ß
         >
           <div
             className={`
@@ -86,11 +86,11 @@ const CoreValues = () => {
               </div>
               <h3
                 id={`${sectionId}-title-${index}`}
-                className="text-xl font-krona font-semibold mb-4 text-white"
+                className="text-lg lg:text-xl font-krona font-semibold mb-4 text-white"
               >
                 {item.title}
               </h3>
-              <p className="text-white/90 text-lg leading-relaxed">
+              <p className="text-white/90 text-sm lg:text-lg leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -103,7 +103,7 @@ const CoreValues = () => {
 
   return (
     <main >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 lg:px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ const CoreValues = () => {
         >
           <h2
             id="technology-heading"
-            className="text-4xl font-bold mb-4 font-krona"
+            className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
             Our Technology
           </h2>
@@ -129,12 +129,12 @@ const CoreValues = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 mt-20"
+          className="text-center mb-16 mt-10 lg:mt-20"
           aria-labelledby="services-heading"
         >
           <h2
             id="services-heading"
-            className="text-4xl font-bold mb-4 font-krona"
+            className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
             Our Services
           </h2>
