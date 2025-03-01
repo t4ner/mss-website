@@ -2,13 +2,10 @@ import React from "react";
 import companyInfo from "/homeImage/companyInfo.jpg";
 import { motion } from "framer-motion";
 
-
 const CompanyInfo = () => {
   return (
     <section aria-label="Company Information" className="company-info-section">
       <div className="bg-gray-50  text-black py-16 relative overflow-hidden container mx-auto rounded-lg">
-    
-
         <div className="container mx-auto px-6">
           <motion.article
             initial={{ opacity: 0 }}
@@ -23,7 +20,7 @@ const CompanyInfo = () => {
                   About Us
                 </div>
 
-                <h1 className="text-4xl font-bold mb-8 leading-tight font-krona">
+                <h1 className="text-lg lg:text-4xl font-bold mb-8 leading-tight font-krona">
                   <span className="block text-[#0C4A79]">
                     Innovative Solutions in
                   </span>
@@ -32,7 +29,7 @@ const CompanyInfo = () => {
                   </span>
                 </h1>
 
-                <div className="space-y-4 text-lg leading-relaxed mb-10">
+                <div className="space-y-4 text-sm lg:text-lg leading-relaxed mb-10">
                   <p itemProp="description">
                     MSS Cable Machinery is a leading provider of innovative
                     solutions for cable manufacturing. With our expertise and
@@ -130,7 +127,6 @@ const CompanyInfo = () => {
           </motion.article>
         </div>
       </div>
-    
     </section>
   );
 };

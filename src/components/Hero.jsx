@@ -10,7 +10,7 @@ const Hero = ({ title, subtitle, image }) => {
           <img
             src={image}
             alt="hero"
-            className="w-full h-[70vh] lg:h-[80vh] object-cover"
+            className="w-full h-[65vh] lg:h-[80vh] object-cover"
             loading="lazy"
             aria-hidden="false"
           />
