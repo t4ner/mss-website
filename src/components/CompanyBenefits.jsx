@@ -61,7 +61,7 @@ const CompanyBenefits = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#0C4A79]/20 blur-xl rounded-full"></div>
                   <div className="relative bg-gradient-to-br from-[#0C4A79] to-[#2171B5] p-4 rounded-2xl transform group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    <benefit.icon className="w-6 lg:w-8 h-6 lg:h-8 text-white" />
                   </div>
                 </div>
               </div>
