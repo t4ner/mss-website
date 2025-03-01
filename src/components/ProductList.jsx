@@ -301,7 +301,7 @@ const ProductList = () => {
       <div className="lg:hidden">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed bottom-3 right-3 z-50 bg-[#0C4A79]  text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+          className="fixed bottom-3 right-3 z-50 bg-gradient-to-br from-[#0C4A79] to-[#2171B5]  text-white px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
         >
           <span className="text-sm  mr-1">Products</span>
         </button>
