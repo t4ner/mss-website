@@ -26,15 +26,15 @@ const ContactForm = () => {
     <div className="container">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Sol Sütun - Başlık ve İletişim Bilgileri */}
-        <div className="md:sticky md:top-6">
-          <h2 className="text-5xl font-krona font-bold text-[#1a1a1a] mb-4 leading-tight">
+        <div className="md:sticky md:top-6 px-2 lg:px-0">
+          <h2 className="text-lg lg:text-5xl font-krona font-bold text-[#1a1a1a] mb-4 leading-tight">
             Send us your questions about our products
           </h2>
-          <p className="text-gray-600 text-lg mb-6">
+          <p className="text-gray-600 text-sm lg:text-lg mb-6">
             Let's find the best solution together!
           </p>
 
-          <div className="space-y-3 text-lg">
+          <div className="space-y-3 text-sm lg:text-lg">
             <div className="flex items-center gap-2 text-gray-600">
               <HiOutlineMail className="w-5 h-5" />
               <span>Mail me at </span>
@@ -60,8 +60,8 @@ const ContactForm = () => {
         </div>
 
         {/* Sağ Sütun - Form */}
-        <div className="bg-white/50 rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-xl mb-6">Send us a message</h2>
+        <div className="bg-white/50 rounded-xl mx-2 p-2 lg:p-6 shadow-sm border border-gray-100">
+          <h2 className="text-lg lg:text-xl mb-6">Send us a message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <input
@@ -69,8 +69,8 @@ const ContactForm = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Full name*"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
+                placeholder="Full name"
+                className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
               />
             </div>
@@ -81,8 +81,8 @@ const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Email address*"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
+                placeholder="Email address"
+                className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
               />
             </div>
@@ -94,7 +94,7 @@ const ContactForm = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
+                className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
               />
             </div>
 
@@ -103,16 +103,16 @@ const ContactForm = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us more about your project*"
+                placeholder="Tell us more about your project"
                 rows="4"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
+                className="w-full px-4  py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="bg-gradient-to-br from-[#0C4A79] to-[#2171B5] text-white px-6 py-3 rounded-lg hover:bg-[#0C4A79]/80 transition-colors duration-300"
+              className="bg-gradient-to-br text-sm lg:text-base from-[#0C4A79] to-[#2171B5] text-white px-6 py-3 rounded-lg hover:bg-[#0C4A79]/80 transition-colors duration-300"
             >
               Send message
             </button>

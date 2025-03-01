@@ -29,7 +29,7 @@ const benefits = [
 const ContactBenefits = () => {
   return (
     <section
-      className="pt-20 relative overflow-hidden"
+      className="pt-10 lg:pt-20 relative overflow-hidden"
       aria-labelledby="assistance-title"
     >
       <div className="container mx-auto px-4">
@@ -41,7 +41,7 @@ const ContactBenefits = () => {
         >
           <h2
             id="assistance-title"
-            className="text-4xl font-bold font-krona text-gray-900 mb-6"
+            className="text-lg lg:text-4xl font-bold font-krona text-gray-900 mb-6"
           >
             How Can We Assist You?
           </h2>
@@ -61,16 +61,16 @@ const ContactBenefits = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#0C4A79]/20 blur-xl rounded-full"></div>
                   <div className="relative bg-gradient-to-br from-[#0C4A79] to-[#2171B5] p-4 rounded-2xl transform group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    <benefit.icon className="w-6 lg:w-8 h-6 lg:h-8 text-white" />
                   </div>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h3 className="text-2xl font-bold font-krona text-gray-900 mb-4">
+                <h3 className="text-lg lg:text-2xl font-bold font-krona text-gray-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-sm lg:text-lg text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -89,9 +89,9 @@ const ContactBenefits = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-10 lg:mt-16"
         >
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+          <p className="text-sm lg:text-lg text-gray-700 max-w-4xl mx-auto">
             Ready to Talk? If you need immediate assistance or have an urgent
             matter, do not hesitate to call or email us. We are eager to hear
             from you and provide the support you need.{" "}
