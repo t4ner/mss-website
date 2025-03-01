@@ -10,41 +10,41 @@ import {
 const ProductServices = () => {
   const items = [
     {
-      icon: <BiBookContent className="text-5xl text-white" />,
+      icon: <BiBookContent className="text-3xl lg:text-5xl text-white" />,
       title: "Consultation and Planning",
       description:
         "Support in planning and implementing your cable manufacturing projects.",
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <MdInstallMobile className="text-5xl text-white" />,
+      icon: <MdInstallMobile className="text-3xl lg:text-5xl text-white" />,
       title: "Installation and Commissioning",
       description:
         "Comprehensive installation and commissioning services for smooth operation.",
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
-      icon: <BiSupport className="text-5xl text-white" />,
+      icon: <BiSupport className="text-3xl lg:text-5xl text-white" />,
       title: "Maintenance and Support",
       description:
         "Dedicated support team for continuous optimization of your machines.",
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <MdOutlineEngineering className="text-5xl text-white" />,
+      icon: <MdOutlineEngineering className="text-3xl lg:text-5xl text-white" />,
       title: "Modernization and Upgrading",
       description:
         "Improvement of existing machines and equipment for better performance and longevity.",
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <BiWrench className="text-5xl text-white" />,
+      icon: <BiWrench className="text-3xl lg:text-5xl text-white" />,
       title: "Technical Support and Service",
       description: "Quick and efficient solutions for technical issues.",
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
-      icon: <MdPeople className="text-5xl text-white" />,
+      icon: <MdPeople className="text-3xl lg:text-5xl text-white" />,
       title: "HR Services",
       description:
         "Training and preparation of your staff for machine operation.",
@@ -65,7 +65,7 @@ const ProductServices = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
           whileHover={{ scale: 1.03 }}
-          className="relative group h-[400px]"
+          className="relative group  h-[300px] lg:h-[400px]"
           role="listitem"
           aria-labelledby={`features-title-${index}`}
         >
@@ -86,11 +86,11 @@ const ProductServices = () => {
               </div>
               <h3
                 id={`features-title-${index}`}
-                className="text-xl font-krona font-semibold mb-4 text-white"
+                className="text-lg lg:text-xl font-krona font-semibold mb-4 text-white"
               >
                 {item.title}
               </h3>
-              <p className="text-white/90 text-lg leading-relaxed">
+              <p className="text-white/90 text-sm lg:text-lg leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -103,17 +103,17 @@ const ProductServices = () => {
 
   return (
     <main>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 lg:px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
           aria-labelledby="services-heading"
         >
           <h2
             id="services-heading"
-            className="text-4xl font-bold mb-4 font-krona"
+            className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
             Our Services
           </h2>

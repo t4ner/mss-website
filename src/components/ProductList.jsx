@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ProductList = () => {
   const [selectedCategory, setSelectedCategory] =
     useState("Rod Breakdown Line");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const productsRef = useRef(null);
 
   const categories = [
     "Rod Breakdown Line",
@@ -30,7 +32,11 @@ const ProductList = () => {
       description:
         "Our extrusion lines provide reliable insulation and sheathing of cables to meet the highest quality standards.",
       specs: "Capacity up to 500 kg, processing speed up to 100 m/min.",
-      images: ["/services/services2.jpg", "/services/services2-2.jpg", "/services/services2-3.jpg"],
+      images: [
+        "/services/services2.jpg",
+        "/services/services2-2.jpg",
+        "/services/services2-3.jpg",
+      ],
       category: "Insulation & Sheathing Lines",
     },
     {
@@ -130,15 +136,25 @@ const ProductList = () => {
     }));
   };
 
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+    setIsMobileMenuOpen(false);
+
+    // Scroll to products with smooth behavior
+    if (productsRef.current) {
+      productsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="container flex gap-8">
+    <div className="container flex lg:gap-8">
       {/* Sidebar */}
-      <div className="w-[30%] flex-shrink-0 bg-gray-50 p-5 rounded-lg">
+      <div className="hidden lg:block w-[30%] flex-shrink-0 bg-gray-50 p-5 rounded-lg">
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
               <button
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => handleCategorySelect(category)}
                 className={`w-full text-lg text-left p-4 rounded-lg transition-all duration-200 flex items-center justify-between ${
                   selectedCategory === category
                     ? "bg-gray-200 text-[#0C4A79]"
@@ -146,7 +162,7 @@ const ProductList = () => {
                 }`}
               >
                 {category}
-                <span className="text-3xl">  » </span>
+                <span className="text-3xl"> » </span>
               </button>
             </li>
           ))}
@@ -154,7 +170,10 @@ const ProductList = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="flex items-center justify-center flex-1 w-full  gap-8 bg-gray-50 p-6 rounded-lg">
+      <div
+        ref={productsRef}
+        className="flex items-center justify-center flex-1 w-full  gap-8 bg-gray-50 lg:p-6 rounded-lg"
+      >
         {products
           .filter(
             (product) =>
@@ -249,14 +268,14 @@ const ProductList = () => {
 
                 <div className="p-8">
                   <div className="mb-6">
-                    <h2 className="text-xl font-krona font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                    <h2 className="text-lg lg:text-xl font-krona font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                       {product.title}
                     </h2>
                   </div>
 
                   <div className="space-y-6">
                     <div className="prose prose-gray">
-                      <p className="text-gray-600 text-lg">
+                      <p className="text-gray-600 text-sm lg:text-lg">
                         {product.description}
                       </p>
                     </div>
@@ -266,7 +285,7 @@ const ProductList = () => {
                         <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">
                           Specifications
                         </div>
-                        <div className="text-gray-700 text-lg">
+                        <div className="text-gray-700 text-sm lg:text-lg">
                           {product.specs}
                         </div>
                       </div>
@@ -276,6 +295,81 @@ const ProductList = () => {
               </div>
             </div>
           ))}
+      </div>
+
+      {/* Mobile Category Button and Menu */}
+      <div className="lg:hidden">
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="fixed bottom-3 right-3 z-50 bg-[#0C4A79]  text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+        >
+          <span className="text-sm  mr-1">Products</span>
+         
+        </button>
+
+        {/* Mobile Category Menu */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 bg-black/50 z-40 flex items-end justify-center animate-fade-in">
+            <div className="bg-white rounded-t-2xl w-full max-h-[80vh] overflow-y-auto animate-slide-up">
+              <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center">
+                <h3 className="text-lg lg:text-xl font-medium lg:font-bold text-[#0C4A79]">
+                  Our Products
+                </h3>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="p-4">
+                <ul className="space-y-2">
+                  {categories.map((category, index) => (
+                    <li key={index}>
+                      <button
+                        onClick={() => handleCategorySelect(category)}
+                        className={`w-full text-left p-4 rounded-xl transition-all duration-200 flex items-center justify-between ${
+                          selectedCategory === category
+                            ? "bg-gray-200 text-[#0C4A79]"
+                            : "hover:bg-gray-50 text-gray-700"
+                        }`}
+                      >
+                        <span className=" text-sm lg:text-lg">{category}</span>
+                        {selectedCategory === category && (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
