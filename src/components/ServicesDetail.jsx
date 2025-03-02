@@ -17,20 +17,20 @@ const ServicesDetail = () => {
               style={{ paddingTop: `calc(${index + 1} * 1.5em)` }}
             >
               <div
-                className="box-border rounded-lg shadow-lg h-auto md:h-[70vh] 
-                            flex flex-col md:flex-row transition-all duration-500 
+                className="box-border rounded-lg shadow-lg h-auto lg:h-[70vh] 
+                            flex flex-col lg:flex-row transition-all duration-500 
                             relative overflow-hidden bg-white"
               >
-                <div className="w-full md:w-2/3 relative h-[300px] md:h-full">
+                <div className="w-full lg:w-2/3 relative h-[300px] lg:h-full">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
+                <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
                   <div className="max-w-xl">
-                    <h2 className="text-lg lg:text-2xl mb-4 md:mb-6 text-gray-800 font-bold font-krona">
+                    <h2 className="text-lg lg:text-2xl mb-4 lg:mb-6 text-gray-800 font-bold font-krona">
                       {service.title}
                     </h2>
                     <p className="text-sm lg:text-lg text-gray-600 leading-relaxed">

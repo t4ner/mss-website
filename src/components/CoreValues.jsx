@@ -52,7 +52,7 @@ const CoreValues = () => {
 
   const CardGrid = ({ items, sectionId }) => (
     <div
-      className="grid grid-cols-1 md:grid-cols-3 gap-8"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-8"
       role="list"
       aria-label="Feature cards"
     >

@@ -34,7 +34,7 @@ const ContactBenefits = () => {
           <div className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => {
             const IconComponent = icons[benefit.icon] || FaSearch;
             return (

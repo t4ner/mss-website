@@ -26,9 +26,9 @@ const ContactForm = () => {
 
   return (
     <div className="container">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Sol Sütun - Başlık ve İletişim Bilgileri */}
-        <div className="md:sticky md:top-6 px-2 lg:px-0">
+        <div className="lg:sticky lg:top-6 px-2 lg:px-0">
           <h2 className="text-lg lg:text-5xl font-krona font-bold text-[#1a1a1a] mb-4 leading-tight">
             {t("contact.form.title")}
           </h2>

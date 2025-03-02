@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="bg-white container rounded-lg shadow-sm mt-10 lg:mt-20 lg:mb-5 px-4 sm:px-6 lg:px-8 border-t border-gray-100"
+      className="bg-white container lg:rounded-lg shadow-sm mt-10 lg:mt-20 lg:mb-5 px-4 sm:px-6 lg:px-8 border-t border-gray-100"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto py-10">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
           {/* Logo */}
           <div className="flex flex-col items-center">
             <Link to="/" aria-label="Cable Machinery GmbH Ana Sayfa">
@@ -23,7 +23,7 @@ const Footer = () => {
           {/* Main Navigation links - Hidden on mobile */}
           <nav
             aria-label="Main Footer navigation"
-            className="hidden md:block md:ml-auto"
+            className="hidden lg:block lg:ml-auto"
           >
             <ul className="flex flex-wrap text-sm lg:text-base justify-end gap-x-8 gap-y-3">
               <li>
@@ -64,9 +64,9 @@ const Footer = () => {
           {/* Legal links - Visible on all screens */}
           <nav
             aria-label="Legal Footer navigation"
-            className="md:ml-auto mt-4 md:mt-0"
+            className="lg:ml-auto mt-4 lg:mt-0"
           >
-            <ul className="flex flex-wrap text-sm lg:text-base justify-center md:justify-end gap-x-4 md:gap-x-8 gap-y-2">
+            <ul className="flex flex-wrap text-sm lg:text-base justify-center lg:justify-end gap-x-4 lg:gap-x-8 gap-y-2">
               <li>
                 <Link
                   to="/privacy-policy"

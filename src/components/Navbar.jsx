@@ -56,7 +56,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="Company Logo"
-                className="object-contain w-auto h-16 md:h-20"
+                className="object-contain w-auto h-16 lg:h-20"
                 width="80"
                 height="80"
                 loading="eager"
@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="items-center hidden space-x-8 md:flex">
+            <div className="items-center hidden space-x-8 lg:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.text}
@@ -142,7 +142,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex items-center md:hidden">
+            <div className="flex items-center lg:hidden">
               {/* Mobile Language Selector */}
               <div className="relative mr-4">
                 <button
@@ -226,7 +226,7 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 z-40 flex items-center justify-center pt-20 bg-white md:hidden"
+              className="fixed inset-0 z-40 flex items-center justify-center pt-20 bg-white lg:hidden"
               style={{ top: 0 }}
               role="dialog"
               aria-modal="true"
