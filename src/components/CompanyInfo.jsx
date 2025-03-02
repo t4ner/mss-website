@@ -37,45 +37,7 @@ const CompanyInfo = () => {
                   <p>
                     {t("companyInfo.productRange")}
                   </p>
-                </div>
-
-                {/* Özellik kartları */}
-                <div className="grid grid-cols-2 gap-4 mb-10" role="list">
-                  {[
-                    {
-                      title: t("companyInfo.precisionEngineering"),
-                      desc: t("companyInfo.precisionEngineering"),
-                    },
-                    {
-                      title: t("companyInfo.globalSupport"),
-                      desc: t("companyInfo.globalSupport"),
-                    },
-                    {
-                      title: t("companyInfo.customSolutions"),
-                      desc: t("companyInfo.customSolutions"),
-                    },
-                    {
-                      title: t("companyInfo.innovation"),
-                      desc: t("companyInfo.innovation"),
-                    },
-                  ].map((feature, index) => (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      key={index}
-                      className="bg-gray-200 p-5 rounded-lg hover:bg-white/90 transition-colors duration-300"
-                      role="listitem"
-                    >
-                      <h2 className="font-medium text-sm lg:text-lg mb-2">
-                        {feature.title}
-                      </h2>
-                      <p className="text-gray-400 text-sm lg:text-lg">
-                        {feature.desc}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+                </div>                
               </header>
             </div>
 

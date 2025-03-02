@@ -142,33 +142,85 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className="relative z-50 p-2 md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-expanded={isMobileMenuOpen}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                aria-hidden="true"
+            <div className="flex items-center md:hidden">
+              {/* Mobile Language Selector */}
+              <div className="relative mr-4">
+                <button
+                  className="flex items-center space-x-1 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full border border-gray-200 hover:border-[#0C4A79] transition-all duration-300 shadow-sm hover:shadow-md"
+                  onClick={(e) => {
+                    const select = e.currentTarget.nextElementSibling;
+                    select.click();
+                  }}
+                >
+                  {i18n.language === "en" ? (
+                    <svg className="w-4 h-4" viewBox="0 0 640 480">
+                      <path fill="#012169" d="M0 0h640v480H0z" />
+                      <path
+                        fill="#FFF"
+                        d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"
+                      />
+                      <path
+                        fill="#C8102E"
+                        d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"
+                      />
+                      <path
+                        fill="#FFF"
+                        d="M241 0v480h160V0H241zM0 160v160h640V160H0z"
+                      />
+                      <path
+                        fill="#C8102E"
+                        d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" viewBox="0 0 640 480">
+                      <path fill="#FFCE00" d="M0 320h640v160H0z" />
+                      <path d="M0 0h640v160H0z" />
+                      <path fill="#DD0000" d="M0 160h640v160H0z" />
+                    </svg>
+                  )}
+                  <span className="text-xs font-medium">
+                    {i18n.language.toUpperCase()}
+                  </span>
+                </button>
+                <select
+                  onChange={(e) => changeLanguage(e.target.value)}
+                  value={i18n.language}
+                  className="absolute opacity-0 inset-0 w-full h-full cursor-pointer"
+                >
+                  <option value="en">{t("language.en")}</option>
+                  <option value="de">{t("language.de")}</option>
+                </select>
+              </div>
+
+              <button
+                className="relative z-50 p-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-expanded={isMobileMenuOpen}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d={
-                    isMobileMenuOpen
-                      ? "M6 18L18 6M6 6l12 12"
-                      : "M4 6h16M4 12h16M4 18h16"
-                  }
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={
+                      isMobileMenuOpen
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu */}
@@ -192,56 +244,6 @@ const Navbar = () => {
                     {link.text}
                   </Link>
                 ))}
-
-                {/* Mobile Language Selector */}
-                <div className="relative mt-4 w-32">
-                  <button
-                    className="flex items-center justify-center space-x-2 w-full bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 hover:border-[#0C4A79] transition-all duration-300 shadow-sm hover:shadow-md"
-                    onClick={(e) => {
-                      const select = e.currentTarget.nextElementSibling;
-                      select.click();
-                    }}
-                  >
-                    {i18n.language === "en" ? (
-                      <svg className="w-5 h-5" viewBox="0 0 640 480">
-                        <path fill="#012169" d="M0 0h640v480H0z" />
-                        <path
-                          fill="#FFF"
-                          d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"
-                        />
-                        <path
-                          fill="#C8102E"
-                          d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"
-                        />
-                        <path
-                          fill="#FFF"
-                          d="M241 0v480h160V0H241zM0 160v160h640V160H0z"
-                        />
-                        <path
-                          fill="#C8102E"
-                          d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"
-                        />
-                      </svg>
-                    ) : (
-                      <svg className="w-5 h-5" viewBox="0 0 640 480">
-                        <path fill="#FFCE00" d="M0 320h640v160H0z" />
-                        <path d="M0 0h640v160H0z" />
-                        <path fill="#DD0000" d="M0 160h640v160H0z" />
-                      </svg>
-                    )}
-                    <span className="text-sm font-medium">
-                      {i18n.language.toUpperCase()}
-                    </span>
-                  </button>
-                  <select
-                    onChange={(e) => changeLanguage(e.target.value)}
-                    value={i18n.language}
-                    className="absolute opacity-0 inset-0 w-full h-full cursor-pointer"
-                  >
-                    <option value="en">{t("language.en")}</option>
-                    <option value="de">{t("language.de")}</option>
-                  </select>
-                </div>
               </div>
             </div>
           )}
