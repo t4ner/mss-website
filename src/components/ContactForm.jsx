@@ -37,9 +37,12 @@ const ContactForm = () => {
           </p>
 
           <div className="space-y-3 text-sm lg:text-lg">
-            <div className="flex items-center gap-2 text-gray-600">
-              <HiOutlineMail className="w-5 h-5" />
-              <span>{t("contact.form.emailLabel")} </span>
+            <div className="flex flex-col lg:flex-row gap-2 text-gray-600">
+              <div className="flex items-center gap-2">
+                <HiOutlineMail className="w-5 h-5" />
+                <span>{t("contact.form.emailLabel")} </span>
+              </div>
+
               <a
                 href="mailto:manufacturing@mssmachinery.de"
                 className="text-[#0C4A79] hover:text-[#0C4A79]/80"
@@ -48,9 +51,11 @@ const ContactForm = () => {
               </a>
             </div>
 
-            <div className="flex items-center gap-2 text-gray-600">
-              <HiOutlinePhone className="w-5 h-5" />
-              <span>{t("contact.form.phoneLabel")} </span>
+            <div className="flex flex-col lg:flex-row gap-2 text-gray-600">
+              <div className="flex items-center gap-2">
+                <HiOutlinePhone className="w-5 h-5" />
+                <span>{t("contact.form.phoneLabel")} </span>
+              </div>
               <a
                 href="tel:+4962186277411"
                 className="text-[#0C4A79] hover:text-[#0C4A79]/80"
