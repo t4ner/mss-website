@@ -245,7 +245,7 @@ const ProductList = () => {
 
         {/* Mobile Category Menu */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black/50 z-40 flex items-end justify-center animate-fade-in">
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-end justify-center animate-fade-in">
             <div className="bg-white rounded-t-2xl w-full max-h-[80vh] overflow-y-auto animate-slide-up">
               <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center">
                 <h3 className="text-lg lg:text-xl font-medium lg:font-bold text-[#0C4A79]">
