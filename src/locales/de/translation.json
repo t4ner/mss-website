@@ -11,8 +11,291 @@
     "en": "Englisch",
     "de": "Deutsch"
   },
-  "hero": {
+  "home-hero": {
     "title": "MSS Cable Machinery",
     "subtitle": "Die richtige Technologie für Kabelfertigungsmaschinen"
+  },
+  "companyInfo": {
+    "aboutUs": "Über uns",
+    "cableManufacturing": "Kabelherstellung",
+    "innovativeSolutions": "Innovative Lösungen",
+    "mainDescription": "MSS Cable Machinery ist ein führender Anbieter von innovativen Lösungen für die Kabelfertigung. Mit unserer Expertise und modernsten Technologien entwickeln wir Maschinen, die höchste Präzision und Effizienz gewährleisten.",
+    "productRange": "Unsere Produkte umfassen eine breite Palette von Kabelfertigungsmaschinen, die speziell darauf ausgelegt sind, die Anforderungen unserer Kunden zu erfüllen und deren Produktivität zu maximieren.",
+    "precisionEngineering": "Präzisionsherstellung",
+    "globalSupport": "Globaler Support",
+    "customSolutions": "Anpassbare Lösungen",
+    "innovation": "Innovation",
+    "experience": "Erfahrung",
+    "machinesDelivered": "Maschinen geliefert",
+    "countriesServed": "Länder bedient"
+  },
+  "coreValues": {
+    "technology": {
+      "heading": "Unsere Technologie",
+      "values": [
+        {
+          "title": "Präzision und Zuverlässigkeit",
+          "description": "Unsere Maschinen sind so konzipiert, dass sie präzise und zuverlässige Ergebnisse liefern, um die Qualität Ihrer Kabelproduktion zu gewährleisten."
+        },
+        {
+          "title": "Effizienzsteigerung",
+          "description": "Durch den Einsatz fortschrittlicher Technologien und Automatisierungslösungen helfen wir unseren Kunden, ihre Produktionsprozesse zu optimieren und die Effizienz zu steigern."
+        },
+        {
+          "title": "Anpassungsfähigkeit",
+          "description": "Wir bieten maßgeschneiderte Lösungen, die auf die spezifischen Bedürfnisse und Anforderungen unserer Kunden zugeschnitten sind."
+        }
+      ]
+    },
+    "services": {
+      "heading": "Unsere Dienstleistungen",
+      "items": [
+        {
+          "title": "Beratung und Planung",
+          "description": "Unsere Experten unterstützen Sie bei der Planung und Implementierung Ihrer Kabelfertigungsprojekte."
+        },
+        {
+          "title": "Installation und Inbetriebnahme",
+          "description": "Wir bieten umfassende Installations- und Inbetriebnahmedienste, um sicherzustellen, dass Ihre Maschinen reibungslos funktionieren."
+        },
+        {
+          "title": "Wartung und Support",
+          "description": "Unser engagiertes Support-Team steht Ihnen zur Verfügung, um sicherzustellen, dass Ihre Maschinen stets in optimalem Zustand sind und reibungslos laufen."
+        }
+      ]
+    }
+  },
+  "companyBenefits": {
+    "heading": "Warum MSS Cable Machinery?",
+    "benefits": [
+      {
+        "title": "Erfahrung und Know-how",
+        "description": "Mit jahrelanger Erfahrung in der Branche verfügen wir über das notwendige Know-how, um Ihnen die besten Lösungen zu bieten."
+      },
+      {
+        "title": "Innovation",
+        "description": "Wir sind ständig bestrebt, innovative Lösungen zu entwickeln, die den sich ändernden Anforderungen des Marktes gerecht werden."
+      },
+      {
+        "title": "Kundenorientierung",
+        "description": "Unser oberstes Ziel ist es, unsere Kunden zufriedenzustellen, indem wir ihnen qualitativ hochwertige Produkte und Dienstleistungen bieten."
+      }
+    ]
+  },
+  "discoverMore": "Entdecken Sie die Vorteile unserer Technologie und lassen Sie uns gemeinsam Ihre Kabelfertigungsprozesse auf ein neues Niveau heben. Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie wir Ihnen helfen können, Ihre Produktionsziele zu erreichen.",
+  "products": {
+    "hero": {
+      "title": "Kabelfertigungsmaschinen und ",
+      "subtitle": "Spezialmaschinen"
+    },
+    "info": {
+      "description": "Bei MSS Cable Machinery bieten wir eine breite Palette von Maschinen für die Kabelfertigung an. Unsere Produkte sind darauf ausgelegt, höchste Präzision und Effizienz zu gewährleisten, um die Produktivität unserer Kunden zu maximieren. Mit unserer langjährigen Erfahrung und unserem Fachwissen entwickeln wir maßgeschneiderte Lösungen, die speziell auf die individuellen Bedürfnisse unserer Kunden zugeschnitten sind."
+    },
+    "categories": [
+      "Rod Breakdown Line",
+      "Insulation & Sheathing Lines",
+      "Stranding and Armoring Lines",
+      "Central Strander Machine",
+      "Steel Wire Armoring Machine",
+      "Multi Central Stranding Line",
+      "Mica Taping Line",
+      "Rewinding Line",
+      "Horizontal Taping Line",
+      "CV Line Machines"
+    ],
+    "productList": [
+      {
+        "title": "Rod Breakdown Line",
+        "description": "Diese Maschinen sind für das effiziente Aufbrechen von Stangen konzipiert und sorgen für eine gleichmäßige und präzise Verarbeitung."
+      },
+      {
+        "title": "Insulation – Sheathing – Tandem Extrusion Lines",
+        "description": "Unsere Extrusionslinien bieten eine zuverlässige Isolierung und Ummantelung von Kabeln, um höchste Qualitätsstandards zu erfüllen.",
+        "specs": "Kapazität bis zu 500 kg, Verarbeitungsgeschwindigkeit bis zu 100 m/min."
+      },
+      {
+        "title": "Stranding and Armoring Lines (Drum Twister)",
+        "description": "Diese Maschinen ermöglichen das präzise Verseilen und Armierenvon Kabeln, wobei sie gleichzeitig eine hohe Produktionsgeschwindigkeit gewährleisten.",
+        "specs": "Verseilgeschwindigkeit bis zu 200 m/min, Armierungsdicke bis zu 5 mm."
+      },
+      {
+        "title": "Central Strander Machine (Bakır 07)",
+        "description": "Eine zentrale Verseilmaschine, die für ihre Zuverlässigkeit und Präzision bekannt ist und eine gleichmäßige Verseilung gewährleistet.",
+        "specs": "Verseilgeschwindigkeit bis zu 180 m/min, maximale Verseilkapazität bis zu 1000 kg."
+      },
+      {
+        "title": "Central Steel Wire Armoring Machine (Çelik 08)",
+        "description": "Diese Maschine ist speziell für die Armierung von Stahlseilen konzipiert und bietet eine robuste und langlebige Lösung.",
+        "specs": "Armierungsgeschwindigkeit bis zu 150 m/min, maximale Armierungsdicke bis zu 8 mm."
+      },
+      {
+        "title": "Multi Central Stranding Line (MultiStrander 10)",
+        "description": "Eine vielseitige Verseilmaschine, die mehrere Verseilprozesse in einer einzigen Linie kombiniert, um die Effizienz zu maximieren.",
+        "specs": "Verseilgeschwindigkeit bis zu 250 m/min, maximale Verseilkapazität bis zu 1500 kg."
+      },
+      {
+        "title": "Mica Taping Line",
+        "description": "Diese Maschinen sind für das präzise Umwickeln von Kabeln mit Glimmerband konzipiert, um eine zusätzliche Isolationsschicht zu bieten.",
+        "specs": "Wickelgeschwindigkeit bis zu 120 m/min, maximale Wickeldicke bis zu 2 mm."
+      },
+      {
+        "title": "Rewinding Line",
+        "description": "Unsere Umwickelmaschinen sorgen für eine gleichmäßige und präzise Umwicklung von Kabeln, um die Produktqualität zu verbessern.",
+        "specs": "Umwickelgeschwindigkeit bis zu 100 m/min, maximale Umwickelkapazität bis zu 500 kg"
+      },
+      {
+        "title": "Horizontal Taping Line",
+        "description": "Diese Maschinen ermöglichen das horizontale Umwickeln von Kabeln, wobei sie eine gleichmäßige und präzise Umwicklung gewährleisten.",
+        "specs": "Umwickelgeschwindigkeit bis zu 150 m/min, maximale Umwickeldicke bis zu 3 mm."
+      },
+      {
+        "title": "CV Line Machines",
+        "description": "Unsere CV-Linienmaschinen bieten eine zuverlässige und präzise Verarbeitung von Kabeln, um höchste Qualitätsstandards zu erfüllen.",
+        "specs": "Verarbeitungsgeschwindigkeit bis zu 200 m/min, maximale Verarbeitungskapazität bis zu 1000 kg."
+      }
+    ],
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "items": [
+        {
+          "title": "Beratung und Planung",
+          "description": "Unterstützung bei der Planung und Umsetzung Ihrer Kabelfertigungsprojekte."
+        },
+        {
+          "title": "Installation und Inbetriebnahme",
+          "description": "Umfassende Installations- und Inbetriebnahmedienste für einen reibungslosen Betrieb."
+        },
+        {
+          "title": "Wartung und Support",
+          "description": "Engagiertes Support-Team für die kontinuierliche Optimierung Ihrer Maschinen."
+        },
+        {
+          "title": "Modernisierung und Aufrüstung",
+          "description": "Verbesserung bestehender Maschinen und Anlagen für bessere Leistung und Langlebigkeit."
+        },
+        {
+          "title": "Technischer Support und Service",
+          "description": "Schnelle und effiziente Lösungen für technische Probleme."
+        },
+        {
+          "title": "Personaldienstleistungen",
+          "description": "Schulung und Vorbereitung Ihres Personals für den Maschinenbetrieb."
+        }
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Umfassende Lösungen",
+      "subtitle": "für Ihre Kabelherstellung"
+    },
+    "info": {
+      "description": "Bei MSS Cable Machinery bieten wir eine breite Palette von Dienstleistungen an, die darauf abzielen, die Effizienz und Produktivität Ihrer Kabelfertigungsprozesse zu maximieren. Unsere Experten stehen Ihnen zur Seite, um sicherzustellen, dass Ihre Maschinen stets in optimalem Zustand sind und reibungslos funktionieren."
+    },
+    "detail": [
+      {
+        "title": "Schlüsselfertige Kabelwerke",
+        "image": "/servicesDetail/servicesdetail1.jpg",
+        "description": "Wir bieten komplette Lösungen für den Aufbau und die Inbetriebnahme von Kabelwerken. Von der Planung bis zur endgültigen Implementierung übernehmen wir alle notwendigen Schritte, um Ihr Projekt erfolgreich umzusetzen."
+      },
+      {
+        "title": "Produktion von Kabelmaschinen",
+        "image": "/servicesDetail/servicesdetail2.jpg",
+        "description": "Unsere Produktionslinien umfassen eine Vielzahl von Maschinen für die Kabelfertigung, die höchste Qualitätsstandards erfüllen. Wir entwickeln und fertigen Maschinen, die speziell auf die Anforderungen unserer Kunden zugeschnitten sind."
+      },
+      {
+        "title": "Installation von Maschinen",
+        "image": "/servicesDetail/servicesdetail3.jpg",
+        "description": "Unser Expertenteam kümmert sich um die fachgerechte Installation Ihrer Maschinen. Wir sorgen dafür, dass alle Komponenten korrekt installiert und eingerichtet werden, um eine reibungslose Inbetriebnahme zu gewährleisten."
+      },
+      {
+        "title": "Modernisierung und Aufrüstung",
+        "image": "/servicesDetail/servicesdetail4.jpg",
+        "description": "Wir bieten Dienstleistungen zur Modernisierung und Aufrüstung bestehender Maschinen und Anlagen an. Durch den Einsatz modernster Technologien helfen wir Ihnen, die Leistung Ihrer Maschinen zu verbessern und deren Lebensdauer zu verlängern."
+      },
+      {
+        "title": "Technischer Support und Service",
+        "image": "/servicesDetail/servicesdetail5.jpg",
+        "description": "Unser technischer Support steht Ihnen rund um die Uhr zur Verfügung. Wir bieten schnelle und effiziente Lösungen für alle technischen Probleme, um Ausfallzeiten zu minimieren und die Produktivität zu maximieren."
+      },
+      {
+        "title": "Wartung und HR-Dienstleistungen",
+        "image": "/servicesDetail/servicesdetail6.jpg",
+        "description": "Regelmäßige Wartung ist entscheidend, um die Langlebigkeit und Effizienz Ihrer Maschinen zu gewährleisten. Unser Wartungsteam bietet umfassende Wartungsdienste an, um sicherzustellen, dass Ihre Maschinen stets in bestem Zustand sind. Zusätzlich bieten wir HR-Dienstleistungen an, um sicherzustellen, dass Ihr Personal optimal geschult und auf die Bedienung der Maschinen vorbereitet ist."
+      }
+    ],
+    "benefits": {
+      "heading": "Warum MSS Cable Machinery?",
+      "items": [
+        {
+          "id": "01",
+          "title": "Erfahrung und Know-how",
+          "description": "Mit jahrelanger Erfahrung in der Branche verfügen wir über das notwendige Know-how, um Ihnen die besten Lösungen zu bieten.",
+          "icon": "FaTools"
+        },
+        {
+          "id": "02",
+          "title": "Innovation",
+          "description": "Wir sind ständig bestrebt, innovative Lösungen zu entwickeln, die den sich ändernden Anforderungen des Marktes gerecht werden.",
+          "icon": "FaLightbulb"
+        },
+        {
+          "id": "03",
+          "title": "Kundenzufriedenheit",
+          "description": "Unser oberstes Ziel ist es, unsere Kundenzufriedenzustellen, indem wir ihnen qualitativ hochwertige Produkte und Dienstleistungen bieten.",
+          "icon": "FaHandshake"
+        }
+      ],
+      "footer": {
+        "text": "Entdecken Sie die Vorteile unserer Dienstleistungen und lassen Sie uns gemeinsam Ihre Kabelherstellungsprozesse optimieren.",
+        "contactLink": "Kontaktieren Sie uns noch heute",
+        "afterLink": "um mehr darüber zu erfahren, wie wir Ihnen helfen können, Ihre Produktionsziele zu erreichen."
+      }
+    }
+  },
+  "contact": {
+    "info": {
+      "description": "Bei MSS Cable Machinery legen wir großen Wert auf den direkten Kontakt mit unseren Kunden. Ob Sie Fragen zu unseren Produkten haben, technischen Support benötigen oder ein individuelles Angebot wünschen – unser Team steht Ihnen jederzeit zur Verfügung"
+    },
+    "form": {
+      "title": "Senden Sie uns Ihre Fragen zu unseren Produkten",
+      "subtitle": "Lassen Sie uns gemeinsam die beste Lösung finden!",
+      "emailLabel": "Schreiben Sie mir an",
+      "phoneLabel": "Rufen Sie uns an unter",
+      "formTitle": "Senden Sie uns eine Nachricht",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Erzählen Sie uns mehr über Ihr Projekt",
+      "submitButton": "Nachricht senden"
+    },
+    "benefits": {
+      "heading": "Wie können wir Ihnen helfen?",
+      "items": [
+        {
+          "id": "01",
+          "title": "Produktanfragen",
+          "description": "Erfahren Sie mehr über unsere breite Palette von Kabelfertigungsmaschinen und wie sie Ihre Produktionsprozesse optimieren können.",
+          "icon": "FaSearch"
+        },
+        {
+          "id": "02",
+          "title": "Technischer Support",
+          "description": "Unser Expertenteam steht Ihnen bei technischen Fragen und Problemen zur Seite, um Ausfallzeiten zu minimieren und die Effizienz zu maximieren.",
+          "icon": "FaTools"
+        },
+        {
+          "id": "03",
+          "title": "Individuelle Lösungen",
+          "description": "Wir bieten maßgeschneiderte Lösungen, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Kontaktieren Sie uns, um mehr darüber zu erfahren, wie wir Ihnen helfen können, Ihre Produktionsziele zu erreichen.",
+          "icon": "FaCogs"
+        }
+      ],
+      "footer": {
+        "text": "Bereit zum Gespräch? Wenn Sie sofortige Unterstützung benötigen oder ein dringendes Anliegen haben, zögern Sie nicht, uns anzurufen oder eine E-Mail zu senden. Wir freuen uns darauf, von Ihnen zu hören und Ihnen weiterhelfen zu können.",
+        "contactLink": "Kontaktieren Sie uns",
+        "afterLink": "noch heute und lassen Sie uns gemeinsam Ihre Kabelfertigungsprozesse auf ein neues Niveau heben."
+      }
+    }
   }
 }

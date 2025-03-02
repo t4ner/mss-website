@@ -5,13 +5,17 @@ import ServicesDetail from "../components/ServicesDetail";
 import ServicesInfo from "../components/ServicesInfo";
 import ServicesBenefits from "../components/ServicesBenefits";
 import Footer from "../components/Footer";
+import { useTranslation } from "react-i18next";
+
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Navbar />
       <Hero
-        title="Comprehensive Solutions"
-        subtitle="for Your Cable Manufacturing"
+        title={t("services.hero.title")}
+        subtitle={t("services.hero.subtitle")}
         image="/hero/services-hero.png"
       />
       <ServicesInfo />

@@ -1,8 +1,9 @@
 import React from "react";
 import companyInfo from "/homeImage/companyInfo.jpg";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 const CompanyInfo = () => {
+  const { t } = useTranslation();
   return (
     <section aria-label="Company Information" className="company-info-section">
       <div className="bg-gray-50  text-black py-8 lg:py-16 relative overflow-hidden container mx-auto rounded-lg">
@@ -17,29 +18,24 @@ const CompanyInfo = () => {
             <div className="lg:w-1/2">
               <header className="mb-12">
                 <div className="inline-block bg-[#0C4A79] text-white backdrop-blur-sm px-4 py-1.5 rounded-full text-xs lg:text-sm mb-6">
-                  About Us
+                  {t("companyInfo.aboutUs")}
                 </div>
 
                 <h1 className="text-lg lg:text-4xl font-bold mb-8 leading-tight font-krona">
                   <span className="block text-[#0C4A79]">
-                    Innovative Solutions in
+                    {t("companyInfo.innovativeSolutions")}
                   </span>
                   <span className="block mt-1 text-[#E5153D]">
-                    Cable Manufacturing
+                    {t("companyInfo.cableManufacturing")}
                   </span>
                 </h1>
 
                 <div className="space-y-4 text-sm lg:text-lg leading-relaxed mb-10">
                   <p itemProp="description">
-                    MSS Cable Machinery is a leading provider of innovative
-                    solutions for cable manufacturing. With our expertise and
-                    advanced technologies, we develop machines that ensure the
-                    highest precision and efficiency.
+                    {t("companyInfo.mainDescription")}
                   </p>
                   <p>
-                    Our product range includes a wide variety of cable
-                    manufacturing machines designed to meet our customers'
-                    requirements and maximize their productivity.
+                    {t("companyInfo.productRange")}
                   </p>
                 </div>
 
@@ -47,20 +43,20 @@ const CompanyInfo = () => {
                 <div className="grid grid-cols-2 gap-4 mb-10" role="list">
                   {[
                     {
-                      title: "Precision Engineering",
-                      desc: "High-precision manufacturing",
+                      title: t("companyInfo.precisionEngineering"),
+                      desc: t("companyInfo.precisionEngineering"),
                     },
                     {
-                      title: "Global Support",
-                      desc: "24/7 technical assistance",
+                      title: t("companyInfo.globalSupport"),
+                      desc: t("companyInfo.globalSupport"),
                     },
                     {
-                      title: "Custom Solutions",
-                      desc: "Tailored to your needs",
+                      title: t("companyInfo.customSolutions"),
+                      desc: t("companyInfo.customSolutions"),
                     },
                     {
-                      title: "Innovation",
-                      desc: "Advanced technologies",
+                      title: t("companyInfo.innovation"),
+                      desc: t("companyInfo.innovation"),
                     },
                   ].map((feature, index) => (
                     <motion.div
@@ -74,7 +70,9 @@ const CompanyInfo = () => {
                       <h2 className="font-medium text-sm lg:text-lg mb-2">
                         {feature.title}
                       </h2>
-                      <p className="text-gray-400 text-sm lg:text-lg">{feature.desc}</p>
+                      <p className="text-gray-400 text-sm lg:text-lg">
+                        {feature.desc}
+                      </p>
                     </motion.div>
                   ))}
                 </div>
@@ -108,9 +106,9 @@ const CompanyInfo = () => {
                   role="list"
                 >
                   {[
-                    { value: "25+", label: "Years Experience" },
-                    { value: "1000+", label: "Machines Delivered" },
-                    { value: "50+", label: "Countries Served" },
+                    { value: "25+", label: t("companyInfo.experience") },
+                    { value: "1000+", label: t("companyInfo.machinesDelivered")},
+                    { value: "50+", label: t("companyInfo.countriesServed") },
                   ].map((stat, index) => (
                     <div key={index} className="text-center" role="listitem">
                       <div className="text-3xl font-bold text-[#E5153D]">

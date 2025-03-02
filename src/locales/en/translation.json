@@ -11,8 +11,291 @@
     "en": "English",
     "de": "German"
   },
-  "hero": {
+  "home-hero": {
     "title": "MSS Cable Machinery",
     "subtitle": "The Right Technology for Cable Manufacturing Machines"
+  },
+  "companyInfo": {
+    "aboutUs": "About Us",
+    "cableManufacturing": "Cable Manufacturing",
+    "innovativeSolutions": "Innovative Solutions",
+    "mainDescription": "MSS Cable Machinery is a leading provider of innovative solutions for cable manufacturing. With our expertise and advanced technologies, we develop machines that ensure the highest precision and efficiency.",
+    "productRange": "Our product range includes a wide variety of cable manufacturing machines designed to meet our customers' requirements and maximize their productivity.",
+    "precisionEngineering": "Precision Engineering",
+    "globalSupport": "Global Support",
+    "customSolutions": "Custom Solutions",
+    "innovation": "Innovation",
+    "experience": "Experience",
+    "machinesDelivered": "Machines Delivered",
+    "countriesServed": "Countries Served"
+  },
+  "coreValues": {
+    "technology": {
+      "heading": "Our Technology",
+      "values": [
+        {
+          "title": "Precision and Reliability",
+          "description": "Our machines are engineered to deliver precise and reliable results, ensuring the quality of your cable production."
+        },
+        {
+          "title": "Efficiency Enhancement",
+          "description": "By employing state-of-the-art technologies and automation solutions, we help our customers optimize their production processes and enhance efficiency."
+        },
+        {
+          "title": "Adaptability",
+          "description": "We offer tailored solutions that cater to the specific needs and requirements of our customers."
+        }
+      ]
+    },
+    "services": {
+      "heading": "Our Services",
+      "items": [
+        {
+          "title": "Consultation and Planning",
+          "description": "Our experts support you in planning and implementing your cable manufacturing projects."
+        },
+        {
+          "title": "Installation and Commissioning",
+          "description": "We provide comprehensive installation and commissioning services to ensure your machines operate smoothly."
+        },
+        {
+          "title": "Maintenance and Support",
+          "description": "Our dedicated support team is available to ensure your machines are always in optimal condition and running smoothly."
+        }
+      ]
+    }
+  },
+  "companyBenefits": {
+    "heading": "Why Choose MSS Cable Machinery?",
+    "benefits": [
+      {
+        "title": "Experience and Know-how",
+        "description": "With years of experience in the industry, we possess the necessary expertise to provide you with the best solutions."
+      },
+      {
+        "title": "Innovation",
+        "description": "We are constantly developing innovative solutions to meet the evolving demands of the market."
+      },
+      {
+        "title": "Customer Satisfaction",
+        "description": "Our top priority is to satisfy our customers by providing high-quality products and services."
+      }
+    ]
+  },
+  "discoverMore": "Discover the benefits of our technology and let us elevate your cable manufacturing processes together. Contact us today to learn more about how we can help you achieve your production goals.",
+  "products": {
+    "hero": {
+      "title": "Cable Manufacturing",
+      "subtitle": "Machines and Special Machines"
+    },
+    "info": {
+      "description": "At MSS Cable Machinery, we offer a wide range of machines for cable manufacturing. Our products are designed to ensure the highest precision and efficiency, maximizing our customers' productivity. With our extensive experience and expertise, we develop tailored solutions that meet the specific needs of our clients."
+    },
+    "categories": [
+      "Rod Breakdown Line",
+      "Insulation & Sheathing Lines",
+      "Stranding and Armoring Lines",
+      "Central Strander Machine",
+      "Steel Wire Armoring Machine",
+      "Multi Central Stranding Line",
+      "Mica Taping Line",
+      "Rewinding Line",
+      "Horizontal Taping Line",
+      "CV Line Machines"
+    ],
+    "productList": [
+      {
+        "title": "Rod Breakdown Line",
+        "description": "These machines are designed for the efficient breakdown of rods, ensuring uniform and precise processing."
+      },
+      {
+        "title": "Insulation – Sheathing – Tandem Extrusion Lines",
+        "description": "Our extrusion lines provide reliable insulation and sheathing of cables to meet the highest quality standards.",
+        "specs": "Capacity up to 500 kg, processing speed up to 100 m/min."
+      },
+      {
+        "title": "Stranding and Armoring Lines (Drum Twister)",
+        "description": "These machines enable precise stranding and armoring of cables while maintaining high production speed.",
+        "specs": "Stranding speed up to 200 m/min, armoring thickness up to 5 mm."
+      },
+      {
+        "title": "Central Strander Machine (Bakır 07)",
+        "description": "A central stranding machine known for its reliability and precision, ensuring uniform stranding.",
+        "specs": "Stranding speed up to 180 m/min, maximum stranding capacity up to 1000 kg."
+      },
+      {
+        "title": "Central Steel Wire Armoring Machine (Çelik 08)",
+        "description": "Specifically designed for the armoring of steel wires, offering a robust and durable solution.",
+        "specs": "Armoring speed up to 150 m/min, maximum armoring thickness up to 8 mm."
+      },
+      {
+        "title": "Multi Central Stranding Line (MultiStrander 10)",
+        "description": "A versatile stranding machine that combines multiple stranding processes in a single line to maximize efficiency.",
+        "specs": "Stranding speed up to 250 m/min, maximum stranding capacity up to 1500 kg."
+      },
+      {
+        "title": "Mica Taping Line",
+        "description": "These machines are designed for the precise taping of cables with mica tape to provide an additional layer of insulation.",
+        "specs": "Taping speed up to 120 m/min, maximum taping thickness up to 2 mm."
+      },
+      {
+        "title": "Rewinding Line",
+        "description": "Ensures uniform and precise rewinding of cables to improve product quality.",
+        "specs": "Rewinding speed up to 100 m/min, maximum rewinding capacity up to 500 kg."
+      },
+      {
+        "title": "Horizontal Taping Line",
+        "description": "Provides horizontal taping of cables for uniform and precise taping.",
+        "specs": "Taping speed up to 150 m/min, maximum taping thickness up to 3 mm."
+      },
+      {
+        "title": "CV Line Machines",
+        "description": "Offers reliable and precise processing of cables to meet the highest quality standards.",
+        "specs": "Processing speed up to 200 m/min, maximum processing capacity up to 1000 kg."
+      }
+    ],
+    "services": {
+      "title": "Our Services",
+      "items": [
+        {
+          "title": "Consultation and Planning",
+          "description": "Support in planning and implementing your cable manufacturing projects."
+        },
+        {
+          "title": "Installation and Commissioning",
+          "description": "Comprehensive installation and commissioning services for smooth operation."
+        },
+        {
+          "title": "Maintenance and Support",
+          "description": "Dedicated support team for continuous optimization of your machines."
+        },
+        {
+          "title": "Modernization and Upgrading",
+          "description": "Improvement of existing machines and equipment for better performance and longevity."
+        },
+        {
+          "title": "Technical Support and Service",
+          "description": "Quick and efficient solutions for technical issues."
+        },
+        {
+          "title": "HR Services",
+          "description": "Training and preparation of your staff for machine operation."
+        }
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Comprehensive Solutions",
+      "subtitle": "for Your Cable Manufacturing"
+    },
+    "info": {
+      "description": "At MSS Cable Machinery, we offer a wide range of services aimed at maximizing the efficiency and productivity of your cable manufacturing processes. Our experts are dedicated to ensuring that your machines are always in optimal condition and operating smoothly."
+    },
+    "detail": [
+      {
+        "title": "Turnkey Cable Factories",
+        "image": "/servicesDetail/servicesdetail1.jpg",
+        "description": "We provide complete solutions for the setup and commissioning of cable factories. From planning to final implementation, we handle all necessary steps to ensure your project's success."
+      },
+      {
+        "title": "Cable Machine Production",
+        "image": "/servicesDetail/servicesdetail2.jpg",
+        "description": "Our production lines include a variety of machines for cable manufacturing that meet the highest quality standards. We develop and manufacture machines tailored to our customers' specific requirements."
+      },
+      {
+        "title": "Machine Installation",
+        "image": "/servicesDetail/servicesdetail3.jpg",
+        "description": "Our expert team ensures the professional installation of your machines. We make sure all components are correctly installed and configured to guarantee a smooth startup."
+      },
+      {
+        "title": "Modernization and Upgrading",
+        "image": "/servicesDetail/servicesdetail4.jpg",
+        "description": "We offer services for modernizing and upgrading existing machines and equipment. By employing the latest technologies, we help you improve the performance and extend the lifespan of your machines."
+      },
+      {
+        "title": "Technical Support and Service",
+        "image": "/servicesDetail/servicesdetail5.jpg",
+        "description": "Our technical support is available around the clock. We provide quick and efficient solutions for any technical issues to minimize downtime and maximize productivity."
+      },
+      {
+        "title": "Maintenance and HR Services",
+        "image": "/servicesDetail/servicesdetail6.jpg",
+        "description": "Regular maintenance is crucial for the longevity and efficiency of your machines. Our maintenance team offers comprehensive services to ensure your machines are always in top condition. Additionally, we provide HR services to ensure your staff is well-trained and prepared to operate the machines."
+      }
+    ],
+    "benefits": {
+      "heading": "Why Choose MSS Cable Machinery?",
+      "items": [
+        {
+          "id": "01",
+          "title": "Experience and Expertise",
+          "description": "With years of experience in the industry, we have the necessary know-how to provide you with the best solutions.",
+          "icon": "FaTools"
+        },
+        {
+          "id": "02",
+          "title": "Innovation",
+          "description": "We are constantly developing innovative solutions to meet the changing demands of the market.",
+          "icon": "FaLightbulb"
+        },
+        {
+          "id": "03",
+          "title": "Customer Satisfaction",
+          "description": "Our top priority is to satisfy our customers by providing high-quality products and services.",
+          "icon": "FaHandshake"
+        }
+      ],
+      "footer": {
+        "text": "Discover the benefits of our services and let us optimize your cable manufacturing processes together.",
+        "contactLink": "Contact us today",
+        "afterLink": "to learn more about how we can help you achieve your production goals."
+      }
+    }
+  },
+  "contact": {
+    "info": {
+      "description": "At MSS Cable Machinery, we value direct communication with our customers. Whether you have questions about our products, need technical support, or require a customized solution, our team is ready to assist you."
+    },
+    "form": {
+      "title": "Send us your questions about our products",
+      "subtitle": "Let's find the best solution together!",
+      "emailLabel": "Mail me at",
+      "phoneLabel": "Call us at",
+      "formTitle": "Send us a message",
+      "fullName": "Full name",
+      "email": "Email address",
+      "subject": "Subject",
+      "message": "Tell us more about your project",
+      "submitButton": "Send message"
+    },
+    "benefits": {
+      "heading": "How Can We Assist You?",
+      "items": [
+        {
+          "id": "01",
+          "title": "Product Inquiries",
+          "description": "Learn more about our range of cable manufacturing machines and how they can optimize your production processes.",
+          "icon": "FaSearch"
+        },
+        {
+          "id": "02",
+          "title": "Technical Support",
+          "description": "Our expert team is available to address any technical issues or questions to minimize downtime and maximize efficiency.",
+          "icon": "FaTools"
+        },
+        {
+          "id": "03",
+          "title": "Customized Solutions",
+          "description": "We offer tailored solutions designed to meet your specific needs. Contact us to discuss how we can help you achieve your production goals.",
+          "icon": "FaCogs"
+        }
+      ],
+      "footer": {
+        "text": "Ready to Talk? If you need immediate assistance or have an urgent matter, do not hesitate to call or email us. We are eager to hear from you and provide the support you need.",
+        "contactLink": "Contact us today",
+        "afterLink": "and let's elevate your cable manufacturing processes to the next level."
+      }
+    }
   }
 }

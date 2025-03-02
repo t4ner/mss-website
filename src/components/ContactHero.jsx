@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactHero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="hero-section">
       <div className="container mx-auto">

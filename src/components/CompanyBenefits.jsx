@@ -1,32 +1,32 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { FaTools, FaLightbulb, FaHandshake } from "react-icons/fa";
-
-const benefits = [
-  {
-    id: "01",
-    title: "Experience and Know-how",
-    description:
-      "With years of experience in the industry, we possess the necessary expertise to provide you with the best solutions.",
-    icon: FaTools,
-  },
-  {
-    id: "02",
-    title: "Innovation",
-    description:
-      "We are constantly developing innovative solutions to meet the evolving demands of the market.",
-    icon: FaLightbulb,
-  },
-  {
-    id: "03",
-    title: "Customer Satisfaction",
-    description:
-      "Our top priority is to satisfy our customers by providing high-quality products and services.",
-    icon: FaHandshake,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const CompanyBenefits = () => {
+  const { t } = useTranslation();
+
+  const benefits = [
+    {
+      id: "01",
+      title: t("companyBenefits.benefits.0.title"),
+      description: t("companyBenefits.benefits.0.description"),
+      icon: FaTools,
+    },
+    {
+      id: "02",
+      title: t("companyBenefits.benefits.1.title"),
+      description: t("companyBenefits.benefits.1.description"),
+      icon: FaLightbulb,
+    },
+    {
+      id: "03",
+      title: t("companyBenefits.benefits.2.title"),
+      description: t("companyBenefits.benefits.2.description"),
+      icon: FaHandshake,
+    },
+  ];
+
   return (
     <section
       className=" relative overflow-hidden"
@@ -43,7 +43,7 @@ const CompanyBenefits = () => {
             id="benefits-title"
             className="text-lg lg:text-4xl  font-bold font-krona text-gray-900 mb-6"
           >
-            Why Choose MSS Cable Machinery?
+            {t("companyBenefits.heading")}
           </h2>
           <div className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"></div>
         </motion.div>
@@ -92,16 +92,7 @@ const CompanyBenefits = () => {
           className="text-center mt-10 lg:mt-16"
         >
           <p className="text-sm lg:text-lg text-gray-700 max-w-2xl mx-auto">
-            Discover the benefits of our technology and let us elevate your
-            cable manufacturing processes together. {""}
-            <a
-              href="/contact"
-              className="text-[#0C4A79] hover:text-[#0C4A79]/80 font-semibold underline transition-colors"
-            >
-              Contact us today
-            </a>{" "}
-            to learn more about how we can help you achieve your production
-            goals.
+            {t("discoverMore")}
           </p>
         </motion.div>
       </div>

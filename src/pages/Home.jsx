@@ -14,8 +14,8 @@ const Home = () => {
       <Navbar />
       <div className="space-y-10 lg:space-y-20">
         <Hero
-          title={t("hero.title")}
-          subtitle={t("hero.subtitle")}
+          title={t("home-hero.title")}
+          subtitle={t("home-hero.subtitle")}
           image="/hero/home-hero.jpeg"
         />
         <CompanyInfo />

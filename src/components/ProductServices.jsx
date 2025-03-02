@@ -6,51 +6,36 @@ import {
   MdInstallMobile,
   MdPeople,
 } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const ProductServices = () => {
-  const items = [
-    {
-      icon: <BiBookContent className="text-3xl lg:text-5xl text-white" />,
-      title: "Consultation and Planning",
-      description:
-        "Support in planning and implementing your cable manufacturing projects.",
-      gradient: "from-[#0C4A79] to-[#2171B5]",
-    },
-    {
-      icon: <MdInstallMobile className="text-3xl lg:text-5xl text-white" />,
-      title: "Installation and Commissioning",
-      description:
-        "Comprehensive installation and commissioning services for smooth operation.",
-      gradient: "from-[#E5153D] to-[#FF4D6A]",
-    },
-    {
-      icon: <BiSupport className="text-3xl lg:text-5xl text-white" />,
-      title: "Maintenance and Support",
-      description:
-        "Dedicated support team for continuous optimization of your machines.",
-      gradient: "from-[#0C4A79] to-[#2171B5]",
-    },
-    {
-      icon: <MdOutlineEngineering className="text-3xl lg:text-5xl text-white" />,
-      title: "Modernization and Upgrading",
-      description:
-        "Improvement of existing machines and equipment for better performance and longevity.",
-      gradient: "from-[#0C4A79] to-[#2171B5]",
-    },
-    {
-      icon: <BiWrench className="text-3xl lg:text-5xl text-white" />,
-      title: "Technical Support and Service",
-      description: "Quick and efficient solutions for technical issues.",
-      gradient: "from-[#E5153D] to-[#FF4D6A]",
-    },
-    {
-      icon: <MdPeople className="text-3xl lg:text-5xl text-white" />,
-      title: "HR Services",
-      description:
-        "Training and preparation of your staff for machine operation.",
-      gradient: "from-[#0C4A79] to-[#2171B5]",
-    },
+  const { t } = useTranslation();
+
+  const serviceIcons = [
+    <BiBookContent className="text-3xl lg:text-5xl text-white" />,
+    <MdInstallMobile className="text-3xl lg:text-5xl text-white" />,
+    <BiSupport className="text-3xl lg:text-5xl text-white" />,
+    <MdOutlineEngineering className="text-3xl lg:text-5xl text-white" />,
+    <BiWrench className="text-3xl lg:text-5xl text-white" />,
+    <MdPeople className="text-3xl lg:text-5xl text-white" />,
   ];
+
+  const gradients = [
+    "from-[#0C4A79] to-[#2171B5]",
+    "from-[#E5153D] to-[#FF4D6A]",
+    "from-[#0C4A79] to-[#2171B5]",
+    "from-[#0C4A79] to-[#2171B5]",
+    "from-[#E5153D] to-[#FF4D6A]",
+    "from-[#0C4A79] to-[#2171B5]",
+  ];
+
+  const items = t("products.services.items", { returnObjects: true }).map(
+    (item, index) => ({
+      ...item,
+      icon: serviceIcons[index],
+      gradient: gradients[index],
+    })
+  );
 
   const CardGrid = ({ items }) => (
     <div
@@ -115,7 +100,7 @@ const ProductServices = () => {
             id="services-heading"
             className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
-            Our Services
+            {t("products.services.title")}
           </h2>
           <div
             className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"

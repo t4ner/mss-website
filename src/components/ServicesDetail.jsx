@@ -1,44 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ServicesDetail = () => {
-  const services = [
-    {
-      title: "Turnkey Cable Factories",
-      image: "/servicesDetail/servicesdetail1.jpg",
-      description:
-        "We provide complete solutions for the setup and commissioning of cable factories. From planning to final implementation, we handle all necessary steps to ensure your project's success.",
-    },
-    {
-      title: "Cable Machine Production",
-      image: "/servicesDetail/servicesdetail2.jpg",
-      description:
-        "Our production lines include a variety of machines for cable manufacturing that meet the highest quality standards. We develop and manufacture machines tailored to our customers' specific requirements.",
-    },
-    {
-      title: "Machine Installation",
-      image: "/servicesDetail/servicesdetail3.jpg",
-      description:
-        "Our expert team ensures the professional installation of your machines. We make sure all components are correctly installed and configured to guarantee a smooth startup.",
-    },
-    {
-      title: "Modernization and Upgrading",
-      image: "/servicesDetail/servicesdetail4.jpg",
-      description:
-        "We offer services for modernizing and upgrading existing machines and equipment. By employing the latest technologies, we help you improve the performance and extend the lifespan of your machines.",
-    },
-    {
-      title: "Technical Support and Service",
-      image: "/servicesDetail/servicesdetail5.jpg",
-      description:
-        "Our technical support is available around the clock. We provide quick and efficient solutions for any technical issues to minimize downtime and maximize productivity.",
-    },
-    {
-      title: "Maintenance and HR Services",
-      image: "/servicesDetail/servicesdetail6.jpg",
-      description:
-        "Regular maintenance is crucial for the longevity and efficiency of your machines. Our maintenance team offers comprehensive services to ensure your machines are always in top condition. Additionally, we provide HR services to ensure your staff is well-trained and prepared to operate the machines.",
-    },
-  ];
+  const { t } = useTranslation();
+
+  const services = t("services.detail", { returnObjects: true });
 
   return (
     <div>

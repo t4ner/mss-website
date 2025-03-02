@@ -1,116 +1,48 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const ProductList = () => {
-  const [selectedCategory, setSelectedCategory] =
-    useState("Rod Breakdown Line");
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState(
+    t("products.categories.0")
+  );
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const productsRef = useRef(null);
 
-  const categories = [
-    "Rod Breakdown Line",
-    "Insulation & Sheathing Lines",
-    "Stranding and Armoring Lines",
-    "Central Strander Machine",
-    "Steel Wire Armoring Machine",
-    "Multi Central Stranding Line",
-    "Mica Taping Line",
-    "Rewinding Line",
-    "Horizontal Taping Line",
-    "CV Line Machines",
-  ];
+  const categories = t("products.categories", { returnObjects: true });
 
-  const products = [
-    {
-      title: "Rod Breakdown Line",
-      description:
-        "These machines are designed for the efficient breakdown of rods, ensuring uniform and precise processing.",
-      image: "/services/services1.jpg",
-      category: "Rod Breakdown Line",
-    },
-    {
-      title: "Insulation – Sheathing – Tandem Extrusion Lines",
-      description:
-        "Our extrusion lines provide reliable insulation and sheathing of cables to meet the highest quality standards.",
-      specs: "Capacity up to 500 kg, processing speed up to 100 m/min.",
-      images: [
-        "/services/services2.jpg",
-        "/services/services2-2.jpg",
-        "/services/services2-3.jpg",
-      ],
-      category: "Insulation & Sheathing Lines",
-    },
-    {
-      title: "Stranding and Armoring Lines (Drum Twister)",
-      description:
-        "These machines enable precise stranding and armoring of cables while maintaining high production speed.",
-      specs: "Stranding speed up to 200 m/min, armoring thickness up to 5 mm.",
-      images: ["/services/services3.jpg", "/services/services3-2.jpg"],
-      category: "Stranding and Armoring Lines",
-    },
-    {
-      title: "Central Strander Machine (Bakır 07)",
-      description:
-        "A central stranding machine known for its reliability and precision, ensuring uniform stranding.",
-      specs:
-        "Stranding speed up to 180 m/min, maximum stranding capacity up to 1000 kg.",
-      images: ["/services/services4.jpg", "/services/services4-2.jpg"],
-      category: "Central Strander Machine",
-    },
-    {
-      title: "Central Steel Wire Armoring Machine (Çelik 08)",
-      description:
-        "Specifically designed for the armoring of steel wires, offering a robust and durable solution.",
-      specs:
-        "Armoring speed up to 150 m/min, maximum armoring thickness up to 8 mm.",
-      images: ["/services/services5.jpg", "/services/services5-2.jpg"],
-      category: "Steel Wire Armoring Machine",
-    },
-    {
-      title: "Multi Central Stranding Line (MultiStrander 10)",
-      description:
-        "A versatile stranding machine that combines multiple stranding processes in a single line to maximize efficiency.",
-      specs:
-        "Stranding speed up to 250 m/min, maximum stranding capacity up to 1500 kg.",
-      images: ["/services/services6.jpg", "/services/services6-2.jpg"],
-      category: "Multi Central Stranding Line",
-    },
-    {
-      title: "Mica Taping Line",
-      description:
-        "These machines are designed for the precise taping of cables with mica tape to provide an additional layer of insulation.",
-      specs:
-        "Taping speed up to 120 m/min, maximum taping thickness up to 2 mm.",
-      image: "/services/services7.jpg",
-      category: "Mica Taping Line",
-    },
-    {
-      title: "Rewinding Line",
-      description:
-        "Ensures uniform and precise rewinding of cables to improve product quality.",
-      specs:
-        "Rewinding speed up to 100 m/min, maximum rewinding capacity up to 500 kg.",
-      images: ["/services/services8.jpg", "/services/services8-2.jpg"],
-      category: "Rewinding Line",
-    },
-    {
-      title: "Horizontal Taping Line",
-      description:
-        "Provides horizontal taping of cables for uniform and precise taping.",
-      specs:
-        "Taping speed up to 150 m/min, maximum taping thickness up to 3 mm.",
-      image: "/services/services9.jpg",
-      category: "Horizontal Taping Line",
-    },
-    {
-      title: "CV Line Machines",
-      description:
-        "Offers reliable and precise processing of cables to meet the highest quality standards.",
-      specs:
-        "Processing speed up to 200 m/min, maximum processing capacity up to 1000 kg.",
+  const products = t("products.productList", { returnObjects: true }).map(
+    (product, index) => {
+      // Add images from the original product data
+      const originalImages = [
+        "/services/services1.jpg",
+        [
+          "/services/services2.jpg",
+          "/services/services2-2.jpg",
+          "/services/services2-3.jpg",
+        ],
+        ["/services/services3.jpg", "/services/services3-2.jpg"],
+        ["/services/services4.jpg", "/services/services4-2.jpg"],
+        ["/services/services5.jpg", "/services/services5-2.jpg"],
+        ["/services/services6.jpg", "/services/services6-2.jpg"],
+        "/services/services7.jpg",
+        ["/services/services8.jpg", "/services/services8-2.jpg"],
+        "/services/services9.jpg",
+        null,
+      ];
 
-      category: "CV Line Machines",
-    },
-  ];
+      return {
+        ...product,
+        category: categories[index],
+        image: Array.isArray(originalImages[index])
+          ? undefined
+          : originalImages[index],
+        images: Array.isArray(originalImages[index])
+          ? originalImages[index]
+          : undefined,
+      };
+    }
+  );
 
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
 
@@ -121,6 +53,11 @@ const ProductList = () => {
     }, {});
     setCurrentImageIndexes(initialIndexes);
   }, []);
+
+  useEffect(() => {
+    // Update selected category when language changes
+    setSelectedCategory(t("products.categories.0"));
+  }, [t]);
 
   const nextImage = (productIndex, imagesLength) => {
     setCurrentImageIndexes((prev) => ({
@@ -172,7 +109,7 @@ const ProductList = () => {
       {/* Product Grid */}
       <div
         ref={productsRef}
-        className="flex items-center justify-center flex-1 w-full  gap-8 bg-gray-50 lg:p-6 rounded-lg"
+        className="flex items-center justify-center flex-1 w-full gap-8 bg-gray-50 lg:p-6 rounded-lg"
       >
         {products
           .filter(
@@ -301,9 +238,9 @@ const ProductList = () => {
       <div className="lg:hidden">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed bottom-3 right-3 z-50 bg-gradient-to-br from-[#0C4A79] to-[#2171B5]  text-white px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+          className="fixed bottom-3 right-3 z-50 bg-gradient-to-br from-[#0C4A79] to-[#2171B5] text-white px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
         >
-          <span className="text-sm  mr-1">Products</span>
+          <span className="text-sm mr-1">Products</span>
         </button>
 
         {/* Mobile Category Menu */}
@@ -346,7 +283,7 @@ const ProductList = () => {
                             : "hover:bg-gray-50 text-gray-700"
                         }`}
                       >
-                        <span className=" text-sm lg:text-lg">{category}</span>
+                        <span className="text-sm lg:text-lg">{category}</span>
                         {selectedCategory === category && (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -28,16 +30,16 @@ const ContactForm = () => {
         {/* Sol Sütun - Başlık ve İletişim Bilgileri */}
         <div className="md:sticky md:top-6 px-2 lg:px-0">
           <h2 className="text-lg lg:text-5xl font-krona font-bold text-[#1a1a1a] mb-4 leading-tight">
-            Send us your questions about our products
+            {t("contact.form.title")}
           </h2>
           <p className="text-gray-600 text-sm lg:text-lg mb-6">
-            Let's find the best solution together!
+            {t("contact.form.subtitle")}
           </p>
 
           <div className="space-y-3 text-sm lg:text-lg">
             <div className="flex items-center gap-2 text-gray-600">
               <HiOutlineMail className="w-5 h-5" />
-              <span>Mail me at </span>
+              <span>{t("contact.form.emailLabel")} </span>
               <a
                 href="mailto:manufacturing@mssmachinery.de"
                 className="text-[#0C4A79] hover:text-[#0C4A79]/80"
@@ -48,7 +50,7 @@ const ContactForm = () => {
 
             <div className="flex items-center gap-2 text-gray-600">
               <HiOutlinePhone className="w-5 h-5" />
-              <span>Call us at </span>
+              <span>{t("contact.form.phoneLabel")} </span>
               <a
                 href="tel:+4962186277411"
                 className="text-[#0C4A79] hover:text-[#0C4A79]/80"
@@ -61,7 +63,9 @@ const ContactForm = () => {
 
         {/* Sağ Sütun - Form */}
         <div className="bg-white/50 rounded-xl mx-2 p-2 lg:p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg lg:text-xl mb-6">Send us a message</h2>
+          <h2 className="text-lg lg:text-xl mb-6">
+            {t("contact.form.formTitle")}
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <input
@@ -69,7 +73,7 @@ const ContactForm = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Full name"
+                placeholder={t("contact.form.fullName")}
                 className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
               />
@@ -81,7 +85,7 @@ const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Email address"
+                placeholder={t("contact.form.email")}
                 className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
               />
@@ -93,7 +97,7 @@ const ContactForm = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Subject"
+                placeholder={t("contact.form.subject")}
                 className="w-full px-4 py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
               />
             </div>
@@ -103,7 +107,7 @@ const ContactForm = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us more about your project"
+                placeholder={t("contact.form.message")}
                 rows="4"
                 className="w-full px-4  py-3 text-sm lg:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0C4A79]"
                 required
@@ -114,7 +118,7 @@ const ContactForm = () => {
               type="submit"
               className="bg-gradient-to-br text-sm lg:text-base from-[#0C4A79] to-[#2171B5] text-white px-6 py-3 rounded-lg hover:bg-[#0C4A79]/80 transition-colors duration-300"
             >
-              Send message
+              {t("contact.form.submitButton")}
             </button>
           </form>
         </div>

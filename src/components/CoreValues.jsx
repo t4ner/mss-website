@@ -2,52 +2,50 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BiCog, BiLineChart, BiWrench } from "react-icons/bi";
 import { MdOutlineEngineering, MdBuildCircle, MdSupport } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const CoreValues = () => {
+  const { t } = useTranslation();
   const values = [
     {
-      icon: <BiCog className= "text-3xl lg:text-5xl text-white" />,
-      title: "Precision and Reliability",
-      description:
-        "Our machines are engineered to deliver precise and reliable results, ensuring the quality of your cable production.",
+      icon: <BiCog className="text-3xl lg:text-5xl text-white" />,
+      title: t("coreValues.technology.values.0.title"),
+      description: t("coreValues.technology.values.0.description"),
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <BiLineChart className= "text-3xl lg:text-5xl text-white" />,
-      title: "Efficiency Enhancement",
-      description:
-        "By employing state-of-the-art technologies and automation solutions, we help our customers optimize their production processes and enhance efficiency.",
+      icon: <BiLineChart className="text-3xl lg:text-5xl text-white" />,
+      title: t("coreValues.technology.values.1.title"),
+      description: t("coreValues.technology.values.1.description"),
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
-      icon: <BiWrench className= "text-3xl lg:text-5xl text-white" />,
-      title: "Adaptability",
-      description:
-        "We offer tailored solutions that cater to the specific needs and requirements of our customers.",
+      icon: <BiWrench className="text-3xl lg:text-5xl text-white" />,
+      title: t("coreValues.technology.values.2.title"),
+      description: t("coreValues.technology.values.2.description"),
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
   ];
 
   const services = [
     {
-      icon: <MdOutlineEngineering className= "text-3xl lg:text-5xl text-white" />,
-      title: "Consultation and Planning",
-      description:
-        "Our experts support you in planning and implementing your cable manufacturing projects.",
+      icon: (
+        <MdOutlineEngineering className="text-3xl lg:text-5xl text-white" />
+      ),
+      title: t("coreValues.services.items.0.title"),
+      description: t("coreValues.services.items.0.description"),
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
     {
-      icon: <MdBuildCircle className= "text-3xl lg:text-5xl text-white" />,
-      title: "Installation and Commissioning",
-      description:
-        "We provide comprehensive installation and commissioning services to ensure your machines operate smoothly.",
+      icon: <MdBuildCircle className="text-3xl lg:text-5xl text-white" />,
+      title: t("coreValues.services.items.1.title"),
+      description: t("coreValues.services.items.1.description"),
       gradient: "from-[#E5153D] to-[#FF4D6A]",
     },
     {
       icon: <MdSupport className="text-3xl lg:text-5xl text-white" />,
-      title: "Maintenance and Support",
-      description:
-        "Our dedicated support team is available to ensure your machines are always in optimal condition and running smoothly.",
+      title: t("coreValues.services.items.2.title"),
+      description: t("coreValues.services.items.2.description"),
       gradient: "from-[#0C4A79] to-[#2171B5]",
     },
   ];
@@ -67,7 +65,8 @@ const CoreValues = () => {
           whileHover={{ scale: 1.03 }}
           className="relative group h-[300px] lg:h-[400px]"
           role="listitem"
-          aria-labelledby={`${sectionId}-title-${index}`}ß
+          aria-labelledby={`${sectionId}-title-${index}`}
+          ß
         >
           <div
             className={`
@@ -102,7 +101,7 @@ const CoreValues = () => {
   );
 
   return (
-    <main >
+    <main>
       <div className="container mx-auto px-2 lg:px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}
@@ -115,7 +114,7 @@ const CoreValues = () => {
             id="technology-heading"
             className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
-            Our Technology
+            {t("coreValues.technology.heading")}
           </h2>
           <div
             className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"
@@ -136,7 +135,7 @@ const CoreValues = () => {
             id="services-heading"
             className="text-lg lg:text-4xl font-bold mb-4 font-krona"
           >
-            Our Services
+            {t("coreValues.services.heading")}
           </h2>
           <div
             className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"
