@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "STARTSEITE",
+    "about": "ÜBER UNS",
+    "services": "DIENSTLEISTUNGEN",
+    "contact": "KONTAKT",
+    "products": "PRODUKTE"
+  },
+  "language": {
+    "select": "Sprache auswählen",
+    "en": "Englisch",
+    "de": "Deutsch"
+  },
+  "hero": {
+    "title": "MSS Cable Machinery",
+    "subtitle": "Die richtige Technologie für Kabelfertigungsmaschinen"
+  }
+}

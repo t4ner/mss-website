@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "services": "SERVICES",
+    "contact": "CONTACT",
+    "products": "PRODUCTS"
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "de": "German"
+  },
+  "hero": {
+    "title": "MSS Cable Machinery",
+    "subtitle": "The Right Technology for Cable Manufacturing Machines"
+  }
+}
