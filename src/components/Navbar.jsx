@@ -194,7 +194,7 @@ const Navbar = () => {
               </div>
 
               <button
-                className="relative z-50 p-2"
+                className="relative z-[71] p-2"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-expanded={isMobileMenuOpen}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
@@ -226,7 +226,7 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 z-40 flex items-center justify-center pt-20 bg-white md:hidden"
+              className="fixed inset-0 z-[70] flex items-center justify-center pt-20 bg-white md:hidden"
               style={{ top: 0 }}
               role="dialog"
               aria-modal="true"
