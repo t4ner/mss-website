@@ -84,6 +84,9 @@
   },
   "discoverMore": "Discover the benefits of our technology and let us elevate your cable manufacturing processes together. Contact us today to learn more about how we can help you achieve your production goals.",
   "products": {
+    "title": "Products",
+    "specifications": "Specifications",
+    "ourProducts": "Our Products",
     "hero": {
       "title": "Cable Manufacturing",
       "subtitle": "Machines and Special Machines"

@@ -220,7 +220,7 @@ const ProductList = () => {
                     {product.specs && (
                       <div className="border-l-4 border-[#0C4A79] pl-4">
                         <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">
-                          Specifications
+                          {t("products.specifications")}
                         </div>
                         <div className="text-gray-700 text-sm lg:text-lg">
                           {product.specs}
@@ -240,7 +240,7 @@ const ProductList = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="fixed bottom-3 right-3 z-50 bg-gradient-to-br from-[#0C4A79] to-[#2171B5] text-white px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
         >
-          <span className="text-sm mr-1">Products</span>
+          <span className="text-sm mr-1">{t("products.title")}</span>
         </button>
 
         {/* Mobile Category Menu */}
@@ -249,7 +249,7 @@ const ProductList = () => {
             <div className="bg-white rounded-t-2xl w-full max-h-[80vh] overflow-y-auto animate-slide-up">
               <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center">
                 <h3 className="text-lg lg:text-xl font-medium lg:font-bold text-[#0C4A79]">
-                  Our Products
+                  {t("products.ourProducts")}
                 </h3>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}

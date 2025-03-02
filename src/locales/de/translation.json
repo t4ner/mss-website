@@ -84,6 +84,9 @@
   },
   "discoverMore": "Entdecken Sie die Vorteile unserer Technologie und lassen Sie uns gemeinsam Ihre Kabelfertigungsprozesse auf ein neues Niveau heben. Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie wir Ihnen helfen können, Ihre Produktionsziele zu erreichen.",
   "products": {
+    "title": "Produkte",
+    "specifications": "Spezifikationen",
+    "ourProducts": "Unsere Produkte",
     "hero": {
       "title": "Kabelfertigungsmaschinen und ",
       "subtitle": "Spezialmaschinen"
