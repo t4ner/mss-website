@@ -48,7 +48,7 @@ const CompanyBenefits = () => {
           <div className="w-24 h-1 bg-black mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.id}
@@ -85,16 +85,6 @@ const CompanyBenefits = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-10 lg:mt-16"
-        >
-          <p className="text-sm lg:text-lg text-gray-700 max-w-2xl mx-auto">
-            {t("discoverMore")}
-          </p>
-        </motion.div>
       </div>
     </section>
   );
