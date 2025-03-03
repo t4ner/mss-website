@@ -5,12 +5,16 @@ const PrivacyPolicy = () => {
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto px-4 pt-12">
-        <h1 className="text-4xl font-bold mb-8">Datenschutzerklärung</h1>
+      <div className="container mx-auto px-4 pt-8 lg:pt-12">
+        <h1 className="text-base lg:text-4xl font-bold mb-8">
+          Datenschutzerklärung
+        </h1>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">1. Einleitung</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            1. Einleitung
+          </h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges
             Anliegen. Mit dieser Datenschutzerklärung informieren wir Sie
             darüber, wie wir Ihre personenbezogenen Daten erheben, verarbeiten
@@ -20,8 +24,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">2. Verantwortlicher</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            2. Verantwortlicher
+          </h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Verantwortlich für die Datenverarbeitung ist:
             <br />
             MSS Cable Machinery GmbH
@@ -39,16 +45,18 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
             3. Erhebung und Verarbeitung personenbezogener Daten
           </h2>
 
-          <h3 className="text-xl font-semibold mb-3">3.1 Besuch der Website</h3>
-          <p className="text-gray-700 mb-4">
+          <h3 className="text-sm lg:text-xl font-semibold mb-3">
+            3.1 Besuch der Website
+          </h3>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Beim Besuch unserer Website erheben wir automatisch bestimmte Daten,
             die Ihr Browser an unseren Server übermittelt. Diese Daten umfassen:
           </p>
-          <ul className="list-disc list-inside text-gray-700 mb-4 ml-4">
+          <ul className="list-disc list-inside text-sm lg:text-base text-gray-700 mb-4 ml-4">
             <li>IP-Adresse des anfragenden Rechners</li>
             <li>Datum und Uhrzeit des Zugriffs</li>
             <li>Name und URL der abgerufenen Datei</li>
@@ -58,7 +66,7 @@ const PrivacyPolicy = () => {
               sowie der Name Ihres Access-Providers
             </li>
           </ul>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Diese Daten werden temporär in einem sogenannten Logfile gespeichert
             und nach spätestens sieben Tagen gelöscht. Die vorübergehende
             Speicherung erfolgt aus Sicherheitsgründen, um z.B. Angriffsversuche
@@ -66,10 +74,10 @@ const PrivacyPolicy = () => {
             anderen personenbezogenen Daten von Ihnen findet nicht statt.
           </p>
 
-          <h3 className="text-xl font-semibold mb-3">
+          <h3 className="text-sm lg:text-xl font-semibold mb-3">
             3.2 Kontaktformular und E-Mail-Kontakt
           </h3>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wenn Sie uns über unser Kontaktformular oder per E-Mail
             kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre
             E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer) von uns
@@ -81,14 +89,14 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
             4. Weitergabe von Daten
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur,
             wenn:
           </p>
-          <ul className="list-disc list-inside text-gray-700 mb-4 ml-4">
+          <ul className="list-disc list-inside text-sm lg:text-base text-gray-700 mb-4 ml-4">
             <li>
               Sie Ihre nach Art. 6 Abs. 1 S. 1 lit. a DSGVO ausdrückliche
               Einwilligung dazu erteilt haben
@@ -111,8 +119,8 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">5. Cookies</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">5. Cookies</h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wir setzen auf unserer Website Cookies ein. Cookies sind kleine
             Dateien, die Ihr Browser automatisch erstellt und die auf Ihrem
             Endgerät (Laptop, Tablet, Smartphone o.ä.) gespeichert werden, wenn
@@ -151,9 +159,13 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">6. Analyse-Tools</h2>
-          <h3 className="text-xl font-semibold mb-3">6.1 Google Analytics</h3>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            6. Analyse-Tools
+          </h2>
+          <h3 className="text-sm lg:text-xl font-semibold mb-3">
+            6.1 Google Analytics
+          </h3>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
             Optimierung unserer Seiten nutzen wir Google Analytics, ein
             Webanalysedienst der Google Inc.
@@ -163,14 +175,14 @@ const PrivacyPolicy = () => {
             Cookies (siehe unter Ziff. 5) verwendet. Die durch den Cookie
             erzeugten Informationen über Ihre Benutzung dieser Website wie:
           </p>
-          <ul className="list-disc list-inside text-gray-700 mb-4 ml-4">
+          <ul className="list-disc list-inside text-sm lg:text-base text-gray-700 mb-4 ml-4">
             <li>Browser-Typ/-Version</li>
             <li>verwendetes Betriebssystem</li>
             <li>Referrer-URL (die zuvor besuchte Seite)</li>
             <li>Hostname des zugreifenden Rechners (IP-Adresse)</li>
             <li>Uhrzeit der Serveranfrage</li>
           </ul>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             werden an einen Server von Google in den USA übertragen und dort
             gespeichert. Die Informationen werden verwendet, um die Nutzung der
             Website auszuwerten, um Reports über die Websiteaktivitäten
@@ -184,20 +196,20 @@ const PrivacyPolicy = () => {
             Die IP-Adressen werden anonymisiert, so dass eine Zuordnung nicht
             möglich ist (IP-Masking).
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Sie können die Installation der Cookies durch eine entsprechende
             Einstellung der Browser-Software verhindern; wir weisen jedoch
             darauf hin, dass in diesem Fall gegebenenfalls nicht sämtliche
             Funktionen dieser Website vollumfänglich genutzt werden können.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Sie können darüber hinaus die Erfassung der durch das Cookie
             erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl.
             Ihrer IP-Adresse) sowie die Verarbeitung dieser Daten durch Google
             verhindern, indem Sie ein Browser- Add-on herunterladen und
             installieren (https://tools.google.com/dlpage/ gaoptout?hl=de).
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Alternativ zum Browser-Add-on, insbesondere bei Browsern auf mobilen
             Endgeräten, können Sie die Erfassung durch Google Analytics zudem
             verhindern, indem Sie auf diesen Link klicken. Es wird ein
@@ -207,7 +219,7 @@ const PrivacyPolicy = () => {
             Gerät abgelegt. Löschen Sie die Cookies in diesem Browser, müssen
             Sie das Opt-out-Cookie erneut setzen.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Weitere Informationen zum Datenschutz im Zusammenhang mit Google
             Analytics finden Sie etwa in der Google Analytics-Hilfe (https://
             support.google.com/analytics/answer/6004245?hl=de).
@@ -215,9 +227,13 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">7. Betroffenenrechte</h2>
-          <p className="text-gray-700 mb-4">Sie haben das Recht:</p>
-          <ul className="list-disc list-inside text-gray-700 mb-4 ml-4 space-y-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            7. Betroffenenrechte
+          </h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
+            Sie haben das Recht:
+          </p>
+          <ul className="list-disc list-inside text-sm lg:text-base text-gray-700 mb-4 ml-4 space-y-4">
             <li className="ml-4">
               gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten
               personenbezogenen Daten zu verlangen. Insbesondere können Sie
@@ -276,8 +292,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">8. Widerspruchsrecht</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            8. Widerspruchsrecht
+          </h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Sofern Ihre personenbezogenen Daten auf Grundlage von berechtigten
             Interessen gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO verarbeitet werden,
             haben Sie das Recht, gemäß Art. 21 DSGVO Widerspruch gegen die
@@ -292,8 +310,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">9. Datensicherheit</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            9. Datensicherheit
+          </h2>
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wir verwenden innerhalb des Website-Besuchs das verbreitete
             SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils
             höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt
@@ -314,10 +334,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
             10. Aktualität und Änderung dieser Datenschutzerklärung
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-sm lg:text-base text-gray-700 mb-4">
             Diese Datenschutzerklärung ist aktuell gültig und hat den Stand
             Februar 2025. Durch die Weiterentwicklung unserer Website und
             Angebote darüber oder aufgrund geänderter gesetzlicher

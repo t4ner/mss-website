@@ -5,31 +5,35 @@ const TermsOfService = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="container mx-auto pt-12 ">
+      <div className="container mx-auto px-4 pt-8 lg:pt-12 ">
         <h1 className="text-base lg:text-4xl font-bold mb-8 text-gray-900">
           Impressum
         </h1>
 
         <section className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <h2 className="text-base lg:text-xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4 text-gray-900">
             Angaben gemäß § 5 TMG
           </h2>
           <div className="space-y-2 text-gray-700">
-            <p className="font-semibold">MSS Cable Machinery GmbH</p>
-            <p>Vertreten durch: Mustafa Dündar (Managing Director)</p>
+            <p className="font-semibold text-sm lg:text-base">
+              MSS Cable Machinery GmbH
+            </p>
+            <p className="text-sm lg:text-base">
+              Vertreten durch: Mustafa Dündar (Managing Director)
+            </p>
             <div className="mt-4">
-              <p>
+              <p className="text-sm lg:text-base">
                 <span className="font-medium">Adresse:</span> Krügerstraße 8-10,
                 68219 Mannheim, Deutschland
               </p>
-              <p>
+              <p className="text-sm lg:text-base">
                 <span className="font-medium">Telefon:</span> +49 621 862 77411
               </p>
-              <p>
+              <p className="text-sm lg:text-base">
                 <span className="font-medium">E-Mail:</span>{" "}
                 manufacturing@mssmachinery.de
               </p>
-              <p>
+              <p className="text-sm lg:text-base">
                 <span className="font-medium">Website:</span>{" "}
                 www.mssmachinery.de
               </p>
@@ -38,43 +42,43 @@ const TermsOfService = () => {
         </section>
 
         <section className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <h2 className="text-base lg:text-xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4 text-gray-900">
             Registrierung & Umsatzsteuer
           </h2>
           <div className="space-y-2 text-gray-700">
-            <p>
+            <p className="text-sm lg:text-base">
               <span className="font-medium">Registergericht:</span> Amtsgericht
               Mannheim
             </p>
-            <p>
+            <p className="text-sm lg:text-base">
               <span className="font-medium">Registernummer:</span> HRB 729253
             </p>
-            <p>
+            <p className="text-sm lg:text-base">
               <span className="font-medium">Umsatzsteuer-ID:</span> DE 147033361
             </p>
           </div>
         </section>
 
         <section className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <h2 className="text-base lg:text-xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4 text-gray-900">
             Verantwortlich für den Inhalt
           </h2>
           <div className="space-y-2 text-gray-700">
-            <p>Nach § 55 Abs. 2 RStV:</p>
-            <p>Mustafa Dündar</p>
-            <p>Krügerstraße 8-10</p>
-            <p>68219 Mannheim, Deutschland</p>
+            <p className="text-sm lg:text-base">Nach § 55 Abs. 2 RStV:</p>
+            <p className="text-sm lg:text-base">Mustafa Dündar</p>
+            <p className="text-sm lg:text-base">Krügerstraße 8-10</p>
+            <p className="text-sm lg:text-base">68219 Mannheim, Deutschland</p>
           </div>
         </section>
 
         <section className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <h2 className="text-base lg:text-xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-sm lg:text-xl font-semibold mb-4 text-gray-900">
             Haftungsausschluss
           </h2>
 
           <div className="space-y-6 text-gray-700">
             <div>
-              <h3 className="text-sm lg:text-lg font-medium mb-2">
+              <h3 className="text-sm lg:text-xl font-medium mb-2">
                 1. Inhalt des Onlineangebotes
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
@@ -91,7 +95,7 @@ const TermsOfService = () => {
             </div>
 
             <div>
-              <h3 className="text-sm lg:text-lg font-medium mb-2">
+              <h3 className="text-sm lg:text-xl font-medium mb-2">
                 2. Verweise und Links
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
@@ -105,7 +109,7 @@ const TermsOfService = () => {
             </div>
 
             <div>
-              <h3 className="text-sm lg:text-lg font-medium mb-2">
+              <h3 className="text-sm lg:text-xl font-medium mb-2">
                 3. Urheber- und Kennzeichenrecht
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
@@ -119,7 +123,7 @@ const TermsOfService = () => {
             </div>
 
             <div>
-              <h3 className="text-sm lg:text-lg font-medium mb-2">
+              <h3 className="text-sm lg:text-xl font-medium mb-2">
                 4. Datenschutz
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
@@ -134,7 +138,7 @@ const TermsOfService = () => {
             </div>
 
             <div>
-              <h3 className="text-sm lg:text-lg font-medium mb-2">
+              <h3 className="text-sm lg:text-xl font-medium mb-2">
                 5. Rechtswirksamkeit
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
