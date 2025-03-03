@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const PrivacyPolicy = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <div className="container mx-auto px-4 pt-8 lg:pt-12">
         <h1 className="text-base lg:text-4xl font-bold mb-8 text-black">
