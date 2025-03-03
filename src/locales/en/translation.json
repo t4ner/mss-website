@@ -310,8 +310,156 @@
     },
     "legal": {
       "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "terms": "Imprint"
     },
     "copyright": "© Cable Machinery GmbH | All rights reserved | Design and Development by Macaree"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "The protection of your personal data is an important concern for us. With this privacy policy, we inform you about how we collect, process, and use your personal data when you visit our website or use our services."
+    },
+    "controller": {
+      "title": "2. Controller",
+      "content": "The party responsible for data processing is:",
+      "company": "MSS Cable Machinery GmbH",
+      "manager": "Mustafa Dündar (Managing Director)",
+      "address": "Krügerstraße 8-10",
+      "city": "68219 Mannheim, Germany",
+      "phone": "+49 621 862 77411",
+      "email": "manufacturing@mssmachinery.de"
+    },
+    "dataCollection": {
+      "title": "3. Collection and Processing of Personal Data",
+      "websiteVisit": {
+        "title": "3.1 Visiting the Website",
+        "content": "When visiting our website, we automatically collect certain data that your browser transmits to our server. This data includes:",
+        "items": [
+          "IP address of the requesting computer",
+          "Date and time of access",
+          "Name and URL of the retrieved file",
+          "Website from which access is made (referrer URL)",
+          "Browser used and, if applicable, the operating system of your computer as well as the name of your access provider"
+        ],
+        "storage": "This data is temporarily stored in a so-called log file and deleted after a maximum of seven days. Temporary storage is done for security reasons, to be able to trace, for example, attempts to attack. The storage of this data along with other personal data about you does not take place."
+      },
+      "contactForm": {
+        "title": "3.2 Contact Form and Email Contact",
+        "content": "If you contact us via our contact form or by email, the data you provide (your email address, possibly your name, and phone number) will be stored by us in order to answer your questions or send you the information you requested. These data will be deleted as soon as they are no longer required for the purpose for which they were collected."
+      }
+    },
+    "dataSharing": {
+      "title": "4. Data Sharing",
+      "content": "Your personal data will only be shared with third parties if:",
+      "items": [
+        "You have given your explicit consent according to Art. 6 para. 1 sentence 1 lit. a GDPR,",
+        "The sharing is necessary according to Art. 6 para. 1 sentence 1 lit. f GDPR for the assertion, exercise, or defense of legal claims, and there is no reason to believe that you have an overriding legitimate interest in not sharing your data,",
+        "There is a legal obligation to share according to Art. 6 para. 1 sentence 1 lit. c GDPR, or",
+        "This is legally permissible and necessary for the performance of a contract with you according to Art. 6 para. 1 sentence 1 lit. b GDPR."
+      ]
+    },
+    "cookies": {
+      "title": "5. Cookies",
+      "content": "We use cookies on our website. Cookies are small files that your browser automatically creates and stores on your device (laptop, tablet, smartphone, etc.) when you visit our site. Cookies do not cause any damage to your device and do not contain viruses, trojans, or other malicious software. The cookie stores information that is specific to the device used. However, this does not mean that we directly gain knowledge of your identity. Cookies are used to make your use of our services more convenient. For example, we use session cookies to recognize that you have already visited certain pages on our website. These are automatically deleted after you leave our site. Additionally, we use temporary cookies to improve the user- friendliness, which are stored on your device for a set period of time. When you visit our site again, these cookies allow us to recognize that you have already been on our site and what inputs and settings you have made, so you don't have to enter them again. We also use cookies to statistically record the use of our website and evaluate this for the purpose of optimizing our offerings. These cookies allow us to recognize that you have already visited our site when you return. These cookies are deleted after a defined period of time. The data processed by cookies is required for the purposes mentioned to safeguard our legitimate interests as well as the interests of third parties according to Art. 6 para. 1 sentence 1 lit. f GDPR. Most browsers accept cookies automatically. However, you can configure your browser to prevent cookies from being stored on your computer or to always show a notification before a new cookie is set. Please note that disabling cookies completely may mean that you cannot use all features of our website."
+    },
+    "analytics": {
+      "title": "6. Analytics Tools",
+      "googleAnalytics": {
+        "title": "6.1 Google Analytics",
+        "content": "To design our pages in line with requirements and continuously improve them, we use Google Analytics, a web analytics service provided by Google Inc. (https://www.google.de/intl/de/about/) (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; hereinafter referred to as Google). In this context, pseudonymized usage profiles are created and cookies (see section 5) are used.",
+        "dataCollected": "The information generated by the cookie about your use of this website, such as:",
+        "items": [
+          "Browser type/version",
+          "Operating system used",
+          "Referrer URL (the previously visited page)",
+          "Hostname of the accessing computer (IP address)",
+          "Time of the server request"
+        ],
+        "optOut": "is transmitted to a Google server in the USA and stored there. The information is used to evaluate website usage, compile reports on website activities, and provide additional services related to website usage and internet usage for market research and design purposes. This information may also be passed to third parties if required by law or if third parties process this data on behalf of Google. Under no circumstances will your IP address be merged with other Google data. IP addresses are anonymized, making it impossible to assign them (IP masking). You can prevent the installation of cookies by adjusting your browser software accordingly; however, we would like to point out that in this case, you may not be able to use all features of this website to their full extent. Additionally, you can prevent the collection of the data generated by the cookie and related to your use of the website (including your IP address) and its processing by Google by downloading and installing a browser add-on (https://tools.google.com/dlpage/gaoptout?hl=en). Alternatively, especially for browsers on mobile devices, you can prevent the collection by Google Analytics by clicking this link. An opt- out cookie will be set, which prevents future collection of your data when you visit this website. The opt-out cookie only applies to this browser and only to our website and will be stored on your device. If you delete the cookies in this browser, you will need to set the opt-out cookie again. For more information on data protection in connection with Google Analytics, please visit the Google Analytics Help (https://support.google.com/analytics/answer/6004245?hl=en)."
+      }
+    },
+    "rights": {
+      "title": "7. Data Subject Rights",
+      "content": "You have the right:",
+      "items": [
+        "According to Art. 15 GDPR, to request information about the personal data we process about you. In particular, you can request information about the purposes of processing, the categories of personal data, the categories of recipients to whom your data has been disclosed or will be disclosed, the planned retention period, the existence of the right to rectification, deletion, restriction of processing, or objection, the existence of a right to lodge a complaint, the origin of your data, if they were not collected from us, as well as information on the existence of automated decision-making, including profiling, and any meaningful information about the details;",
+        "According to Art. 16 GDPR, to request the correction of inaccurate or completion of your personal data stored with us without undue delay;",
+        "According to Art. 17 GDPR, to request the deletion of your personal data stored with us, unless processing is required for the exercise of the right to freedom of expression and information, for compliance with a legal obligation, for reasons of public interest, or for the establishment, exercise, or defense of legal claims;",
+        "According to Art. 18 GDPR, to request the restriction of processing of your personal data, as long as the accuracy of the data is contested by you, the processing is unlawful, but you object to the deletion, and we no longer need the data, but you need it for the establishment, exercise, or defense of legal claims, or you have objected to processing under Art. 21 GDPR;",
+        "According to Art. 20 GDPR, to receive your personal data that you have provided to us in a structured, commonly used, and machine- readable format, or to request the transfer to another controller;",
+        "According to Art. 7 para. 3 GDPR, to withdraw your consent once given to us at any time. This means that we may no longer continue processing based on this consent in the future, and",
+        "According to Art. 77 GDPR, to lodge a complaint with a supervisory authority. Usually, you can contact the supervisory authority of your usual place of residence or workplace or our company's location for this purpose."
+      ]
+    },
+    "rightToObject": {
+      "title": "8. Right to Object",
+      "content": "If your personal data is processed based on legitimate interests according to Art. 6 para. 1 sentence 1 lit. f GDPR, you have the right to object to the processing of your personal data according to Art. 21 GDPR, insofar as there are reasons arising from your particular situation or if the objection is directed against direct marketing. In the latter case, you have a general right to object, which we will implement without specifying a particular situation. If you wish to exercise your right to withdraw consent or object, it is sufficient to send an email to manufacturing@mssmachinery.de."
+    },
+    "dataSecurity": {
+      "title": "9. Data Security",
+      "content": "We use the commonly used SSL (Secure Socket Layer) procedure in connection with the highest encryption level supported by your browser during your visit to the website. Typically, this is 256-bit encryption. If your browser does not support 256-bit encryption, we use 128-bit v3 technology instead. You can tell whether a page of our website is transmitted securely by the closed key or padlock symbol in the lower status bar of your browser. In addition, we use suitable technical and organizational security measures to protect your data from accidental or intentional manipulation, partial or complete loss, destruction, or unauthorized access by third parties. Our security measures are continuously improved in line with technological developments."
+    },
+    "updates": {
+      "title": "10. Currentness and Changes to This Privacy Policy",
+      "content": "This privacy policy is currently valid and was last updated in February 2025. Due to the development of our website and services or due to changes in legal or regulatory requirements, it may be necessary to update this privacy policy. The current version of the privacy policy can be accessed and printed at any time on the website under Privacy Policy."
+    }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "companyInfo": {
+      "title": "Information according to § 5 TMG",
+      "companyName": "MSS Cable Machinery GmbH",
+      "management": "Represented by: Mustafa Dündar (Managing Director)",
+      "contact": {
+        "labels": {
+          "address": "Address",
+          "phone": "Phone",
+          "email": "Email",
+          "website": "Website"
+        },
+        "values": {
+          "address": "Krügerstraße 8-10, 68219 Mannheim, Germany",
+          "phone": "+49 621 862 77411",
+          "email": "manufacturing@mssmachinery.de",
+          "website": "www.mssmachinery.de"
+        }
+      }
+    },
+    "registration": {
+      "title": "Registration & VAT",
+      "court": "Register court: Mannheim District Court",
+      "number": "Register number: HRB 729253",
+      "vatId": "VAT ID: VAT identification number according to § 27a VAT Act: DE 147033361 Responsible for the content according to § 55 Abs. 2 RStV: Mustafa Dündar Krügerstraße 8-10, 68219 Mannheim, Germany"
+    },
+    "responsibility": {
+      "title": "Responsible for the content",
+      "according": "According to § 55 Abs. 2 RStV:",
+      "name": "Mustafa Dündar",
+      "address": "Krügerstraße 8-10, 68219 Mannheim, Germany"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": {
+        "title": "1. Content of the online offer",
+        "text": "The author assumes no responsibility for the currentness, correctness, completeness, or quality of the information provided. Liability claims against the author, related to material or immaterial damages caused by the use or non-use of the provided information or by using incorrect and incomplete information, are generally excluded, unless the author is proven to be at fault intentionally or grossly negligently. All offers are subject to change and non-binding. The author explicitly reserves the right to change, supplement, delete parts of the pages, or to temporarily or permanently cease the publication without prior notice."
+      },
+      "links": {
+        "title": "2. References and links",
+        "text": "In case of direct or indirect references to foreign websites (hyperlinks) that are outside the author's area of responsibility, a liability obligation would only apply if the author is aware of the content and it would be technically possible and reasonable to prevent the use of illegal content. The author hereby expressly declares that at the time of setting the link, no illegal content was visible on the linked pages. The author has no influence on the current and future design, content, or authorship of the linked/ associated pages. Therefore, the author distances himself explicitly from all content of all linked/associated pages that were changed after the link was set. This statement applies to all links and references set within the author's own internet offer as well as to foreign entries in guestbooks, discussion forums, directories, mailing lists, and all other forms of databases where external write access is possible. For illegal, incorrect, or incomplete content, and especially for damages resulting from the use or non-use of such information, only the provider of the page referred to is liable, not the one who simply refers to the respective publication via links."
+      },
+      "copyright": {
+        "title": "3. Copyright and trademark law",
+        "text": "The author strives to respect the copyrights of the images, graphics, sound documents, video sequences, and texts used in all publications, to use images, graphics, sound documents, video sequences, and texts created by himself or to rely on license-free graphics, sound documents, video sequences, and texts. All trademarks and logos mentioned within the internet offer and possibly protected by third parties are subject to the provisions of the respective applicable trademark law and the ownership rights of the respective registered owners without restriction. The copyright for published objects created by the author himself remains with the author of the pages. Reproduction or use of such graphics, sound documents, video sequences, and texts in other electronic or printed publications is not permitted without the author's express consent."
+      },
+      "dataProtection": {
+        "title": "4. Data protection",
+        "text": "If within the internet offer there is the possibility of entering personal or business data (email addresses, names, addresses), the disclosure of this data by the user is on a voluntary basis. The use and payment of all offered services are – as far as technically possible and reasonable – also permitted without the provision of such data or by providing anonymized data or a pseudonym. The use of contact data published within the imprint or similar details, such as postal addresses, phone and fax numbers, and email addresses by third parties for sending unsolicited information is not permitted. Legal action against the senders of so-called spam mails in case of violations of this prohibition is expressly reserved."
+      },
+      "validity": {
+        "title": "5. Legal validity of this disclaimer",
+        "text": "This disclaimer is to be regarded as part of the internet offer from which this page was referred to. If parts or individual phrases of this text should not, no longer, or not completely correspond to the applicable legal situation, the remaining parts of the document remain unaffected in their content and validity."
+      }
+    }
   }
 }
