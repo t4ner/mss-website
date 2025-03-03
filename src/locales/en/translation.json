@@ -300,5 +300,18 @@
         "afterLink": "and let's elevate your cable manufacturing processes to the next level."
       }
     }
+  },
+  "footer": {
+    "navigation": {
+      "home": "Home",
+      "products": "Products",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© Cable Machinery GmbH | All rights reserved | Design and Development by Macaree"
   }
 }

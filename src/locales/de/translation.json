@@ -300,5 +300,18 @@
         "afterLink": "noch heute und lassen Sie uns gemeinsam Ihre Kabelfertigungsprozesse auf ein neues Niveau heben."
       }
     }
+  },
+  "footer": {
+    "navigation": {
+      "home": "Startseite",
+      "products": "Produkte",
+      "services": "Dienstleistungen",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Datenschutzerklärung",
+      "terms": "Impressum"
+    },
+    "copyright": "© Cable Machinery GmbH | Alle Rechte vorbehalten | Design und Entwicklung von Macaree"
   }
 }

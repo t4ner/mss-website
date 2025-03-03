@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer
       className="bg-white container lg:rounded-lg shadow-sm mt-10 lg:mt-20 lg:mb-5 px-4 sm:px-6 lg:px-8 border-t border-gray-100"
@@ -20,47 +23,6 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Main Navigation links - Hidden on mobile */}
-          <nav
-            aria-label="Main Footer navigation"
-            className="hidden lg:block lg:ml-auto"
-          >
-            <ul className="flex flex-wrap text-sm lg:text-base justify-end gap-x-8 gap-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
           {/* Legal links - Visible on all screens */}
           <nav
             aria-label="Legal Footer navigation"
@@ -70,17 +32,17 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
+                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 "
                 >
-                  Privacy Policy
+                  {t("footer.legal.privacy")}
                 </Link>
               </li>
               <li>
                 <Link
                   to="/terms-of-service"
-                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200 font-medium"
+                  className="text-gray-500 hover:text-[#0C4A79] transition-colors duration-200"
                 >
-                  Terms of Service
+                  {t("footer.legal.terms")}
                 </Link>
               </li>
             </ul>
@@ -91,9 +53,8 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-100 mt-8 pt-6">
-          <p className="text-gray-500 text-sm text-center">
-            © {new Date().getFullYear()} Cable Machinery GmbH | Alle Rechte
-            vorbehalten | Design und Entwicklung Macaree
+          <p className="text-gray-500 text-sm lg:text-base  text-center">
+            {new Date().getFullYear()} {t("footer.copyright")}
           </p>
         </div>
       </div>
