@@ -1,18 +1,22 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 const PrivacyPolicy = () => {
   return (
     <div>
       <Navbar />
       <div className="container mx-auto px-4 pt-8 lg:pt-12">
-        <h1 className="text-base lg:text-4xl font-bold mb-8">
+        <h1 className="text-base lg:text-4xl font-bold mb-8 text-black">
           Datenschutzerklärung
         </h1>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section1"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            1. Einleitung
+            <span className="text-black">1. Einleitung</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges
@@ -23,9 +27,12 @@ const PrivacyPolicy = () => {
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section2"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            2. Verantwortlicher
+            <span className="text-black">2. Verantwortlicher</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Verantwortlich für die Datenverarbeitung ist:
@@ -38,19 +45,36 @@ const PrivacyPolicy = () => {
             <br />
             68219 Mannheim, Deutschland
             <br />
-            Telefon: +49 621 862 77411
+            Telefon:{" "}
+            <a
+              href="tel:+496218627741"
+              className="text-[#0C4A79] hover:underline"
+            >
+              +49 621 862 77411
+            </a>
             <br />
-            E-Mail: manufacturing@mssmachinery.de
+            E-Mail:{" "}
+            <a
+              href="mailto:manufacturing@mssmachinery.de"
+              className="text-[#0C4A79] hover:underline"
+            >
+              manufacturing@mssmachinery.de
+            </a>
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section3"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            3. Erhebung und Verarbeitung personenbezogener Daten
+            <span className="text-black">
+              3. Erhebung und Verarbeitung personenbezogener Daten
+            </span>
           </h2>
 
-          <h3 className="text-sm lg:text-xl font-semibold mb-3">
-            3.1 Besuch der Website
+          <h3 id="section3-1" className="text-sm lg:text-xl font-semibold mb-3">
+            <span className="text-black">3.1 Besuch der Website</span>
           </h3>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Beim Besuch unserer Website erheben wir automatisch bestimmte Daten,
@@ -74,8 +98,10 @@ const PrivacyPolicy = () => {
             anderen personenbezogenen Daten von Ihnen findet nicht statt.
           </p>
 
-          <h3 className="text-sm lg:text-xl font-semibold mb-3">
-            3.2 Kontaktformular und E-Mail-Kontakt
+          <h3 id="section3-2" className="text-sm lg:text-xl font-semibold mb-3">
+            <span className="text-black">
+              3.2 Kontaktformular und E-Mail-Kontakt
+            </span>
           </h3>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wenn Sie uns über unser Kontaktformular oder per E-Mail
@@ -88,9 +114,12 @@ const PrivacyPolicy = () => {
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section4"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            4. Weitergabe von Daten
+            <span className="text-black">4. Weitergabe von Daten</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur,
@@ -118,8 +147,13 @@ const PrivacyPolicy = () => {
           </ul>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-sm lg:text-xl font-semibold mb-4">5. Cookies</h2>
+        <section
+          id="section5"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
+          <h2 className="text-sm lg:text-xl font-semibold mb-4">
+            <span className="text-black">5. Cookies</span>
+          </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wir setzen auf unserer Website Cookies ein. Cookies sind kleine
             Dateien, die Ihr Browser automatisch erstellt und die auf Ihrem
@@ -158,22 +192,33 @@ const PrivacyPolicy = () => {
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section6"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            6. Analyse-Tools
+            <span className="text-black">6. Analyse-Tools</span>
           </h2>
-          <h3 className="text-sm lg:text-xl font-semibold mb-3">
-            6.1 Google Analytics
+          <h3 id="section6-1" className="text-sm lg:text-xl font-semibold mb-3">
+            <span className="text-black">6.1 Google Analytics</span>
           </h3>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
             Optimierung unserer Seiten nutzen wir Google Analytics, ein
-            Webanalysedienst der Google Inc.
-            (https://www.google.de/intl/de/about/) (1600 Amphitheatre Parkway,
-            Mountain View, CA 94043, USA; im Folgenden "Google"). In diesem
-            Zusammenhang werden pseudonymisierte Nutzungsprofile erstellt und
-            Cookies (siehe unter Ziff. 5) verwendet. Die durch den Cookie
-            erzeugten Informationen über Ihre Benutzung dieser Website wie:
+            Webanalysedienst der Google Inc. (
+            <a
+              href="https://www.google.de/intl/de/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0C4A79] hover:underline"
+            >
+              https://www.google.de/intl/de/about/
+            </a>
+            ) (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; im
+            Folgenden "Google"). In diesem Zusammenhang werden pseudonymisierte
+            Nutzungsprofile erstellt und Cookies (siehe unter Ziff. 5)
+            verwendet. Die durch den Cookie erzeugten Informationen über Ihre
+            Benutzung dieser Website wie:
           </p>
           <ul className="list-disc list-inside text-sm lg:text-base text-gray-700 mb-4 ml-4">
             <li>Browser-Typ/-Version</li>
@@ -221,14 +266,25 @@ const PrivacyPolicy = () => {
           </p>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Weitere Informationen zum Datenschutz im Zusammenhang mit Google
-            Analytics finden Sie etwa in der Google Analytics-Hilfe (https://
-            support.google.com/analytics/answer/6004245?hl=de).
+            Analytics finden Sie etwa in der Google Analytics-Hilfe (
+            <a
+              href="https://support.google.com/analytics/answer/6004245?hl=de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0C4A79] hover:underline"
+            >
+              https://support.google.com/analytics/answer/6004245?hl=de
+            </a>
+            ).
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section7"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            7. Betroffenenrechte
+            <span className="text-black">7. Betroffenenrechte</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Sie haben das Recht:
@@ -291,9 +347,12 @@ const PrivacyPolicy = () => {
           </ul>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section8"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            8. Widerspruchsrecht
+            <span className="text-black">8. Widerspruchsrecht</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Sofern Ihre personenbezogenen Daten auf Grundlage von berechtigten
@@ -305,13 +364,23 @@ const PrivacyPolicy = () => {
             Fall haben Sie ein generelles Widerspruchsrecht, das ohne Angabe
             einer besonderen Situation von uns umgesetzt wird. Möchten Sie von
             Ihrem Widerrufs- oder Widerspruchsrecht Gebrauch machen, genügt eine
-            E-Mail an manufacturing@mssmachinery.de.
+            E-Mail an{" "}
+            <a
+              href="mailto:manufacturing@mssmachinery.de"
+              className="text-[#0C4A79] hover:underline"
+            >
+              manufacturing@mssmachinery.de
+            </a>
+            .
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section9"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            9. Datensicherheit
+            <span className="text-black">9. Datensicherheit</span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Wir verwenden innerhalb des Website-Besuchs das verbreitete
@@ -333,9 +402,14 @@ const PrivacyPolicy = () => {
           </p>
         </section>
 
-        <section className="mb-8 bg-white rounded-lg shadow-sm p-8">
+        <section
+          id="section10"
+          className="mb-8 bg-white rounded-lg shadow-sm p-8"
+        >
           <h2 className="text-sm lg:text-xl font-semibold mb-4">
-            10. Aktualität und Änderung dieser Datenschutzerklärung
+            <span className="text-black">
+              10. Aktualität und Änderung dieser Datenschutzerklärung
+            </span>
           </h2>
           <p className="text-sm lg:text-base text-gray-700 mb-4">
             Diese Datenschutzerklärung ist aktuell gültig und hat den Stand

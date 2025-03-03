@@ -27,15 +27,33 @@ const TermsOfService = () => {
                 68219 Mannheim, Deutschland
               </p>
               <p className="text-sm lg:text-base">
-                <span className="font-medium">Telefon:</span> +49 621 862 77411
+                <span className="font-medium">Telefon:</span>{" "}
+                <a
+                  href="tel:+4962186277411"
+                  className="text-[#0C4A79] hover:underline"
+                >
+                  +49 621 862 77411
+                </a>
               </p>
               <p className="text-sm lg:text-base">
                 <span className="font-medium">E-Mail:</span>{" "}
-                manufacturing@mssmachinery.de
+                <a
+                  href="mailto:manufacturing@mssmachinery.de"
+                  className="text-[#0C4A79] hover:underline"
+                >
+                  manufacturing@mssmachinery.de
+                </a>
               </p>
               <p className="text-sm lg:text-base">
                 <span className="font-medium">Website:</span>{" "}
-                www.mssmachinery.de
+                <a
+                  href="https://www.mssmachinery.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0C4A79] hover:underline"
+                >
+                  www.mssmachinery.de
+                </a>
               </p>
             </div>
           </div>
@@ -51,10 +69,12 @@ const TermsOfService = () => {
               Mannheim
             </p>
             <p className="text-sm lg:text-base">
-              <span className="font-medium">Registernummer:</span> HRB 729253
+              <span className="font-medium">Registernummer:</span>{" "}
+              <span className="text-[#0C4A79]">HRB 729253</span>
             </p>
             <p className="text-sm lg:text-base">
-              <span className="font-medium">Umsatzsteuer-ID:</span> DE 147033361
+              <span className="font-medium">Umsatzsteuer-ID:</span>{" "}
+              <span className="text-[#0C4A79]">DE 147033361</span>
             </p>
           </div>
         </section>
@@ -90,7 +110,12 @@ const TermsOfService = () => {
                 bzw. durch die Nutzung fehlerhafter und unvollständiger
                 Informationen verursacht wurden, sind grundsätzlich
                 ausgeschlossen, sofern seitens des Autors kein nachweislich
-                vorsätzliches oder grob fahrlässiges Verschulden vorliegt.
+                vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Alle
+                Angebote sind freibleibend und unverbindlich. Der Autor behält
+                es sich ausdrücklich vor, Teile der Seiten oder das gesamte
+                Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen,
+                zu löschen oder die Veröffentlichung zeitweise oder endgültig
+                einzustellen.
               </p>
             </div>
 
@@ -100,11 +125,29 @@ const TermsOfService = () => {
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
                 Bei direkten oder indirekten Verweisen auf fremde Webseiten
-                („Hyperlinks"), die außerhalb des Verantwortungsbereiches des
+                („Hyperlinks“), die außerhalb des Verantwortungsbereiches des
                 Autors liegen, würde eine Haftungsverpflichtung ausschließlich
                 in dem Fall in Kraft treten, in dem der Autor von den Inhalten
                 Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die
-                Nutzung im Falle rechtswidriger Inhalte zu verhindern.
+                Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor
+                erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung
+                keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar
+                waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte
+                oder die Urheberschaft der verlinkten/verknüpften Seiten hat der
+                Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit
+                ausdrücklich von allen Inhalten aller verlinkten/verknüpften
+                Seiten, die nach der Linksetzung verändert wurden. Diese
+                Feststellung gilt für alle innerhalb des eigenen
+                Internetangebotes gesetzten Links und Verweise sowie für
+                Fremdeinträge in vom Autor eingerichteten Gästebüchern,
+                Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen
+                anderen Formen von Datenbanken, auf deren Inhalt externe
+                Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder
+                unvollständige Inhalte und insbesondere für Schäden, die aus der
+                Nutzung oder Nichtnutzung solcherart dargebotener Informationen
+                entstehen, haftet allein der Anbieter der Seite, auf welche
+                verwiesen wurde, nicht derjenige, der über Links auf die
+                jeweilige Veröffentlichung lediglich verweist.
               </p>
             </div>
 
@@ -114,11 +157,20 @@ const TermsOfService = () => {
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
                 Der Autor ist bestrebt, in allen Publikationen die Urheberrechte
-                der verwendeten Inhalte zu beachten. Das Copyright für
-                veröffentlichte, vom Autor selbst erstellte Objekte bleibt
-                allein beim Autor der Seiten. Eine Vervielfältigung oder
-                Verwendung ohne ausdrückliche Zustimmung des Autors ist nicht
-                gestattet.
+                der verwendeten Bilder, Grafiken, Tondokumente, Videosequenzen
+                und Texte zu beachten, von ihm selbst erstellte Bilder,
+                Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder
+                auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte
+                zurückzugreifen. Alle innerhalb des Internetangebotes genannten
+                und ggf. durch Dritte geschützten Marken- und Warenzeichen
+                unterliegen uneingeschränkt den Bestimmungen des jeweils
+                gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen
+                eingetragenen Eigentümer. Das Copyright für veröffentlichte, vom
+                Autor selbst erstellte Objekte bleibt allein beim Autor der
+                Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken,
+                Tondokumente, Videosequenzen und Texte in anderen elektronischen
+                oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung
+                des Autors nicht gestattet.
               </p>
             </div>
 
@@ -128,12 +180,19 @@ const TermsOfService = () => {
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
                 Sofern innerhalb des Internetangebotes die Möglichkeit zur
-                Eingabe persönlicher oder geschäftlicher Daten besteht, so
-                erfolgt die Preisgabe dieser Daten seitens des Nutzers auf
-                ausdrücklich freiwilliger Basis. Die Nutzung der im Rahmen des
-                Impressums veröffentlichten Kontaktdaten durch Dritte zur
-                Übersendung von nicht ausdrücklich angeforderten Informationen
-                ist nicht gestattet.
+                Eingabe persönlicher oder geschäftlicher Daten (E-Mail-Adressen,
+                Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser
+                Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis.
+                Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist
+                – soweit technisch möglich und zumutbar – auch ohne Angabe
+                solcher Daten bzw. unter Angabe anonymisierter Daten oder eines
+                Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums
+                oder vergleichbarer Angaben veröffentlichten Kontaktdaten wie
+                Postanschriften, Telefon- und Faxnummern sowie E-Mail-Adressen
+                durch Dritte zur Übersendung von nicht ausdrücklich
+                angeforderten Informationen ist nicht gestattet. Rechtliche
+                Schritte gegen die Versender von sogenannten Spam-Mails bei
+                Verstößen gegen dieses Verbot sind ausdrücklich vorbehalten.
               </p>
             </div>
 
@@ -143,10 +202,11 @@ const TermsOfService = () => {
               </h3>
               <p className="text-sm lg:text-base leading-relaxed">
                 Dieser Haftungsausschluss ist als Teil des Internetangebotes zu
-                betrachten. Sofern Teile oder einzelne Formulierungen dieses
-                Textes der geltenden Rechtslage nicht, nicht mehr oder nicht
-                vollständig entsprechen sollten, bleiben die übrigen Teile des
-                Dokuments in ihrem Inhalt und ihrer Gültigkeit davon unberührt.
+                betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern
+                Teile oder einzelne Formulierungen dieses Textes der geltenden
+                Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen
+                sollten, bleiben die übrigen Teile des Dokuments in ihrem Inhalt
+                und ihrer Gültigkeit davon unberührt.
               </p>
             </div>
           </div>
