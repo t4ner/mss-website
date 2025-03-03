@@ -6,6 +6,7 @@ import ServicesInfo from "../components/ServicesInfo";
 import ServicesBenefits from "../components/ServicesBenefits";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
+import ProductServices from "../components/ProductServices";
 
 const Services = () => {
   const { t } = useTranslation();
@@ -20,7 +21,8 @@ const Services = () => {
       />
       <ServicesInfo />
       <ServicesDetail />
-      <ServicesBenefits />
+      <ProductServices />
+      {/* <ServicesBenefits /> */}
       <Footer />
     </div>
   );

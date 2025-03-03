@@ -21,7 +21,6 @@ const Products = () => {
       <div className="space-y-10 lg:space-y-20">
         <ProductsInfo />
         <ProductList />
-        <ProductServices />
       </div>
       <Footer />
     </div>

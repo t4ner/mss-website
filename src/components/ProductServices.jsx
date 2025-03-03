@@ -20,26 +20,19 @@ const ProductServices = () => {
     <MdPeople className="text-3xl lg:text-5xl text-white" />,
   ];
 
-  const gradients = [
-    "from-[#0C4A79] to-[#2171B5]",
-    "from-[#E5153D] to-[#FF4D6A]",
-    "from-[#0C4A79] to-[#2171B5]",
-    "from-[#0C4A79] to-[#2171B5]",
-    "from-[#E5153D] to-[#FF4D6A]",
-    "from-[#0C4A79] to-[#2171B5]",
-  ];
+  
 
   const items = t("products.services.items", { returnObjects: true }).map(
     (item, index) => ({
       ...item,
       icon: serviceIcons[index],
-      gradient: gradients[index],
+    
     })
   );
 
   const CardGrid = ({ items }) => (
     <div
-      className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-8 "
       role="list"
       aria-label="Feature cards"
     >
@@ -56,7 +49,7 @@ const ProductServices = () => {
         >
           <div
             className={`
-              h-full bg-gradient-to-br ${item.gradient} 
+              h-full bg-blue-500/60
               rounded-2xl p-8 shadow-xl transform transition-all duration-300
               hover:shadow-2xl flex flex-col justify-center
             `}
@@ -71,7 +64,7 @@ const ProductServices = () => {
               </div>
               <h3
                 id={`features-title-${index}`}
-                className="text-lg lg:text-xl font-krona font-semibold mb-4 text-white"
+                className="text-lg lg:text-2xl font-krona font-bold mb-4 text-white"
               >
                 {item.title}
               </h3>
@@ -87,7 +80,7 @@ const ProductServices = () => {
   );
 
   return (
-    <main>
+    <main className="mt-20">
       <div className="container mx-auto px-2 lg:px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}
@@ -103,7 +96,7 @@ const ProductServices = () => {
             {t("products.services.title")}
           </h2>
           <div
-            className="w-24 h-1 bg-[#0C4A79] mx-auto rounded-full"
+            className="w-24 h-1 bg-black mx-auto rounded-full"
             role="presentation"
           ></div>
         </motion.section>

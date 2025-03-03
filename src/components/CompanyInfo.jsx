@@ -22,10 +22,10 @@ const CompanyInfo = () => {
                 </div>
 
                 <h1 className="text-lg lg:text-4xl font-bold mb-8 leading-tight font-krona">
-                  <span className="block text-[#0C4A79]">
+                  <span className="block ">
                     {t("companyInfo.innovativeSolutions")}
                   </span>
-                  <span className="block mt-1 text-[#E5153D]">
+                  <span className="block mt-1">
                     {t("companyInfo.cableManufacturing")}
                   </span>
                 </h1>
@@ -57,32 +57,7 @@ const CompanyInfo = () => {
               />
 
               {/* İstatistik kartı */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="hidden lg:block absolute -bottom-12 left-1/2 -translate-x-1/2 w-[90%]"
-              >
-                <div
-                  className="bg-white rounded-lg shadow-lg p-6 flex justify-between"
-                  role="list"
-                >
-                  {[
-                    { value: "25+", label: t("companyInfo.experience") },
-                    { value: "1000+", label: t("companyInfo.machinesDelivered")},
-                    { value: "50+", label: t("companyInfo.countriesServed") },
-                  ].map((stat, index) => (
-                    <div key={index} className="text-center" role="listitem">
-                      <div className="text-3xl font-bold text-[#E5153D]">
-                        {stat.value}
-                      </div>
-                      <div className="text-base text-gray-600">
-                        {stat.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+         
             </motion.div>
           </motion.article>
         </div>

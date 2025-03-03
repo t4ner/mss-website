@@ -8,7 +8,7 @@ body {
 }
 
 @theme {
-  --font-krona: "Krona One", sans-serif;
+  --font-krona: "Montserrat", sans-serif;
 }
 
 @layer components {
