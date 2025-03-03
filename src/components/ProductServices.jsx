@@ -49,7 +49,7 @@ const ProductServices = () => {
         >
           <div
             className={`
-              h-full bg-blue-500/60
+              h-full bg-[#336E95]
               rounded-2xl p-8 shadow-xl transform transition-all duration-300
               hover:shadow-2xl flex flex-col justify-center
             `}

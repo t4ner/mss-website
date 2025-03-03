@@ -42,7 +42,7 @@ const CoreValues = () => {
         >
           <div
             className={`
-              h-full bg-red-600/60
+              h-full bg-[#FE6685]
               rounded-2xl p-8 shadow-xl transform transition-all duration-300
               hover:shadow-2xl flex flex-col justify-center
             `}
