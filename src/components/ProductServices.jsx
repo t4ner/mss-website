@@ -80,7 +80,7 @@ const ProductServices = () => {
   );
 
   return (
-    <main className="mt-20">
+    <main className="mt-10 lg:mt-20">
       <div className="container mx-auto px-2 lg:px-4">
         <motion.section
           initial={{ opacity: 0, y: -20 }}
