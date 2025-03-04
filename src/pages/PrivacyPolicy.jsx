@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      <div className="container mx-auto px-4 pt-8 lg:pt-12">
+      <div className="container mx-auto px-4 pt-32 lg:pt-36">
         <h1 className="text-base lg:text-4xl font-bold mb-8 text-black">
           {t("privacy.title")}
         </h1>

@@ -13,14 +13,16 @@ const Products = () => {
   return (
     <div>
       <Navbar />
-      <Hero
-        title={t("products.hero.title")}
-        subtitle={t("products.hero.subtitle")}
-        image="/hero/products-hero.jpeg"
-      />
-      <div className="space-y-10 lg:space-y-20">
-        <ProductsInfo />
-        <ProductList />
+      <div className="pt-24 lg:pt-32">
+        <Hero
+          title={t("products.hero.title")}
+          subtitle={t("products.hero.subtitle")}
+          image="/hero/products-hero.jpeg"
+        />
+        <div className="space-y-10 lg:space-y-20">
+          <ProductsInfo />
+          <ProductList />
+        </div>
       </div>
       <Footer />
     </div>

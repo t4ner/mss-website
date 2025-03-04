@@ -14,16 +14,18 @@ const Services = () => {
   return (
     <div>
       <Navbar />
-      <Hero
-        title={t("services.hero.title")}
-        subtitle={t("services.hero.subtitle")}
-        image="/hero/services-hero.jpeg"
-      />
-      <ServicesInfo />
-      <ServicesDetail />
-      <ProductServices />
-      {/* <ServicesBenefits /> */}
-      <Footer />
+      <div className="pt-24 lg:pt-32">
+        <Hero
+          title={t("services.hero.title")}
+          subtitle={t("services.hero.subtitle")}
+          image="/hero/services-hero.jpeg"
+        />
+        <ServicesInfo />
+        <ServicesDetail />
+        <ProductServices />
+        {/* <ServicesBenefits /> */}
+        <Footer />
+      </div>
     </div>
   );
 };

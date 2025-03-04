@@ -13,10 +13,12 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      <ContactHero />
-      <ContactInfo />
-      <ContactForm />
-      <ContactBenefits />
+      <div className="pt-24 lg:pt-32">
+        <ContactHero />
+        <ContactInfo />
+        <ContactForm />
+        <ContactBenefits />
+      </div>
       <Footer />
     </div>
   );

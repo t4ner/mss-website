@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="space-y-10 lg:space-y-20">
+      <div className="space-y-10 lg:space-y-20 pt-24 lg:pt-32">
         <Hero
           title={t("home-hero.title")}
           subtitle={t("home-hero.subtitle")}
