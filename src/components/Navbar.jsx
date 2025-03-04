@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-50/80 backdrop-blur-md shadow-sm container mx-auto p-4 lg:rounded-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-50/80 backdrop-blur-md shadow-sm container mx-auto p-4 lg:rounded-b-lg">
       <nav className="w-full" role="navigation" aria-label="Main navigation">
         <div className="container px-0  lg:px-4 mx-auto">
           <div className="flex items-center justify-between">
@@ -226,24 +226,61 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 z-40 flex items-center justify-center pt-20 bg-white lg:hidden"
-              style={{ top: 0 }}
+              className="fixed inset-0 z-[99999] bg-white lg:hidden min-h-screen"
+              style={{ backgroundColor: "white" }}
               role="dialog"
               aria-modal="true"
               aria-label="Mobile Navigation"
             >
-              <div className="flex flex-col items-center p-4 space-y-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.text}
-                    to={link.to}
-                    className="text-black tracking-wider text-xl font-semibold hover:text-[#0C4A79] transition-colors"
-                    aria-label={link.label}
-                    onClick={() => setIsMobileMenuOpen(false)}
+              <div className="container mx-auto px-4 py-4 flex justify-between items-center border-b border-gray-100">
+                <Link
+                  to="/"
+                  className="relative font-bold"
+                  aria-label="Go to homepage"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <img
+                    src={logo}
+                    alt="Company Logo"
+                    className="object-contain w-auto h-16 lg:h-20"
+                    width="80"
+                    height="80"
+                  />
+                </Link>
+                <button
+                  className="p-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    {link.text}
-                  </Link>
-                ))}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex flex-col items-center p-4 mt-8">
+                <div className="w-full max-w-sm mx-auto mt-10">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.text}
+                      to={link.to}
+                      className="block w-full text-center py-6 text-black tracking-wider text-xl font-semibold hover:text-[#0C4A79] transition-colors"
+                      aria-label={link.label}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.text}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           )}
