@@ -50,7 +50,7 @@ const CompanyInfo = () => {
             role="presentation"
           ></div>
         </motion.section>
-          <div className="space-y-6 text-lg leading-relaxed text-sm lg:text-lg">
+          <div className="space-y-6 leading-relaxed text-sm lg:text-lg">
             <p className="text-gray-700" itemProp="description">
               {t("companyInfo.mainDescription")}
             </p>

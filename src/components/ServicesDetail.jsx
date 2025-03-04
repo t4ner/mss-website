@@ -19,21 +19,22 @@ const ServicesDetail = () => {
               <div
                 className="box-border rounded-lg shadow-lg h-auto lg:h-[70vh] 
                             flex flex-col lg:flex-row transition-all duration-500 
-                            relative overflow-hidden bg-white"
+                            relative overflow-hidden bg-[#336E95]"
               >
                 <div className="w-full lg:w-2/3 relative h-[300px] lg:h-full">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    style={{ aspectRatio: "1600/1115" }}
                   />
                 </div>
                 <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
                   <div className="max-w-xl">
-                    <h2 className="text-lg lg:text-2xl mb-4 lg:mb-6 text-gray-800 font-bold font-krona">
+                    <h2 className="text-lg lg:text-2xl mb-4 lg:mb-6 text-white font-bold font-krona">
                       {service.title}
                     </h2>
-                    <p className="text-sm lg:text-lg text-gray-600 leading-relaxed">
+                    <p className="text-sm lg:text-lg text-white leading-relaxed">
                       {service.description}
                     </p>
                   </div>

@@ -16,7 +16,7 @@ const Products = () => {
       <Hero
         title={t("products.hero.title")}
         subtitle={t("products.hero.subtitle")}
-        image="/hero/products-hero.png"
+        image="/hero/products-hero.jpeg"
       />
       <div className="space-y-10 lg:space-y-20">
         <ProductsInfo />
