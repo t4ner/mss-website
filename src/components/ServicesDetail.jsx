@@ -25,8 +25,13 @@ const ServicesDetail = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover object-center p-4"
-                    style={{ aspectRatio: "16/9" }}
+                    className="absolute inset-0 w-full h-full object-contain object-center p-4"
+                    style={{
+                      width: "1677px",
+                      height: "1169px",
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                    }}
                   />
                 </div>
                 <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
