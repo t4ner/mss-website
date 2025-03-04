@@ -17,7 +17,7 @@ const Services = () => {
       <Hero
         title={t("services.hero.title")}
         subtitle={t("services.hero.subtitle")}
-        image="/hero/services-hero.png"
+        image="/hero/services-hero.jpeg"
       />
       <ServicesInfo />
       <ServicesDetail />

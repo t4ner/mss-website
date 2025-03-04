@@ -21,12 +21,12 @@ const ServicesDetail = () => {
                             flex flex-col lg:flex-row transition-all duration-500 
                             relative overflow-hidden bg-[#336E95]"
               >
-                <div className="w-full lg:w-2/3 relative h-[300px] lg:h-full">
+                <div className="w-full lg:w-2/3 relative h-[300px] lg:h-full overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    style={{ aspectRatio: "1600/1115" }}
+                    className="absolute inset-0 w-full h-full object-cover object-center p-4"
+                    style={{ aspectRatio: "16/9" }}
                   />
                 </div>
                 <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
