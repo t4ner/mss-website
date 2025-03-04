@@ -6,8 +6,8 @@ const ProductList = () => {
   const [selectedCategory, setSelectedCategory] = useState(
     t("products.categories.0")
   );
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const productsRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const categories = t("products.categories", { returnObjects: true });
 
@@ -59,6 +59,16 @@ const ProductList = () => {
     setSelectedCategory(t("products.categories.0"));
   }, [t]);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024); // 1024px is the 'lg' breakpoint in Tailwind
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const nextImage = (productIndex, imagesLength) => {
     setCurrentImageIndexes((prev) => ({
       ...prev,
@@ -75,7 +85,6 @@ const ProductList = () => {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-    setIsMobileMenuOpen(false);
 
     // Scroll to products with smooth behavior
     if (productsRef.current) {
@@ -84,9 +93,9 @@ const ProductList = () => {
   };
 
   return (
-    <div className="container flex lg:gap-8">
-      {/* Sidebar */}
-      <div className="hidden lg:block w-[30%] flex-shrink-0 bg-gray-50 p-5 rounded-lg">
+    <div className="container flex flex-col lg:flex-row lg:gap-8">
+      {/* Sidebar - hidden on mobile */}
+      <div className="hidden lg:block lg:w-[30%] lg:flex-shrink-0 bg-gray-50 p-5 rounded-lg">
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
@@ -109,15 +118,17 @@ const ProductList = () => {
       {/* Product Grid */}
       <div
         ref={productsRef}
-        className="flex items-center justify-center flex-1 w-full gap-8 bg-gray-50 lg:p-6 rounded-lg"
+        className="flex flex-col items-center justify-center flex-1 w-full gap-8 bg-gray-50 p-4 lg:p-6 rounded-lg"
       >
         {products
           .filter(
             (product) =>
-              !selectedCategory || product.category === selectedCategory
+              isMobile ||
+              !selectedCategory ||
+              product.category === selectedCategory
           )
           .map((product, index) => (
-            <div key={index} className="grou w-full h-full">
+            <div key={index} className="group w-full h-full">
               <div className="flex flex-col w-full h-full bg-white/50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="relative w-full flex justify-center bg-gray-100">
                   <div className="relative w-full">
@@ -205,7 +216,7 @@ const ProductList = () => {
 
                 <div className="p-8">
                   <div className="mb-6">
-                    <h2 className="text-lg lg:text-xl font-krona font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                    <h2 className="text-lg lg:text-xl font-krona font-bold text-gray-800 mb-3">
                       {product.title}
                     </h2>
                   </div>
@@ -232,80 +243,6 @@ const ProductList = () => {
               </div>
             </div>
           ))}
-      </div>
-
-      {/* Mobile Category Button and Menu */}
-      <div className="lg:hidden">
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed bottom-3 right-3 z-40 bg-gradient-to-br from-[#0C4A79] to-[#2171B5] text-white px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
-        >
-          <span className="text-sm mr-1">{t("products.title")}</span>
-        </button>
-
-        {/* Mobile Category Menu */}
-        {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black/50 z-50 flex items-end justify-center animate-fade-in">
-            <div className="bg-white rounded-t-2xl w-full max-h-[80vh] overflow-y-auto animate-slide-up">
-              <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center">
-                <h3 className="text-lg lg:text-xl font-medium lg:font-bold text-[#0C4A79]">
-                  {t("products.ourProducts")}
-                </h3>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="p-4">
-                <ul className="space-y-2">
-                  {categories.map((category, index) => (
-                    <li key={index}>
-                      <button
-                        onClick={() => handleCategorySelect(category)}
-                        className={`w-full text-left p-4 rounded-xl transition-all duration-200 flex items-center justify-between ${
-                          selectedCategory === category
-                            ? "bg-gray-200 text-[#0C4A79]"
-                            : "hover:bg-gray-50 text-gray-700"
-                        }`}
-                      >
-                        <span className="text-sm lg:text-lg">{category}</span>
-                        {selectedCategory === category && (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        )}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

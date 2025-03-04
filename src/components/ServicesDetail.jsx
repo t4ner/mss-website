@@ -8,7 +8,7 @@ const ServicesDetail = () => {
 
   return (
     <div>
-      <div className="container mt-5 lg:mt-16 px-2 lg:px-0">
+      <div className="container mt-5 lg:mt-16 px-2 lg:px-0 ">
         <ul className="list-none p-0 grid grid-cols-1 gap-[4vw]">
           {services.map((service, index) => (
             <li
