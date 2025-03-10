@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
+    "axios": "^1.8.2",
     "country-flag-icons": "^1.5.18",
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",

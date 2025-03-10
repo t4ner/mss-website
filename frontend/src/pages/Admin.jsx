@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
-  return (
-    <div>Admin</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Admin
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated");
+    navigate("/login");
+  };
+
+  return <div>Admin</div>;
+};
+
+export default Admin;
