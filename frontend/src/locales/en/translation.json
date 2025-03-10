@@ -4,7 +4,8 @@
     "about": "ABOUT",
     "services": "SERVICES",
     "contact": "CONTACT",
-    "products": "PRODUCTS"
+    "products": "PRODUCTS",
+    "blog": "BLOG"  
   },
   "language": {
     "select": "Select Language",
@@ -306,7 +307,8 @@
       "home": "Home",
       "products": "Products",
       "services": "Services",
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog"
     },
     "legal": {
       "privacy": "Privacy Policy",

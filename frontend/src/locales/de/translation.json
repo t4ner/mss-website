@@ -4,7 +4,8 @@
     "about": "ÜBER UNS",
     "services": "DIENSTLEISTUNGEN",
     "contact": "KONTAKT",
-    "products": "PRODUKTE"
+    "products": "PRODUKTE",
+    "blog": "BLOG"
   },
   "language": {
     "select": "Sprache auswählen",
@@ -306,7 +307,8 @@
       "home": "Startseite",
       "products": "Produkte",
       "services": "Dienstleistungen",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "blog": "Blog"
     },
     "legal": {
       "privacy": "Datenschutzerklärung",

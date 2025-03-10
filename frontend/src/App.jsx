@@ -10,6 +10,8 @@ import TermsOfService from "./pages/TermsOfService";
 import Admin from "./pages/Admin";
 import LoginPage from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
         <Route
           path="/admin"
           element={

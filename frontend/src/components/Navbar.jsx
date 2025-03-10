@@ -32,10 +32,16 @@ const Navbar = () => {
       label: t("navigation.services"),
     },
     {
+      to: "/blog",
+      text: t("navigation.blog"),
+      label: t("navigation.blog"),
+    },
+    {
       to: "/contact",
       text: t("navigation.contact"),
       label: t("navigation.contact"),
     },
+ 
   ];
 
   const changeLanguage = (lng) => {
