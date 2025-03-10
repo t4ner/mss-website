@@ -45,7 +45,7 @@ router.get("/:id", async (req, res) => {
 // Create a new blog post
 router.post("/", async (req, res) => {
   try {
-    const { title, content, tags, published } = req.body;
+    const { title, content, tags, published, coverImage } = req.body;
 
     // Parse markdown to HTML for storage
     const htmlContent = marked(content);
@@ -53,6 +53,7 @@ router.post("/", async (req, res) => {
     const newPost = new BlogPost({
       title,
       content: content, // Store original markdown
+      coverImage: coverImage || "",
       tags: tags?.split(",").map((tag) => tag.trim()) || [],
       published: published || false,
       createdAt: new Date(),
@@ -70,12 +71,13 @@ router.post("/", async (req, res) => {
 router.patch("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, content, tags, published } = req.body;
+    const { title, content, tags, published, coverImage } = req.body;
 
     // Parse markdown to HTML if content is updated
     const updatedData = {
       ...(title && { title }),
       ...(content && { content }),
+      ...(coverImage !== undefined && { coverImage }),
       ...(tags && { tags: tags.split(",").map((tag) => tag.trim()) }),
       ...(published !== undefined && { published }),
       updatedAt: new Date(),

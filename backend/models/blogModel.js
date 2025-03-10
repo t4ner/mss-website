@@ -10,6 +10,10 @@ const blogSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  coverImage: {
+    type: String,
+    default: "",
+  },
   author: {
     type: String,
     default: "Admin",

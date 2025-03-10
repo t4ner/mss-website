@@ -16,7 +16,10 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
   const [error, setError] = useState("");
   const [preview, setPreview] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
+  const [coverImage, setCoverImage] = useState("");
+  const [uploadingCover, setUploadingCover] = useState(false);
   const fileInputRef = useRef(null);
+  const coverInputRef = useRef(null);
   const editorRef = useRef(null);
 
   useEffect(() => {
@@ -25,6 +28,7 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
       setContent(post.content);
       setTags(post.tags.join(", "));
       setPublished(post.published);
+      setCoverImage(post.coverImage || "");
     }
   }, [post]);
 
@@ -39,6 +43,7 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
         content,
         tags,
         published,
+        coverImage,
       };
 
       let response;
@@ -69,6 +74,7 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
         setContent("");
         setTags("");
         setPublished(false);
+        setCoverImage("");
       }
     } catch (error) {
       setLoading(false);
@@ -123,9 +129,49 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
     }
   };
 
+  const handleCoverImageUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    setUploadingCover(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/api/upload",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      setCoverImage(response.data.imageUrl);
+      setUploadingCover(false);
+
+      // Reset file input
+      if (coverInputRef.current) {
+        coverInputRef.current.value = "";
+      }
+    } catch (error) {
+      setUploadingCover(false);
+      setError("Failed to upload cover image. Please try again.");
+      console.error("Cover image upload error:", error);
+    }
+  };
+
   const handleAddImage = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
+    }
+  };
+
+  const handleAddCoverImage = () => {
+    if (coverInputRef.current) {
+      coverInputRef.current.click();
     }
   };
 
@@ -186,6 +232,46 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="coverImage"
+              className="block text-gray-700 font-medium mb-2"
+            >
+              Cover Image
+            </label>
+            <div className="flex items-center space-x-4 mb-2">
+              <button
+                type="button"
+                onClick={handleAddCoverImage}
+                className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition"
+                disabled={uploadingCover}
+              >
+                {uploadingCover ? "Uploading..." : "Upload Cover Image"}
+              </button>
+              <input
+                type="file"
+                ref={coverInputRef}
+                onChange={handleCoverImageUpload}
+                accept="image/*"
+                className="hidden"
+              />
+              {coverImage && (
+                <span className="text-sm text-green-600">
+                  Cover image uploaded successfully
+                </span>
+              )}
+            </div>
+            {coverImage && (
+              <div className="mt-2 mb-4">
+                <img
+                  src={coverImage}
+                  alt="Cover Preview"
+                  className="max-h-40 rounded border border-gray-300"
+                />
+              </div>
+            )}
           </div>
 
           <div className="mb-4">
@@ -251,13 +337,13 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
                 type="checkbox"
                 checked={published}
                 onChange={(e) => setPublished(e.target.checked)}
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                className="mr-2"
               />
-              <span className="ml-2 text-gray-700">Publish immediately</span>
+              <span>Publish this post</span>
             </label>
           </div>
 
-          <div className="flex justify-end space-x-3">
+          <div className="flex justify-end space-x-4">
             {post && (
               <button
                 type="button"
@@ -278,9 +364,16 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
         </form>
       ) : (
         <div className="preview-container">
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold">{title}</h3>
-          </div>
+          <h1 className="text-3xl font-bold mb-4">{title}</h1>
+          {coverImage && (
+            <div className="mb-6">
+              <img
+                src={coverImage}
+                alt="Cover"
+                className="w-full max-h-80 object-cover rounded-lg"
+              />
+            </div>
+          )}
           <div
             className="prose max-w-none"
             dangerouslySetInnerHTML={{ __html: mdParser.render(content) }}
