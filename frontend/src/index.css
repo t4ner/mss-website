@@ -59,3 +59,100 @@ body {
     background-clip: text;
   }
 }
+
+/* Markdown Editor Styles */
+.markdown-editor-container {
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.markdown-editor-container .rc-md-editor {
+  border: none !important;
+  font-family: inherit;
+}
+
+.markdown-editor-container .rc-md-navigation {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.markdown-editor-container .editor-container {
+  overflow: auto;
+}
+
+.markdown-editor-container .sec-md {
+  border-right: 1px solid #e2e8f0;
+}
+
+.markdown-editor-container .sec-html {
+  padding: 10px;
+}
+
+/* Basic styles for preview container */
+.preview-container {
+  @apply border rounded-md p-6 bg-white;
+}
+
+.preview-container .prose {
+  @apply max-w-none;
+}
+
+.preview-container .prose h1,
+.preview-container .prose h2,
+.preview-container .prose h3,
+.preview-container .prose h4,
+.preview-container .prose h5,
+.preview-container .prose h6 {
+  @apply font-bold mb-4 mt-6;
+}
+
+.preview-container .prose h1 {
+  @apply text-3xl;
+}
+
+.preview-container .prose h2 {
+  @apply text-2xl;
+}
+
+.preview-container .prose h3 {
+  @apply text-xl;
+}
+
+.preview-container .prose p {
+  @apply mb-4;
+}
+
+.preview-container .prose ul,
+.preview-container .prose ol {
+  @apply mb-4 ml-6;
+}
+
+.preview-container .prose ul {
+  @apply list-disc;
+}
+
+.preview-container .prose ol {
+  @apply list-decimal;
+}
+
+.preview-container .prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.preview-container .prose pre {
+  @apply bg-gray-100 p-4 rounded-md overflow-x-auto my-4;
+}
+
+.preview-container .prose code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.preview-container .prose img {
+  @apply max-w-full h-auto my-4 rounded-md;
+}
+
+.preview-container .prose a {
+  @apply text-blue-600 hover:underline;
+}

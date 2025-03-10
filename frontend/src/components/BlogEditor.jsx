@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { marked } from "marked";
+import MarkdownIt from "markdown-it";
+import MdEditor from "react-markdown-editor-lite";
+import "react-markdown-editor-lite/lib/index.css";
+
+// Initialize a markdown parser
+const mdParser = new MarkdownIt();
 
 const BlogEditor = ({ post, onSuccess, onCancel }) => {
   const [title, setTitle] = useState("");
@@ -12,6 +17,7 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
   const [preview, setPreview] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
   const fileInputRef = useRef(null);
+  const editorRef = useRef(null);
 
   useEffect(() => {
     if (post) {
@@ -93,24 +99,15 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
         }
       );
 
-      // Insert the image markdown at cursor position or at the end
-      const imageMarkdown = `\n![${file.name}](${response.data.imageUrl})\n`;
+      // Insert the image markdown at the end of the content
+      const imageMarkdown = `![${file.name}](${response.data.imageUrl})`;
 
-      // Insert at cursor position if possible
-      const textarea = document.getElementById("content");
-      if (textarea.selectionStart || textarea.selectionStart === 0) {
-        const startPos = textarea.selectionStart;
-        const endPos = textarea.selectionEnd;
-
-        const newContent =
-          content.substring(0, startPos) +
-          imageMarkdown +
-          content.substring(endPos, content.length);
-
-        setContent(newContent);
+      // If editor is available, insert at cursor position
+      if (editorRef.current) {
+        editorRef.current.insertText(imageMarkdown);
       } else {
         // Otherwise append to the end
-        setContent(content + imageMarkdown);
+        setContent((prevContent) => prevContent + imageMarkdown);
       }
 
       setUploadingImage(false);
@@ -130,6 +127,11 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
     }
+  };
+
+  // Handle editor change
+  const handleEditorChange = ({ text }) => {
+    setContent(text);
   };
 
   return (
@@ -191,7 +193,7 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               htmlFor="content"
               className="block text-gray-700 font-medium mb-2"
             >
-              Content (Markdown)
+              Content
             </label>
             <div className="mb-2">
               <button
@@ -210,17 +212,19 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
                 className="hidden"
               />
             </div>
-            <textarea
-              id="content"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
-              rows="15"
-              required
-            />
+            <div className="markdown-editor-container">
+              <MdEditor
+                ref={editorRef}
+                value={content}
+                style={{ height: "400px" }}
+                renderHTML={(text) => mdParser.render(text)}
+                onChange={handleEditorChange}
+                view={{ menu: true, md: true, html: true }}
+              />
+            </div>
             <p className="text-sm text-gray-500 mt-1">
-              You can use Markdown syntax for formatting. Add images using the
-              "Add Image" button.
+              You can format your content using the toolbar above. Add images
+              using the image button or the "Add Image" button.
             </p>
           </div>
 
@@ -253,20 +257,19 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
             </label>
           </div>
 
-          <div className="flex justify-end space-x-4">
+          <div className="flex justify-end space-x-3">
             {post && (
               <button
                 type="button"
                 onClick={onCancel}
-                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
-                disabled={loading}
+                className="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition"
               >
                 Cancel
               </button>
             )}
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
               disabled={loading}
             >
               {loading ? "Saving..." : post ? "Update Post" : "Create Post"}
@@ -274,31 +277,14 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
           </div>
         </form>
       ) : (
-        <div className="border rounded-md p-4">
-          <h1 className="text-2xl font-bold mb-4">
-            {title || "Untitled Post"}
-          </h1>
-
-          {tags && (
-            <div className="mb-4 flex flex-wrap gap-2">
-              {tags.split(",").map((tag, index) => (
-                <span
-                  key={index}
-                  className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs"
-                >
-                  {tag.trim()}
-                </span>
-              ))}
-            </div>
-          )}
-
-          <div className="prose max-w-none">
-            {content ? (
-              <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
-            ) : (
-              <p className="text-gray-500 italic">No content to preview</p>
-            )}
+        <div className="preview-container">
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold">{title}</h3>
           </div>
+          <div
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: mdParser.render(content) }}
+          />
         </div>
       )}
     </div>
