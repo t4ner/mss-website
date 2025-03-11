@@ -9,9 +9,8 @@ const mdParser = new MarkdownIt();
 
 const BlogEditor = ({ post, onSuccess, onCancel }) => {
   const [title, setTitle] = useState("");
+  const [slug, setSlug] = useState("");
   const [content, setContent] = useState("");
-  const [tags, setTags] = useState("");
-  const [published, setPublished] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [preview, setPreview] = useState(false);
@@ -25,24 +24,51 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
   useEffect(() => {
     if (post) {
       setTitle(post.title);
+      setSlug(post.slug || "");
       setContent(post.content);
-      setTags(post.tags.join(", "));
-      setPublished(post.published);
       setCoverImage(post.coverImage || "");
     }
   }, [post]);
+
+  // Başlık değiştiğinde otomatik slug oluştur (kullanıcı manuel değiştirmediği sürece)
+  const generateSlugFromTitle = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w\-]+/g, "")
+      .replace(/\-\-+/g, "-")
+      .replace(/^-+/, "")
+      .replace(/-+$/, "");
+  };
+
+  // Başlık değiştiğinde ve slug manuel değiştirilmediyse otomatik slug oluştur
+  const handleTitleChange = (e) => {
+    const newTitle = e.target.value;
+    setTitle(newTitle);
+
+    // Eğer slug boşsa veya daha önce otomatik oluşturulmuşsa, yeni slug oluştur
+    if (!slug || slug === generateSlugFromTitle(title)) {
+      setSlug(generateSlugFromTitle(newTitle));
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
+    if (!slug.trim()) {
+      setError("Slug alanı boş olamaz");
+      setLoading(false);
+      return;
+    }
+
     try {
       const postData = {
         title,
+        slug,
         content,
-        tags,
-        published,
+        published: true, // Always set published to true
         coverImage,
       };
 
@@ -71,9 +97,8 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
       if (!post) {
         // Clear form after creating a new post
         setTitle("");
+        setSlug("");
         setContent("");
-        setTags("");
-        setPublished(false);
         setCoverImage("");
       }
     } catch (error) {
@@ -228,10 +253,32 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               type="text"
               id="title"
               value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={handleTitleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="slug"
+              className="block text-gray-700 font-medium mb-2"
+            >
+              Slug (URL)
+            </label>
+            <input
+              type="text"
+              id="slug"
+              value={slug}
+              onChange={(e) => setSlug(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+              placeholder="ornek-blog-yazisi"
+            />
+            <p className="mt-1 text-sm text-gray-500">
+              Bu alan blog yazınızın URL'sinde kullanılacaktır. Boşluk ve özel
+              karakter kullanmayın.
+            </p>
           </div>
 
           <div className="mb-4">
@@ -263,6 +310,10 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
                 </span>
               )}
             </div>
+            <p className="text-sm text-gray-500 mt-1 mb-2">
+              İdeal kapak resmi boyutu: <strong>1200 x 800 piksel</strong> (3:2
+              oranı). Yüksek kaliteli ve yatay görüntüler en iyi sonucu verir.
+            </p>
             {coverImage && (
               <div className="mt-2 mb-4">
                 <img
@@ -312,35 +363,6 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               You can format your content using the toolbar above. Add images
               using the image button or the "Add Image" button.
             </p>
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="tags"
-              className="block text-gray-700 font-medium mb-2"
-            >
-              Tags
-            </label>
-            <input
-              type="text"
-              id="tags"
-              value={tags}
-              onChange={(e) => setTags(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Separate tags with commas"
-            />
-          </div>
-
-          <div className="mb-6">
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={published}
-                onChange={(e) => setPublished(e.target.checked)}
-                className="mr-2"
-              />
-              <span>Publish this post</span>
-            </label>
           </div>
 
           <div className="flex justify-end space-x-4">

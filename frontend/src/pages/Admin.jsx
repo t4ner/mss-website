@@ -37,13 +37,118 @@ const Admin = () => {
     setActiveTab("edit");
   };
 
-  const handleDeletePost = async (id) => {
+  const handleDeletePost = async (id, title) => {
+    // If title is provided, use title-based deletion instead of ID-based
+    if (title) {
+      return handleDeletePostByTitle(title);
+    }
+
+    if (!id) {
+      console.error("Delete error: No post ID provided");
+      setError("Failed to delete post: No post ID provided");
+      return;
+    }
+
+    // Check if ID is a valid MongoDB ObjectId (24 hex characters)
+    const isValidObjectId = /^[0-9a-fA-F]{24}$/.test(id);
+    if (!isValidObjectId) {
+      console.error("Delete error: Invalid MongoDB ObjectId format", id);
+      setError("Failed to delete post: Invalid ID format");
+      return;
+    }
+
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {
-        await axios.delete(`http://localhost:5001/api/blogs/${id}`);
-        setPosts(posts.filter((post) => post._id !== id));
+        console.log("Deleting post with ID:", id);
+
+        // Ensure the URL is correctly formatted
+        const deleteUrl = `http://localhost:5001/api/blogs/${id}`;
+        console.log("Delete URL:", deleteUrl);
+
+        const response = await axios({
+          method: "DELETE",
+          url: deleteUrl,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        console.log("Delete response:", response);
+
+        if (response.status === 200) {
+          // Update the posts state to remove the deleted post
+          setPosts((prevPosts) => prevPosts.filter((post) => post._id !== id));
+          setError(""); // Clear any previous errors
+        } else {
+          throw new Error(`Unexpected response status: ${response.status}`);
+        }
       } catch (error) {
-        setError("Failed to delete post");
+        console.error("Delete error:", error);
+        console.error("Error details:", {
+          message: error.message,
+          response: error.response
+            ? {
+                status: error.response.status,
+                statusText: error.response.statusText,
+                data: error.response.data,
+              }
+            : "No response data",
+          request: error.request ? "Request exists" : "No request data",
+        });
+        setError(`Failed to delete post: ${error.message || "Unknown error"}`);
+      }
+    }
+  };
+
+  const handleDeletePostByTitle = async (title) => {
+    if (!title) {
+      console.error("Delete error: No post title provided");
+      setError("Failed to delete post: No post title provided");
+      return;
+    }
+
+    if (window.confirm("Are you sure you want to delete this post?")) {
+      try {
+        console.log("Deleting post with title:", title);
+
+        // Ensure the URL is correctly formatted and encoded
+        const encodedTitle = encodeURIComponent(title);
+        const deleteUrl = `http://localhost:5001/api/blogs/title/${encodedTitle}`;
+        console.log("Delete URL:", deleteUrl);
+
+        const response = await axios({
+          method: "DELETE",
+          url: deleteUrl,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        console.log("Delete response:", response);
+
+        if (response.status === 200) {
+          // Update the posts state to remove the deleted post
+          setPosts((prevPosts) =>
+            prevPosts.filter((post) => post.title !== title)
+          );
+          setError(""); // Clear any previous errors
+        } else {
+          throw new Error(`Unexpected response status: ${response.status}`);
+        }
+      } catch (error) {
+        console.error("Delete error:", error);
+        console.error("Error details:", {
+          message: error.message,
+          response: error.response
+            ? {
+                status: error.response.status,
+                statusText: error.response.statusText,
+                data: error.response.data,
+              }
+            : "No response data",
+          request: error.request ? "Request exists" : "No request data",
+        });
+        setError(`Failed to delete post: ${error.message || "Unknown error"}`);
       }
     }
   };
@@ -82,7 +187,7 @@ const Admin = () => {
         <div className="mb-6 border-b border-gray-200">
           <nav className="flex -mb-px">
             <button
-              className={`mr-8 py-4 px-1 border-b-2 font-medium text-sm ${
+              className={`mr-8 py-4 px-1 border-b-2 font-medium  ${
                 activeTab === "create"
                   ? "border-indigo-500 text-indigo-600"
                   : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
@@ -95,7 +200,7 @@ const Admin = () => {
               Create New Post
             </button>
             <button
-              className={`mr-8 py-4 px-1 border-b-2 font-medium text-sm ${
+              className={`mr-8 py-4 px-1 border-b-2 font-medium ${
                 activeTab === "list" || activeTab === "edit"
                   ? "border-indigo-500 text-indigo-600"
                   : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"

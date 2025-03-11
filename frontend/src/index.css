@@ -156,3 +156,51 @@ body {
 .preview-container .prose a {
   @apply text-blue-600 hover:underline;
 }
+
+.blog-detail-content {
+  h1 {
+    font-size: 30px;
+    font-weight: 600; 
+  }
+  h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  p {
+    padding: 10px 0;
+    color: #6a7282;
+  }
+  li {
+    padding: 5px 0;
+  }
+  img {
+   
+    margin: 10px 0;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #6a7282;
+  }
+  ol {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #6a7282;
+  }
+}

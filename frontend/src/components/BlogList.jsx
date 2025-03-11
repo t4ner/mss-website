@@ -35,18 +35,6 @@ const BlogList = ({ posts, loading, onEdit, onDelete }) => {
               >
                 Date
               </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Status
-              </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Tags
-              </th>
               <th scope="col" className="relative px-6 py-3">
                 <span className="sr-only">Actions</span>
               </th>
@@ -65,29 +53,6 @@ const BlogList = ({ posts, loading, onEdit, onDelete }) => {
                     {formatDate(post.createdAt)}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span
-                    className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                      post.published
-                        ? "bg-green-100 text-green-800"
-                        : "bg-yellow-100 text-yellow-800"
-                    }`}
-                  >
-                    {post.published ? "Published" : "Draft"}
-                  </span>
-                </td>
-                <td className="px-6 py-4">
-                  <div className="flex flex-wrap gap-1">
-                    {post.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <button
                     onClick={() => onEdit(post)}
@@ -96,7 +61,21 @@ const BlogList = ({ posts, loading, onEdit, onDelete }) => {
                     Edit
                   </button>
                   <button
-                    onClick={() => onDelete(post._id)}
+                    onClick={() => {
+                      console.log("Delete button clicked for post:", post);
+                      console.log("Post title:", post.title);
+
+                      if (post.title) {
+                        // Pass both id and title, but the handleDeletePost function will prioritize title
+                        onDelete(post._id, post.title);
+                      } else {
+                        console.error(
+                          "Post title is missing or undefined:",
+                          post
+                        );
+                        alert("Cannot delete post: Title is missing");
+                      }
+                    }}
                     className="text-red-600 hover:text-red-900"
                   >
                     Delete

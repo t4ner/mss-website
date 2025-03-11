@@ -6,6 +6,12 @@ const blogSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+  },
   content: {
     type: String,
     required: true,
@@ -32,7 +38,7 @@ const blogSchema = mongoose.Schema({
   },
   published: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 });
 
