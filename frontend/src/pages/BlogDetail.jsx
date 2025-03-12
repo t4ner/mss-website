@@ -115,12 +115,12 @@ const BlogDetail = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-200 min-h-screen py-8 pt-24 lg:pt-32">
+      <div className="bg-gray-200 min-h-screen py-8 pt-24 lg:pt-32 mt-4 md:mt-0">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <article className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               {/* Header with title and metadata */}
-              <header className="p-6 md:p-8 border-b border-gray-100">
+              <header className="p-4 border-b border-gray-100">
                 <div className="mb-2 text-sm text-gray-500 flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ const BlogDetail = () => {
                   </svg>
                   {formattedDate}
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 leading-tight">
+                <h1 className="text-lg md:text-3xl font-semibold md:font-bold mb-4 text-gray-800 leading-tight">
                   {post.title}
                 </h1>
 
@@ -166,7 +166,7 @@ const BlogDetail = () => {
               {/* Cover image if exists */}
               {post.coverImage && (
                 <div className="w-full border-b border-gray-100">
-                  <div className="h-[600px] overflow-hidden">
+                  <div className="h-[250px] md:h-[600px] overflow-hidden">
                     <img
                       src={post.coverImage}
                       alt={post.title}
@@ -177,7 +177,7 @@ const BlogDetail = () => {
               )}
 
               {/* Content */}
-              <div className="p-6 md:p-8">
+              <div className="md:p-6 ">
                 <div
                   className="blog-detail-content prose prose-lg max-w-none"
                   dangerouslySetInnerHTML={{ __html: marked(post.content) }}

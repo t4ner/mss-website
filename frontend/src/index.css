@@ -158,49 +158,119 @@ body {
 }
 
 .blog-detail-content {
-  h1 {
-    font-size: 30px;
-    font-weight: 600; 
-  }
-  h2 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  h4 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  h5 {
-    font-size: 16px;
-    font-weight: 600;
-  }
+  @apply max-w-full mx-auto text-gray-800 leading-relaxed;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   h6 {
-    font-size: 14px;
-    font-weight: 600;
+    @apply font-semibold text-gray-900 my-6 leading-tight;
   }
+
+  h1 {
+    @apply text-lg md:text-3xl;
+  }
+
+  h2 {
+    @apply text-lg md:text-2xl;
+  }
+
+  h3 {
+    @apply text-base md:text-xl;
+  }
+
+  h4 {
+    @apply text-base md:text-lg;
+  }
+
+  h5 {
+    @apply text-base md:text-lg;
+  }
+
+  h6 {
+    @apply text-sm md:text-base;
+  }
+
   p {
-    padding: 10px 0;
-    color: #6a7282;
+    @apply my-4 text-sm lg:text-base text-gray-700 leading-relaxed;
   }
-  li {
-    padding: 5px 0;
+
+ 
+
+  blockquote {
+    @apply pl-4 italic my-6 border-l-4 border-red-500 py-2 bg-gray-50 rounded-r text-gray-700;
   }
-  img {
-   
-    margin: 10px 0;
+
+  pre {
+    @apply bg-gray-800 text-white p-4 rounded-lg my-6 overflow-x-auto text-sm;
   }
-  ul {
-    list-style-type: disc;
-    padding-left: 40px;
-    color: #6a7282;
+
+  code {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono text-gray-800;
   }
+
+  ul,
   ol {
-    list-style-type: disc;
-    padding-left: 40px;
-    color: #6a7282;
+    @apply my-4 ml-6 text-gray-700;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-disc;
+  }
+
+  li {
+    @apply text-sm lg:text-base mb-2;
+  }
+
+  img {
+    @apply max-w-full h-auto rounded-xs my-6 shadow-md;
+  }
+
+  table {
+    @apply w-full my-6 border-collapse;
+  }
+
+  th {
+    @apply bg-gray-100 p-2 text-left border border-gray-300 font-semibold;
+  }
+
+  td {
+    @apply p-2 border border-gray-300;
+  }
+
+  hr {
+    @apply my-8 border-t border-gray-300;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    padding: 0 1rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply my-4;
+    }
+
+    img {
+      @apply my-4;
+    }
+
+    blockquote {
+      @apply my-4;
+    }
+
+    pre {
+      @apply my-4 text-xs;
+    }
   }
 }

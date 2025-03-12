@@ -273,11 +273,11 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               onChange={(e) => setSlug(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
-              placeholder="ornek-blog-yazisi"
+             
             />
             <p className="mt-1 text-sm text-gray-500">
-              Bu alan blog yazınızın URL'sinde kullanılacaktır. Boşluk ve özel
-              karakter kullanmayın.
+              This field will be used in the blog post URL. Do not use spaces or
+              special characters.
             </p>
           </div>
 
@@ -311,8 +311,8 @@ const BlogEditor = ({ post, onSuccess, onCancel }) => {
               )}
             </div>
             <p className="text-sm text-gray-500 mt-1 mb-2">
-              İdeal kapak resmi boyutu: <strong>1200 x 800 piksel</strong> (3:2
-              oranı). Yüksek kaliteli ve yatay görüntüler en iyi sonucu verir.
+              The ideal cover image size is <strong>1200 x 800 pixels</strong>{" "}
+              (3:2 ratio). High quality, landscape images work best.
             </p>
             {coverImage && (
               <div className="mt-2 mb-4">

@@ -110,13 +110,13 @@ const Blog = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-200 min-h-screen py-8 pt-24 lg:pt-32">
-        <div className="container mx-auto ">
+      <div className="bg-gray-200 min-h-screen px-2 md:px-0 mt-4 md:mt-0 py-8 pt-24 lg:pt-32">
+        <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             {/* Search Box */}
             <form
               onSubmit={handleSearchSubmit}
-              className="relative w-full md:w-96 ml-auto bg-white rounded-lg overflow-hidden"
+              className="relative w-full md:w-96 mx-auto md:ml-auto md:mr-0 bg-white rounded-lg overflow-hidden"
             >
               <input
                 type="text"
@@ -154,7 +154,7 @@ const Blog = () => {
                 : "No blog posts available yet"}
             </div>
           ) : (
-            <div className="flex flex-col space-y-16 max-w-7xl mx-auto">
+            <div className="flex flex-col space-y-8 md:space-y-12 lg:space-y-16 max-w-7xl mx-auto">
               {filteredPosts.map((post, index) => {
                 const formattedDate = formatDate(post.createdAt);
 
@@ -163,9 +163,9 @@ const Blog = () => {
                     key={post._id}
                     className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                   >
-                    <div className="flex flex-col md:flex-row h-[400px]">
+                    <div className="flex flex-col md:flex-row md:h-[400px]">
                       {/* Image section */}
-                      <div className="md:w-1/2 h-full">
+                      <div className="w-full md:w-1/2 h-64 sm:h-80 md:h-full">
                         <Link
                           to={`/blog/${post.slug}`}
                           className="block h-full"
@@ -188,13 +188,13 @@ const Blog = () => {
                         </Link>
                       </div>
                       {/* Content section */}
-                      <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between h-full overflow-hidden">
+                      <div className="w-full md:w-1/2 p-5 sm:p-6 md:p-8 flex flex-col justify-between">
                         <div>
-                          <div className="mb-3 text-sm text-gray-500">
+                          <div className="mb-2 md:mb-3 text-sm text-gray-500">
                             {formattedDate}
                           </div>
 
-                          <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                          <h2 className="text-lg  md:text-3xl font-semibold md:font-bold mb-3 md:mb-4 leading-tight">
                             <Link
                               to={`/blog/${post.slug}`}
                               className="text-[#0C4A79] hover:text-[#0A3D66] transition-colors duration-200"
@@ -203,12 +203,12 @@ const Blog = () => {
                             </Link>
                           </h2>
 
-                          <p className="text-gray-500 mb-6 blog-excerpt line-clamp-4">
+                          <p className="text-gray-500 text-sm md:text-base mb-4 md:mb-6 blog-excerpt line-clamp-3 md:line-clamp-4">
                             {createExcerpt(post.content, 200)}
                           </p>
                         </div>
 
-                        <div className="mt-auto">
+                        <div className="text-sm md:text-base mt-2 md:mt-auto">
                           <Link
                             to={`/blog/${post.slug}`}
                             className="inline-block bg-[#0C4A79] text-white py-2 px-4 rounded font-medium hover:bg-[#0A3D66] transition-colors duration-200"
